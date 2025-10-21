@@ -13,6 +13,7 @@ using namespace std;
 
 int main() {
 
+    cout << "Files compiled successfully." << endl;
     
     return 0;
 
