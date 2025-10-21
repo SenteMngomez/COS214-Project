@@ -1,6 +1,11 @@
 #ifndef PLANTFACTORY_H
 #define PLANTFACTORY_H
 
+#include <string>
+using namespace std;
+
+class Plant;
+
 class PlantFactory {
 
 private:

@@ -1,6 +1,7 @@
 #include "GIveSunlight.h"
 
-void GIveSunlight::execute() {
-	// TODO - implement GIveSunlight::execute
-	throw "Not yet implemented";
+
+
+void GIveSunlight::execute(int *tag, string decorator)
+{
 }

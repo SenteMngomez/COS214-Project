@@ -5,6 +5,9 @@
 #include "GreenhouseInterface.h"
 #include <vector>
 #include <string>
+
+class Iterator;
+
 class Greenhouse :public GreenhouseInterface {
 
 private:

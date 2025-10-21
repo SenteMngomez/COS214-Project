@@ -1,6 +1,7 @@
 #include "WaterPlant.h"
 
-void WaterPlant::execute() {
-	// TODO - implement WaterPlant::execute
-	throw "Not yet implemented";
+
+
+void WaterPlant::execute(int *tag, string decorator)
+{
 }

@@ -1,6 +1,8 @@
 #ifndef RECEIPTBUILDER_H
 #define RECEIPTBUILDER_H
 
+class Receipt;
+
 class ReceiptBuilder {
 
 private:

@@ -10,7 +10,7 @@ void GroundStaff::careForPlant(int* tag) {
 	throw "Not yet implemented";
 }
 
-void GroundStaff::addPlant(GreenHouse* greenHouse, string type) {
+void GroundStaff::addPlant(Greenhouse* greenHouse, string type) {
 	// TODO - implement GroundStaff::addPlant
 	throw "Not yet implemented";
 }
