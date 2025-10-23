@@ -12,6 +12,7 @@ class Iterator;
 class Greenhouse :public GreenhouseInterface {
 
 private:
+
 	std::vector<Plant*> plants;
 	string name;
  

@@ -17,6 +17,7 @@ protected:
 
 	std::vector<InventoryInterface*> observers;
 	void notify(Plant* plant);
+	
 };
 
 #endif 

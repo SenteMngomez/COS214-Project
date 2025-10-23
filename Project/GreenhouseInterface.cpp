@@ -19,7 +19,9 @@ void GreenhouseInterface::detach(InventoryInterface* obs) {
 void GreenhouseInterface::notify(Plant* plant) {
 	
 	for (auto observer : observers){
+
 		observer->updateInventory(plant); // Calling the updateInventory method on each observer
+		
 	}
 
 }

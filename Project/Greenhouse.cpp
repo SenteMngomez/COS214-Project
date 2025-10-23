@@ -45,9 +45,11 @@ Plant* Greenhouse::removePlant(int tag) {
 	});
 
 	if (it != plants.end()){
-		removedPlant =*it;
+
+		removedPlant =*it; 
 		plants.erase(it);
 		notify(removedPlant); //Notify observers about the removed plant
+		
 	}
 
 	return removedPlant;
