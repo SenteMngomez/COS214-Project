@@ -1,10 +1,11 @@
 #ifndef GREENHOUSE_H
 #define GREENHOUSE_H
 
-
 #include "GreenhouseInterface.h"
 #include <vector>
 #include <string>
+#include <iostream>
+#include <algorithm>
 
 class Iterator;
 
@@ -13,7 +14,7 @@ class Greenhouse :public GreenhouseInterface {
 private:
 	std::vector<Plant*> plants;
 	string name;
-
+ 
 public:
 	void waterPlant(Plant* plant);
 

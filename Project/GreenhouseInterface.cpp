@@ -1,16 +1,26 @@
 #include "GreenhouseInterface.h"
 
 void GreenhouseInterface::attach(InventoryInterface* obs) {
-	// TODO - implement GreenhouseInterface::attach
-	throw "Not yet implemented";
+	
+	observers.push_back(obs);
+
 }
 
 void GreenhouseInterface::detach(InventoryInterface* obs) {
-	// TODO - implement GreenhouseInterface::detach
-	throw "Not yet implemented";
+	
+	auto it = std::find(observers.begin(), observers.end(), obs);
+
+	if (it != observers.end()){
+		observers.erase(it);
+	}
+
 }
 
 void GreenhouseInterface::notify(Plant* plant) {
-	// TODO - implement GreenhouseInterface::notify
-	throw "Not yet implemented";
+	
+	for (auto observer : observers){
+		observer->updateInventory(plant); // Calling the updateInventory method on each observer
+	}
+
 }
+ 

@@ -1,26 +1,55 @@
 #include "Greenhouse.h"
 
 void Greenhouse::waterPlant(Plant* plant) {
-	// TODO - implement Greenhouse::waterPlant
-	throw "Not yet implemented";
+	
+	plant->receiveWater();
+	notify(plant);
+
 }
 
 void Greenhouse::giveSunlight(Plant* plant) {
-	// TODO - implement Greenhouse::giveSunlight
-	throw "Not yet implemented";
+	
+	plant->receiveSunlight();
+	notify(plant);
+
 }
 
 void Greenhouse::addPlant(Plant* plant) {
-	// TODO - implement Greenhouse::addPlant
-	throw "Not yet implemented";
+	
+	plants.push_back(plant);
+	notify(plant); // Notify observers about the new plant
+
 }
 
 void Greenhouse::showPlants() {
-	// TODO - implement Greenhouse::showPlants
-	throw "Not yet implemented";
+	
+	if (plants.empty()){
+		std::cout << "No plants in the greenhouse." << std::endl;
+		return;
+	}
+
+	std::cout << "Plants in the greenhouse:" << std::endl;
+	std::cout << "------------------------" << std::endl;
+
+	for (Plant* plant: plants){
+		plant->print();
+	}
 }
 
 Plant* Greenhouse::removePlant(int tag) {
-	// TODO - implement Greenhouse::removePlant
-	throw "Not yet implemented";
+	
+	Plant* removedPlant = nullptr;
+
+	auto it = std::find_if(plants.begin(), plants.end(), [tag](Plant* p) {
+		return p->getChild(tag);
+	});
+
+	if (it != plants.end()){
+		removedPlant =*it;
+		plants.erase(it);
+		notify(removedPlant); //Notify observers about the removed plant
+	}
+
+	return removedPlant;
+
 }
