@@ -3,6 +3,7 @@
 
 #include "PlantState.h"
 #include "CareStrategy.h"
+#include <iostream>
 
 #include <string>
 using namespace std;
@@ -31,6 +32,12 @@ public:
 	void receiveWater();
 
 	void receiveSunlight();
+
+	void setState(PlantState* newState){
+		delete state;
+		this->state = newState;
+		cout<<"Plant state changed."<<endl;
+	}
 
 	//add destructor 
 };
