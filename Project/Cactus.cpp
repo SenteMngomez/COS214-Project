@@ -1,11 +1,19 @@
+/**
+ * @file Cactus.cpp
+ * @brief Implementation of Cactus class
+ * @author Brayden
+ * @date October 26, 2025
+ */
+
 #include "Cactus.h"
 
+Cactus::Cactus(string colour, CareStrategy* careStrategy, double price)
+    : Plant(colour, careStrategy, price) {}
+
 Plant* Cactus::clone() {
-	// TODO - implement Cactus::clone
-	throw "Not yet implemented";
+	return new Cactus(*this);
 }
 
 void Cactus::print() {
-	// TODO - implement Cactus::print
-	throw "Not yet implemented";
+	cout << "Type: " << getType() << ", Colour: " << getColour() << ", Price: R" << getPrice() << endl;
 }
