@@ -1,28 +1,45 @@
 #include "Person.h"
 
+Person::Person(std::string name):name(name){
+
+	messageType="";
+	string messageType="";
+	string message="";
+}
+
 string Person::getName() {
-	// TODO - implement Person::getName
-	throw "Not yet implemented";
+	return name;
 }
 
-void Person::sendMessage(string message, string type, int* tags, string decorator) {
-	// TODO - implement Person::sendMessage
-	throw "Not yet implemented";
+void Person::sendMessage(string message, string type,std::vector<int>* tags, string decorator) {
+	int room=0;
+
+	if(type=="Purchase"){
+		room=1;
+	}
+
+	this->message=message;
+	this->messageType=type;
+	this->tags=tags;
+	this->decorator=decorator;
+
+
+	sections[room]->notify(this);
+
 }
 
-void Person::receiveMessage(Person* person) {
-	// TODO - implement Person::receiveMessage
-	throw "Not yet implemented";
-}
-
-string Person::getMessageType() {
+string Person::getMessageType() const{
 	return this->messageType;
 }
 
-string Person::getMessage() {
+string Person::getMessage() const{
 	return this->message;
 }
 
-int* Person::getTag() {
-	return this->tag;
+std::vector<int>* Person::getTags() {
+	return this->tags;
+}
+
+std::string Person::getDecorator() const{
+	return decorator;
 }

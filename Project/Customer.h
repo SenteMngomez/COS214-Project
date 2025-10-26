@@ -4,10 +4,9 @@
 #include "Person.h"
 class Customer :public Person {
 
-public:
-	string decorator;
-
-	string getDecorator();
+	public:
+		Customer(std::string name);
+		virtual void receiveMessage(Person* person, Section* section);
 };
 
 #endif

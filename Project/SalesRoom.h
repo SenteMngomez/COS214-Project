@@ -5,10 +5,9 @@
 
 class SalesRoom :public Section {
 
-public:
-	Person* personList;
-
-	void notify(Person* person);
+	public:
+		SalesRoom(std::string name);
+		void notify(Person* person);
 };
 
 #endif

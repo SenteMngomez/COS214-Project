@@ -3,17 +3,29 @@
 
 #include "Staff.h"
 #include "Greenhouse.h"
+#include "WaterPlant.h"
+#include "GIveSunlight.h"
 
 
 class GroundStaff :public Staff {
 
 
-public:
-	void handleRequest(Person* person);
+	public:
+		GroundStaff(std::string name);
 
-	void careForPlant(int* tag);
+		void handleRequest(Person* person);
 
-	void addPlant(Greenhouse* greenHouse, string type);
+		void careForPlant(std::vector<int>* tags);
+
+		void addPlant(Greenhouse* greenHouse, string type);
+
+		void setWaterPlantCommand(WaterPlant* waterPlantCommand);
+
+		void setGiveSunlightCommand(GiveSunlight* giveSunlightCommand);
+
+	private:
+		WaterPlant* waterPlantCmd;
+		GiveSunlight* giveSunCmd;
 };
 
 #endif

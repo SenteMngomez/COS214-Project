@@ -11,7 +11,7 @@ protected:
 	Inventory* inventory;
 
 public:
-	virtual void execute(int* tag,string decorator="") = 0;
+	virtual void execute(std::vector<int>* tag,string decorator="") = 0;
 };
 
 #endif

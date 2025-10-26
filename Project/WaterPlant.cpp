@@ -1,7 +1,6 @@
 #include "WaterPlant.h"
 
+WaterPlant::WaterPlant():Command(){}
 
-
-void WaterPlant::execute(int *tag, string decorator)
-{
+void WaterPlant::execute(std::vector<int>* tags, string decorator){
 }
