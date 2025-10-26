@@ -11,7 +11,7 @@ class Iterator;
 
 class Greenhouse :public GreenhouseInterface {
 
-private:
+protected:
 
 	std::vector<Plant*> plants;
 	string name;

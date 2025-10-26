@@ -2,25 +2,34 @@
 #define INVENTORY_H
 
 #include "InventoryInterface.h"
+#include <iostream>
+#include <string>
+#include <map>
+#include <algorithm>
+#include <vector>
 
 class Inventory :public InventoryInterface {
 
-public:
-	Inventory* uniqueInstance;
+private:
 
-	Inventory* instance();
+	static Inventory* uniqueInstance;
+	std::map<std::string, int> stockCount;
+	std::vector<Plant*> plants;
 
 	Inventory();
+	Inventory(const Inventory& inventory);
+	Inventory& operator=(Inventory& inventory);
+	
+public:
+
+	static Inventory* instance();
 
 	void updateInventory(Plant* plant);
 
-	Inventory(Inventory& inventory);
-
 	void addStock(string plantName, int stock);
-
+ 
 	Plant* removePlant(int id);
-
-	Inventory& operator=(Inventory& inventory);
+ 
 };
 
 #endif
