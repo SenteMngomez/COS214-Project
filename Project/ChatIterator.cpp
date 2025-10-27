@@ -1,21 +1,33 @@
+/**
+ * @file ChatIterator.cpp
+ * @brief Implementation of the ChatIterator class.
+ * @author Mosa Leiee
+ * @date 27 October 2025
+ */
 #include "ChatIterator.h"
 
+ChatIterator::ChatIterator(const vector<string>& messages){
+	chats = messages;
+	current = 0;
+}
+
 void ChatIterator::first() {
-	// TODO - implement ChatIterator::first
-	throw "Not yet implemented";
+	current = 0;
 }
 
 void ChatIterator::next() {
-	// TODO - implement ChatIterator::next
-	throw "Not yet implemented";
+	if (current < chats.size()){
+		current++;
+	}
 }
 
-void ChatIterator::isDone() {
-	// TODO - implement ChatIterator::isDone
-	throw "Not yet implemented";
+bool ChatIterator::isDone() {
+	return current >= chats.size();
 }
 
 string ChatIterator::currentItem() {
-	// TODO - implement ChatIterator::currentItem
-	throw "Not yet implemented";
+	if (!isDone()){
+		return chats[current];
+	}
+	return "";
 }
