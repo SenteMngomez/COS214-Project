@@ -17,9 +17,9 @@ protected:
 	string name;
  
 public:
-	void waterPlant(Plant* plant);
+	void waterPlant(int tag);
 
-	void giveSunlight(Plant* plant);
+	void giveSunlight(int tag);
 
 	virtual Iterator* createIterator() = 0;
 

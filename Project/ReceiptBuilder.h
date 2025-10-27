@@ -1,14 +1,20 @@
 #ifndef RECEIPTBUILDER_H
 #define RECEIPTBUILDER_H
 
-class Receipt;
+
+#include "Receipt.h"
+
 
 class ReceiptBuilder {
 
-private:
+protected:
 	Receipt* receipt;
 
 public:
+	ReceiptBuilder(){receipt = new Receipt();}
+
+	virtual ~ReceiptBuilder(){};
+
 	virtual void addPrice() = 0;
 
 	virtual void addSeller() = 0;

@@ -7,8 +7,7 @@ void SellPlant::execute(vector<int>* tag, string decorator) {
 	}
 	for(int i :*tag){
 		if(inventory){
-			inventory->removePlant(i);//updating inventory 
-			greenHouse->removePlant(i);//updating greenhouse 
+			greenHouse->removePlant(i);//updating greenhouse and auto updates inventory 
 			cout<< "Plant greenhouse : "<<this->greenHouse->getName()<<"is selling the following plant id"<<i;
 		}
 	}
