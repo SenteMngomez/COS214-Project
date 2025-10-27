@@ -15,7 +15,12 @@ Inventory* Inventory::instance() {
 
 Inventory::Inventory() {
 	//Empty since we're using singleton
-} 
+}
+
+Inventory::Inventory(const Inventory &inventory)
+{
+	//Empty since we're using singleton
+}
 
 void Inventory::updateInventory(Plant* plant) {
 	
