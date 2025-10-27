@@ -6,8 +6,7 @@ class WaterPlant :public Command {
 
 
 public:
-	WaterPlant();
-	virtual void execute(std::vector<int>* tags,string decorator="");
+	virtual void execute(vector<int>* tag,string decorator="");
 };
 
 #endif

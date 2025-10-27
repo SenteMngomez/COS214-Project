@@ -1,6 +1,16 @@
 #include "SellPlant.h"
 
-void SellPlant::execute(std::vector<int>*, string decorator) {
+void SellPlant::execute(vector<int>* tag, string decorator) {
 	// TODO - implement SellPlant::execute
-	throw "Not yet implemented";
+	if(!tag){
+		return ;
+	}
+	for(int i :*tag){
+		if(inventory){
+			inventory->removePlant(i);//updating inventory 
+			greenHouse->removePlant(i);//updating greenhouse 
+			cout<< "Plant greenhouse : "<<this->greenHouse->getName()<<"is selling the following plant id"<<i;
+		}
+	}
+	
 }

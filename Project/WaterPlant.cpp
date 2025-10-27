@@ -2,5 +2,7 @@
 
 WaterPlant::WaterPlant():Command(){}
 
-void WaterPlant::execute(std::vector<int>* tags, string decorator){
+
+void WaterPlant::execute(vector<int> *tag, string decorator)
+{
 }

@@ -28,6 +28,8 @@ public:
 	void showPlants();
 
 	Plant* removePlant(int tag);
+
+	string getName();
 };
 
 #endif

@@ -4,6 +4,7 @@
 
 #include "Greenhouse.h"
 #include "Inventory.h"
+#include <vector>
 class Command {
 
 protected:
@@ -11,7 +12,7 @@ protected:
 	Inventory* inventory;
 
 public:
-	virtual void execute(std::vector<int>* tag,string decorator="") = 0;
+	virtual void execute(vector<int>* tag,string decorator="") = 0;
 };
 
 #endif

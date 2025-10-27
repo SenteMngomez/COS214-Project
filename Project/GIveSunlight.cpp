@@ -2,5 +2,6 @@
 
 
 
-void GiveSunlight::execute(std::vector<int>* tags, string decorator){
+void GiveSunlight::execute(vector<int> *tag, string decorator)
+{
 }
