@@ -14,6 +14,7 @@
 #include <vector>
 
 using namespace std;
+class Section;
 /**
  * @class ChatIterator
  * @brief Iterator for chat messages.
@@ -21,7 +22,8 @@ using namespace std;
 class ChatIterator :public Iterator {
 
 private:
-	vector<string> chats; //store messages from person
+	const vector<string>* messages; //store messages from person
+	//Section* section;
 	int current;
 
 public:
@@ -30,7 +32,8 @@ public:
 	 * @brief Constructor for ChatIterator.
 	 * @param messages Vector of chat messages to iterate over.
 	 */
-	ChatIterator(const vector<string>& messages);
+	ChatIterator(const vector<string>* mgs);
+	//ChatIterator(Section* section);
 
 	/**
 	 * @brief Set the iterator to the first chat message.
