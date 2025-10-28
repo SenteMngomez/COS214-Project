@@ -2,17 +2,23 @@
 #define RECEIPT_H
 
 #include <string>
+#include <iostream>
+#include <vector>
+class Plant ;
 using namespace std;
 
 class Receipt {
 
 private:
 	double totalPrice;
-	string plantDetails;
-	int seller;
+	vector<Plant*> plants;
+	string seller;
 
 public:
 	Receipt();
+	void setSeller( string seller);
+	void addPlant(Plant* P);
+	void setTotalPrice(double price);
 
 	void print();
 };

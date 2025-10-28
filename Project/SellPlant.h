@@ -2,14 +2,23 @@
 #define SELLPLANT_H
 
 #include "Command.h"
-#include <string>
+#include "Inventory.h"
 
+#include <string>
+#include <vector>
+
+#include <iostream>
 using namespace std;
 class SellPlant :public Command {
+	private:
+		PlantBuilder* builder;
 
 
 public:
-	void execute(int* tag, string decorator);
+	SellPlant(PlantBuilder* pb);
+
+
+	void execute(vector<int>* tag, string decorator="");
 };
 
 #endif

@@ -2,11 +2,12 @@
 #define GIVESUNLIGHT_H
 
 #include "Command.h"
-class GIveSunlight :public Command {
+class GiveSunlight :public Command {
 
 
 public:
-	virtual void execute(int* tag,string decorator="");
+	GiveSunlight();
+	virtual void execute(std::vector<int>* tags,string decorator="");
 };
 
 #endif

@@ -67,6 +67,8 @@ public:
 	 * @return A pointer to the removed plant, or nullptr if not found.
 	 */
 	Plant* removePlant(int tag);
+
+	string getName();
 };
 
 #endif
