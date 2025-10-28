@@ -79,6 +79,8 @@ public:
 	 */
 	std::vector<int>* getTags();
 
+	void addSection(Section* section);
+
 };
 
 #endif

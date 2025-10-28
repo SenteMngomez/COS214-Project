@@ -1,10 +1,12 @@
 #include "SalesClerk.h"
 
+SalesClerk::SalesClerk(std::string name):Staff(name){}
+
 void SalesClerk::handleRequest(Person* person){
 
 	if(person->getMessageType()=="Purchase"){
 
-		std::cout<<"Sales Clerk-"<<this->getName()<<" will assist "<<person->getName()<<" with their Purchase request"<<std::endl;
+		std::cout<<"(Sales Clerk)"<<this->getName()<<" will assist "<<person->getName()<<" with their Purchase request"<<std::endl;
 		sell(person->getTags(),person->getDecorator());
 	}else{
 
@@ -19,7 +21,7 @@ void SalesClerk::sell(std::vector<int>* tags, string decorator) {
 
 	}else{
 
-		std::cout<<"Unable to make sale";
+		std::cout<<"Unable to make sale\n";
 	}
 	
 }

@@ -8,6 +8,6 @@
 			return;
 		}
 
-		std::cout<<"["<<section->getName()<<"] --"<<person->getMessageType()<<"-- \""<<person->getMessage()<<"\" from "<<person->getName();
+		std::cout<<"["<<section->getName()<<"] "<<getName()<<" received --"<<person->getMessageType()<<"-- \""<<person->getMessage()<<"\" from "<<person->getName()<<"\n";
 
 	}

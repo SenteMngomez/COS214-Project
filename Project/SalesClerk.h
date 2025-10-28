@@ -22,6 +22,8 @@ class SalesClerk : public Staff {
 
 	public:
 
+		SalesClerk(std::string name);
+
 		/**
 		 * @brief Handles a request sent by a person. SalesClerk will handle
 		 *        requests of type "Purchase"; otherwise it should delegate to the
