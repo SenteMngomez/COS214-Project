@@ -1,3 +1,9 @@
+/**
+ * @file InventoryInterface.h
+ * @brief Interface for Inventory class (Observer in Observer pattern)
+ * @author Kundai
+ * @date October 26, 2025
+ */
 #ifndef INVENTORYINTERFACE_H
 #define INVENTORYINTERFACE_H
 

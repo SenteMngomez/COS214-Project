@@ -1,3 +1,10 @@
+/**
+ * @file Greenhouse.h
+ * @brief Declaration of Greenhouse class
+ * @author Kundai
+ * @date October 24, 2025
+ */
+
 #ifndef GREENHOUSE_H
 #define GREENHOUSE_H
 
@@ -25,7 +32,7 @@ protected:
 	std::string name;
  
 public:
-	/**
+	/** 
 	 * @brief Waters a specific plant and notifies observers.
 	 * @param plant The plant to water.
 	 */

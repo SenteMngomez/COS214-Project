@@ -1,3 +1,9 @@
+/**
+ * @file Inventory.h
+ * @brief Declaration of Inventory class
+ * @author Kundai
+ * @date October 26, 2025
+ */
 #ifndef INVENTORY_H
 #define INVENTORY_H
 

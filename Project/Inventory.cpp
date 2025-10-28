@@ -1,3 +1,9 @@
+/**
+ * @file Inventory.cpp
+ * @brief Implementation of Inventory class
+ * @author Kundai
+ * @date October 26, 2025
+ */
 #include "Inventory.h"
 #include "Plant.h"
 
@@ -48,7 +54,7 @@ Plant* Inventory::removePlant(int id) {
 
 	//Find plant by the id
 	auto it = std::find_if(plants.begin(), plants.end(), [id](Plant* p){
-		return p->getChild(id);
+		return p->getTag() == id;
 	});
 
 	if (it != plants.end()){
