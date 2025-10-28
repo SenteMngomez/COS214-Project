@@ -1,6 +1,25 @@
-#include "SeedState.h"
+/**
+ * @file SeedState.cpp
+ * @brief Implementation of the SeedState class methods.
+ * @author Mosa Leiee
+ * @date 26 October 2025
+ */
 
-void SeedState::handle() {
-	// TODO - implement SeedState::handle
-	throw "Not yet implemented";
+#include "SeedState.h"
+#include <iostream>
+using namespace std;
+
+/**
+ * @brief Handle the seed state behavior of the plant.
+ * @param plant Pointer to the Plant object whose state is being handled.
+ */
+
+void SeedState::handle(Plant* plant) {
+	
+	cout<<"Germinating from seed to sprout. Critical phase!"<<endl;
+	plant->receiveWater();
+	plant->receiveSunlight();
+
+	cout<<"Seed has successfully germinated into a sprout!"<<endl;
+	plant->setState(new SproutState());
 }
