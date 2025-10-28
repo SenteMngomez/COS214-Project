@@ -83,3 +83,8 @@ Plant* Greenhouse::removePlant(int tag) {
 	return removedPlant; 
 
 }
+
+string Greenhouse::getName()
+{
+    return name;
+}
