@@ -16,6 +16,7 @@ void SalesClerk::sell(std::vector<int>* tags, string decorator) {
 	
 	if(sellPlantCommand){
 		sellPlantCommand->execute(tags,decorator);
+
 	}else{
 
 		std::cout<<"Unable to make sale";
@@ -28,7 +29,7 @@ void SalesClerk::purchaseComplete(std::string msg) {
 	sendMessage(msg,"Purchase Complete");
 }
 
-void SalesClerk::setSellPlantCommannd(SellPlant* sellPlantCommand){
+void SalesClerk::setSellPlantCommand(SellPlant* sellPlantCommand){
 
 	this->sellPlantCommand=sellPlantCommand;
 }
