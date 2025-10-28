@@ -93,6 +93,18 @@ public:
 	}
 
     /**
+    * @brief Get the tag (unique id) of the plant
+    * @return Integer tag
+     */
+    int getTag() const;
+
+    /**
+    * @brief Set the tag (unique id) of the plant
+    * @param t Integer tag to set
+     */
+    void setTag(int t);
+
+    /**
      * @brief Set the state of the plant (for state transitions)
      * @param newState Pointer to the new PlantState
      */

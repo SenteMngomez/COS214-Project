@@ -26,6 +26,14 @@ void Plant::receiveSunlight() {
     cout << getType() << " plant received sunlight." << endl;
 }
 
+int Plant::getTag() const{
+	return tag;
+}
+
+void Plant::setTag(int t){
+	tag = t;
+}
+
 void Plant::setState(PlantState* newState) {
     if(state){
         delete state;  
