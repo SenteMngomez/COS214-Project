@@ -34,6 +34,10 @@ void Plant::setTag(int t){
 	tag = t;
 }
 
+CareStrategy* Plant::getCareStrategy(){
+	return careStrategy;
+}
+
 void Plant::setState(PlantState* newState) {
     if(state){
         delete state;  
