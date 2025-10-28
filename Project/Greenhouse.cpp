@@ -6,17 +6,39 @@
  */
 #include "Greenhouse.h"
 
-void Greenhouse::waterPlant(Plant* plant) {
+void Greenhouse::waterPlant(int tag) {
 	
-	plant->receiveWater();
-	notify(plant);
+	Plant* wateredPlant = nullptr;
+
+	auto it = std::find_if(plants.begin(), plants.end(), [tag](Plant* p) { //Finding plant with tag in order to water
+		return p->getTag() == tag;
+	});
+
+	if (it != plants.end()){
+
+		wateredPlant =*it;
+		wateredPlant->receiveWater();
+		notify(wateredPlant); 
+		
+	}
 
 }
 
-void Greenhouse::giveSunlight(Plant* plant) {
+void Greenhouse::giveSunlight(int tag) {
 	
-	plant->receiveSunlight();
-	notify(plant);
+	Plant* sunBathedPlant = nullptr;
+
+	auto it = std::find_if(plants.begin(), plants.end(), [tag](Plant* p) { //Finding plant with tag in order to give sunlight
+		return p->getTag() == tag;
+	});
+
+	if (it != plants.end()){
+
+		sunBathedPlant =*it;
+		sunBathedPlant->receiveWater();
+		notify(sunBathedPlant); 
+		
+	}
 
 }
 
