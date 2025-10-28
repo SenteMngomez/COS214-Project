@@ -10,7 +10,7 @@ void Greenhouse::waterPlant(int tag) {
 	
 	Plant* wateredPlant = nullptr;
 
-	auto it = std::find_if(plants.begin(), plants.end(), [tag](Plant* p) {
+	auto it = std::find_if(plants.begin(), plants.end(), [tag](Plant* p) { //Finding plant with tag in order to water
 		return p->getTag() == tag;
 	});
 
@@ -18,15 +18,27 @@ void Greenhouse::waterPlant(int tag) {
 
 		wateredPlant =*it;
 		wateredPlant->receiveWater();
-		notify(wateredPlant); //Notify observers about the removed plant
+		notify(wateredPlant); 
 		
 	}
+
 }
 
 void Greenhouse::giveSunlight(int tag) {
 	
-	plant->receiveSunlight();
-	notify(plant);
+	Plant* sunBathedPlant = nullptr;
+
+	auto it = std::find_if(plants.begin(), plants.end(), [tag](Plant* p) { //Finding plant with tag in order to give sunlight
+		return p->getTag() == tag;
+	});
+
+	if (it != plants.end()){
+
+		sunBathedPlant =*it;
+		sunBathedPlant->receiveWater();
+		notify(sunBathedPlant); 
+		
+	}
 
 }
 
