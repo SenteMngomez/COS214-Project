@@ -4,7 +4,7 @@
 #include <string>
 #include <iostream>
 #include <vector>
-class Plant ;
+#include "Plant.h"
 using namespace std;
 
 class Receipt {

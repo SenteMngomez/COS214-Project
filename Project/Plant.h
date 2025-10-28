@@ -105,6 +105,12 @@ public:
      */
     void setTag(int t);
 
+	/**
+	 * @brief Get the careStrategy of the plant
+	 * @return CareStrategy careStrategy
+	 */
+	CareStrategy* getCareStrategy();
+
     /**
      * @brief Set the state of the plant (for state transitions)
      * @param newState Pointer to the new PlantState

@@ -11,7 +11,7 @@ void Receipt::print() {
         cout << "Seller: " << seller << endl;
         cout << "Items:" << endl;
         for (size_t i = 0; i < plants.size(); ++i) {
-            cout << "  - " << plants[i]->getName()
+            cout << "  - " << plants[i]->getType()
                  << " (R" << plants[i]->getPrice() << ")" << endl;
         }
         cout << "-----------------------------" << endl;
