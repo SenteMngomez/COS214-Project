@@ -3,6 +3,7 @@
 
 #include <string>
 #include <iostream>
+#include <vector>
 class Plant ;
 using namespace std;
 
