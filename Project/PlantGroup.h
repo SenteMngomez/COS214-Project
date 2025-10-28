@@ -67,10 +67,11 @@ public:
     void remove(Plant& plant) override;
 
 	/**
-     * @brief Get a child plant by tag
-     * @param tag The tag of the child plant
-     */
-    void getChild(int tag) override;
+	 * @brief Get a child plant by tag
+	 * @param tag The tag of the child plant
+	 * @return Pointer to the child plant, or nullptr if not found
+	 */
+	Plant* getChild(int tag) override;
 
 	/**
      * @brief Destructor to clean up children

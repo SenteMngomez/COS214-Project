@@ -51,14 +51,13 @@ void PlantGroup::remove(Plant& plant){
     }
 }
 
-void PlantGroup::getChild(int tag){
+Plant* PlantGroup::getChild(int tag){
     for(Plant* child : children){
         if(child && child->getTag() == tag){
-            child->print();
-            return;
+            return child;
         }
     }
-    cout << "Child not found at tag " << tag << endl;
+    return nullptr;
 }
 
 PlantGroup::~PlantGroup() {
