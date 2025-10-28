@@ -1,6 +1,6 @@
 #include "ConcretePlantBuilder.h"
 
-Plant* ConcretePlantBuilder::buildCompositePlant(vector<Plant*> plants ,std::string decorator){
+Plant* ConcretePlantBuilder::buildCompositePlant(vector<Plant*> plants ,std::string& decorator){
         if (plants.empty()) return nullptr;
 
         Plant* result = nullptr;
@@ -18,7 +18,7 @@ Plant* ConcretePlantBuilder::buildCompositePlant(vector<Plant*> plants ,std::str
 
         // Apply decorator if any
         if (decorator == "pot") {
-            result = new DecorativePot(result);
+            result = new DecorativePot(result,decorator);
         } else if (decorator == "wrap") {
             result = new GiftWrapDecorator(result);
         }

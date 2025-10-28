@@ -21,5 +21,7 @@ void SellPlant::execute(vector<int>* tag, string decorator) {
     std::cout << "Selling " 
               << (soldPlants.size() > 1 ? "group of plants" : "single plant")
               << " from greenhouse " << greenHouse->getName() << std::endl;
+
+
 	
 }

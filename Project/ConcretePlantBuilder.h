@@ -9,7 +9,7 @@
 
 class ConcretePlantBuilder : public PlantBuilder {
 public:
-    Plant* buildCompositePlant(const std::vector<Plant*>& plants, const std::string& decorator) ;
+    Plant* buildCompositePlant(std::vector<Plant*> plants, std::string& decorator) ;
 };
 
 #endif //CONCRETE_PLANT_BUILDER_H 

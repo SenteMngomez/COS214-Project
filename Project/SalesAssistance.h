@@ -9,8 +9,9 @@ private:
 	ReceiptBuilder* builder;
 
 public:
+	void setBuilder(ReceiptBuilder* b);
 	Receipt* constructReceipt();
-	//add destructor 
+	
 };
 
 #endif

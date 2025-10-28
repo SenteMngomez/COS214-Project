@@ -21,6 +21,7 @@ public:
 
 	virtual void addPlantDetails() = 0;
 
+	Receipt* getReceipt(){ return receipt; }
 	//add destructor 
 };
 
