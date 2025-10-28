@@ -33,7 +33,7 @@ Person* Section::removePerson(Person* person){
 
 Iterator* Section::createIterator(){
 
-	return new ChatIterator();
+	return new ChatIterator(this);
 }
 
 std::string Section::getHistory() const{

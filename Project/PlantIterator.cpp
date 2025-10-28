@@ -1,21 +1,33 @@
+/**
+ * @file PlantIterator.cpp
+ * @brief Implementation of the PlantIterator class.
+ * @author Mosa Leiee
+ * @date 27 October 2025
+ */
 #include "PlantIterator.h"
 
+PlantIterator::PlantIterator(const vector<Plant*>& plantsVec){
+	plants = plantsVec;
+	current = 0;
+}
+
 void PlantIterator::first() {
-	// TODO - implement PlantIterator::first
-	throw "Not yet implemented";
+	current = 0;
 }
 
 void PlantIterator::next() {
-	// TODO - implement PlantIterator::next
-	throw "Not yet implemented";
+	if (current < plants.size()) {
+		current++;
+	}
 }
 
-void PlantIterator::isDone() {
-	// TODO - implement PlantIterator::isDone
-	throw "Not yet implemented";
+bool PlantIterator::isDone() {
+	return current >= plants.size();
 }
 
 Plant* PlantIterator::currentItem() {
-	// TODO - implement PlantIterator::currentItem
-	throw "Not yet implemented";
+	if (!isDone()){
+		return plants[current];
+	}
+	return nullptr;
 }

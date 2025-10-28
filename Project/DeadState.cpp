@@ -1,6 +1,21 @@
-#include "DeadState.h"
+/**
+ * @file DeadState.cpp
+ * @brief Implementation of the DeadState class methods.
+ * @author Mosa Leiee
+ * @date 26 October 2025
+ */
 
-void DeadState::handle() {
-	// TODO - implement DeadState::handle
-	throw "Not yet implemented";
+#include "DeadState.h"
+#include <iostream>
+using namespace std;
+
+/**
+ * @brief Handle the state-specific behavior of the plant when it is dead.
+ * @param plant Pointer to the Plant object whose state is being handled.
+ */
+
+void DeadState::handle(Plant* plant) {
+	
+	cout<<"The plant is dead and can no longer grow. RIP :"<<endl;
+	
 }

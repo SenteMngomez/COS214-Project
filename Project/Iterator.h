@@ -5,11 +5,13 @@ class Iterator {
 
 
 public:
-	void first();
+	virtual void first() = 0;
 
-	void next();
+	virtual void next() = 0;
 
-	void isDone();
+	virtual bool isDone() = 0;
+
+	virtual ~Iterator(){}
 };
 
 #endif

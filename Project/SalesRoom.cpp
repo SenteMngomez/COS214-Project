@@ -1,3 +1,4 @@
+
 #include "SalesRoom.h"
 
 	SalesRoom::SalesRoom(std::string name):Section(name){}

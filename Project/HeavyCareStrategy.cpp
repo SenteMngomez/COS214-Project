@@ -1,16 +1,39 @@
+/**
+ * @file HeavyCareStrategy.cpp
+ * @brief Implementation of the HeavyCareStrategy class.
+ * This class provides specific care instructions for plants requiring heavy care,
+ * including methods for watering, sunlight, and soil care.
+ * @author Mosa Leiee
+ * @date 26 October 2025
+ */
+
 #include "HeavyCareStrategy.h"
+#include <iostream>
+using namespace std;
 
-void HeavyCareStrategy::water() {
-	// TODO - implement HeavyCareStrategy::water
-	throw "Not yet implemented";
+/**
+ * @brief Provides heavy watering to the plant.
+ * @param plant Pointer to the Plant object to be watered.
+ */
+void HeavyCareStrategy::water(Plant* plant) {
+	
+	cout<<"Giving the plant 300ml of water."<<endl;
 }
 
-void HeavyCareStrategy::sunlight() {
-	// TODO - implement HeavyCareStrategy::sunlight
-	throw "Not yet implemented";
+/**
+ * @brief Provides lots of sunlight to the plant.
+ * @param plant Pointer to the Plant object to receive sunlight.
+ */
+void HeavyCareStrategy::sunlight(Plant* plant) {
+
+	cout<<"Placing the plant in direct sunlight for 7-9 hours."<<endl;
 }
 
-void HeavyCareStrategy::soil() {
-	// TODO - implement HeavyCareStrategy::soil
-	throw "Not yet implemented";
+/**
+ * @brief Cares for the soil with nutrient-rich materials.
+ * @param plant Pointer to the Plant object whose soil is to be cared for.
+ */
+void HeavyCareStrategy::soil(Plant* plant) {
+
+	cout<<"Enriching the soil with nutrient-rich, moist soil."<<endl;
 }
