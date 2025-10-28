@@ -19,7 +19,7 @@
  * without modifying the core Plant class.
  */
 class PlantDecorator :public Plant {
-private:
+protected:
 	Plant* component;
 
 public:

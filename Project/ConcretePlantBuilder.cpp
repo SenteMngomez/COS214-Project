@@ -7,9 +7,9 @@ Plant* ConcretePlantBuilder::buildCompositePlant(vector<Plant*> plants ,std::str
 
         // If multiple plants, group them
         if (plants.size() > 1) {
-            PlantGroup* group = new PlantGroup();
+            PlantGroup* group = new PlantGroup("Group", nullptr, 0.0);
             for (auto* p : plants) {
-                group->add(p);
+                group->add(*p);
             }
             result = group;
         } else {
@@ -18,9 +18,9 @@ Plant* ConcretePlantBuilder::buildCompositePlant(vector<Plant*> plants ,std::str
 
         // Apply decorator if any
         if (decorator == "pot") {
-            result = new DecorativePot(result,decorator);
+            result = new DecorativePot(result, "Decorative", result->getColour(), nullptr, result->getPrice());
         } else if (decorator == "wrap") {
-            result = new GiftWrapDecorator(result);
+            result = new GiftWrapDecorator(result, "Gift Wrap", result->getColour(), nullptr, result->getPrice());
         }
 
         return result;

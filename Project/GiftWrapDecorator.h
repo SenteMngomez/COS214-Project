@@ -35,6 +35,37 @@ public:
      * @brief Print the plant with wrapping details
      */
 	void print() override;
+
+	/**
+     * @brief Clone the decorated plant
+     * @return Pointer to a cloned GiftWrapDecorator
+     */
+	Plant* clone() override;
+
+	/**
+     * @brief Get the type of the decorated plant
+     * @return Type string with wrapping info
+     */
+	string getType() const override;
+
+	/**
+     * @brief Add a child plant (delegates to component if applicable)
+     * @param plant Reference to the plant to add
+     */
+	void add(Plant& plant) override;
+
+	/**
+     * @brief Remove a child plant (delegates to component if applicable)
+     * @param plant Reference to the plant to remove
+     */
+	void remove(Plant& plant) override;
+
+	/**
+     * @brief Get a child plant by tag (delegates to component)
+     * @param tag The tag of the child plant
+     * @return Pointer to the child plant, or nullptr
+     */
+	Plant* getChild(int tag) override;
 };
 
 #endif
