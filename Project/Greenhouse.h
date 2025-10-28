@@ -36,13 +36,13 @@ public:
 	 * @brief Waters a specific plant and notifies observers.
 	 * @param plant The plant to water.
 	 */
-	void waterPlant(Plant* plant);
+	void waterPlant(int tag);
 
 	/**
 	 * @brief Gives sunlight to a specific plant and notifies observers.
 	 * @param plant The plant to give sunlight to.
 	 */
-	void giveSunlight(Plant* plant);
+	void giveSunlight(int tag);
 
 	/**
 	 * @brief A factory method to create an iterator for the plants in this greenhouse.

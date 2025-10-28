@@ -6,14 +6,24 @@
  */
 #include "Greenhouse.h"
 
-void Greenhouse::waterPlant(Plant* plant) {
+void Greenhouse::waterPlant(int tag) {
 	
-	plant->receiveWater();
-	notify(plant);
+	Plant* wateredPlant = nullptr;
 
+	auto it = std::find_if(plants.begin(), plants.end(), [tag](Plant* p) {
+		return p->getTag() == tag;
+	});
+
+	if (it != plants.end()){
+
+		wateredPlant =*it;
+		wateredPlant->receiveWater();
+		notify(wateredPlant); //Notify observers about the removed plant
+		
+	}
 }
 
-void Greenhouse::giveSunlight(Plant* plant) {
+void Greenhouse::giveSunlight(int tag) {
 	
 	plant->receiveSunlight();
 	notify(plant);
