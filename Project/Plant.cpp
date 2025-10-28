@@ -1,4 +1,3 @@
-
 /**
  * @file Plant.cpp
  * @brief Implementation of the Plant base class
@@ -25,6 +24,14 @@ void Plant::receiveSunlight() {
         careStrategy->sunlight(this);
     }
     cout << getType() << " plant received sunlight." << endl;
+}
+
+int Plant::getTag() const{
+	return tag;
+}
+
+void Plant::setTag(int t){
+	tag = t;
 }
 
 void Plant::setState(PlantState* newState) {

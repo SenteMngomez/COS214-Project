@@ -1,4 +1,3 @@
-
 /**
  * @file Plant.h
  * @brief Abstract base class for plants in the nursery simulator
@@ -59,10 +58,11 @@ public:
 	virtual void remove(Plant& plant) = 0;
 
 	/**
-     * @brief Get a child plant by tag
-     * @param tag The tag of the child plant
-     */
-	virtual void getChild(int tag) = 0;
+	 * @brief Get a child plant by tag (composite pattern, if applicable)
+	 * @param tag The tag of the child plant
+	 * @return Pointer to the child plant, or nullptr if not found
+	 */
+	virtual Plant* getChild(int tag) = 0;
 
 	/**
      * @brief Construct a Plant with colour and care strategy
@@ -92,6 +92,18 @@ public:
     double getPrice() const { 
 		return price;
 	}
+
+    /**
+    * @brief Get the tag (unique id) of the plant
+    * @return Integer tag
+     */
+    int getTag() const;
+
+    /**
+    * @brief Set the tag (unique id) of the plant
+    * @param t Integer tag to set
+     */
+    void setTag(int t);
 
     /**
      * @brief Set the state of the plant (for state transitions)

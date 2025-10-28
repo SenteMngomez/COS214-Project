@@ -1,11 +1,19 @@
+/**
+ * @file Tulip.cpp
+ * @brief Implementation of Tulip class
+ * @author Brayden
+ * @date October 26, 2025
+ */
+
 #include "Tulip.h"
 
+Tulip::Tulip(string colour, CareStrategy* careStrategy, double price)
+    : Plant(colour, careStrategy, price) {}
+
 Plant* Tulip::clone() {
-	// TODO - implement Tulip::clone
-	throw "Not yet implemented";
+    return new Tulip(*this);
 }
 
 void Tulip::print() {
-	// TODO - implement Tulip::print
-	throw "Not yet implemented";
+	cout << "Tulip: " << getType() << ", Colour: " << getColour() << ", Price: R" << getPrice() << endl;
 }

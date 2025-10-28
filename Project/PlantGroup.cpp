@@ -1,21 +1,65 @@
+/**
+ * @file PlantGroup.cpp
+ * @brief Implementation of PlantGroup class
+ * @author Brayden
+ * @date October 26, 2025
+ */
+
 #include "PlantGroup.h"
+#include <iostream>
+#include <algorithm>
 
-void PlantGroup::print() {
-	// TODO - implement PlantGroup::print
-	throw "Not yet implemented";
+PlantGroup::PlantGroup(string colour, CareStrategy* careStrategy, double price)
+    : Plant(colour, careStrategy, price) {}
+
+string PlantGroup::getType() const{
+    if(types.empty()) return "PlantGroup";
+    string result;
+    for(size_t i = 0; i < types.size(); ++i){
+        if(i > 0) result += ", ";
+        result += types[i];
+    }
+    return result;
 }
 
-void PlantGroup::add(Plant* plant) {
-	// TODO - implement PlantGroup::add
-	throw "Not yet implemented";
+Plant* PlantGroup::clone(){
+    PlantGroup* clonedGroup = new PlantGroup(getColour(), nullptr, getPrice());
+    for(Plant* child : children){
+        clonedGroup->add(*child->clone());
+    }
+    return clonedGroup;
 }
 
-void PlantGroup::remove(Plant* plant) {
-	// TODO - implement PlantGroup::remove
-	throw "Not yet implemented";
+void PlantGroup::print(){
+    cout << "PlantGroup (" << getType() << "), Price: R" << getPrice() << endl;
+    cout << "Children:" << endl;
+    for(size_t i = 0; i < children.size(); ++i){
+        cout << "  [" << i << "] ";
+        children[i]->print();
+    }
 }
 
-void PlantGroup::getChild(int tag) {
-	// TODO - implement PlantGroup::getChild
-	throw "Not yet implemented";
+void PlantGroup::add(Plant& plant){
+    children.push_back(&plant);
+    types.push_back(plant.getType());
+}
+
+void PlantGroup::remove(Plant& plant){
+    auto it = find(children.begin(), children.end(), &plant);
+    if(it != children.end()){
+        children.erase(it);
+    }
+}
+
+Plant* PlantGroup::getChild(int tag){
+    for(Plant* child : children){
+        if(child && child->getTag() == tag){
+            return child;
+        }
+    }
+    return nullptr;
+}
+
+PlantGroup::~PlantGroup() {
+    
 }
