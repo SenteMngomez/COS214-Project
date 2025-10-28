@@ -1,4 +1,6 @@
 #include "Section.h"
+#include "Person.h"
+#include "Staff.h"
 #include <algorithm>
 
 Section::Section(std::string name):name(name){

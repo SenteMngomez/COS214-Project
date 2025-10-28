@@ -17,3 +17,7 @@ Plant* Begonia::clone() {
 void Begonia::print() {
 	cout << "Begonia: " << getType() << ", Colour: " << getColour() << ", Price: R" << getPrice() << endl;
 }
+
+Plant* Begonia::getChild(int tag){
+	return nullptr;
+}

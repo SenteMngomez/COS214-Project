@@ -6,6 +6,7 @@ class WaterPlant :public Command {
 
 
 public:
+	WaterPlant();
 	virtual void execute(vector<int>* tag,string decorator="");
 };
 

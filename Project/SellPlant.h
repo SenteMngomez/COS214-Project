@@ -9,6 +9,8 @@
 
 #include <iostream>
 using namespace std;
+class PlantBuilder;
+
 class SellPlant :public Command {
 	private:
 		PlantBuilder* builder;

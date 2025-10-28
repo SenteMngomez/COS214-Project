@@ -8,8 +8,9 @@
 #ifndef PLANT_H
 #define PLANT_H
 
-#include "PlantState.h"
+
 #include "CareStrategy.h"
+class PlantState;
 
 #include <string>
 using namespace std;
@@ -135,3 +136,4 @@ public:
 };
 
 #endif
+#include "PlantState.h"

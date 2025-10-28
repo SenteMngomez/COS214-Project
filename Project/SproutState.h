@@ -9,7 +9,6 @@
 #define SPROUTSTATE_H
 
 #include "PlantState.h"
-#include "Plant.h"
 #include "MatureState.h"
 
 /**

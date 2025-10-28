@@ -48,7 +48,7 @@ public:
 	// Composite methods (stubs for leaf plant)
     void add(Plant& plant) override {}
     void remove(Plant& plant) override {}
-    Plant* getChild(int tag) override {}
+    Plant* getChild(int tag) override;
 };
 
 #endif

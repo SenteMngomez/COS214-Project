@@ -5,8 +5,7 @@
 
 #include "Iterator.h"
 #include "ChatIterator.h"
-#include "Person.h"
-#include "Staff.h"
+
 
 #include <string>
 #include <vector>
@@ -24,7 +23,8 @@
  * notify(Person*) method to define how messages are propagated Sections also provide an
  * iterator for traversing the contained chat history.
  */
-
+class Person;
+class Staff;
 class Section {
 
 	public:

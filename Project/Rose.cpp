@@ -17,3 +17,7 @@ Plant* Rose::clone() {
 void Rose::print() {
 	cout << "Rose: " << getType() << ", Colour: " << getColour() << ", Price: R" << getPrice() << endl;
 }
+
+Plant* Rose::getChild(int tag){
+	return nullptr;
+}

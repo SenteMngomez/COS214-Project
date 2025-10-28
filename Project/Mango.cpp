@@ -17,3 +17,7 @@ Plant* Mango::clone() {
 void Mango::print() {
 	cout << "Mango: " << getType() << ", Colour: " << getColour() << ", Price: R" << getPrice() << endl;
 }
+
+Plant* Mango::getChild(int tag){
+	return nullptr;
+}
