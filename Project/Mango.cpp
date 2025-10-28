@@ -1,11 +1,19 @@
+/**
+ * @file Mango.cpp
+ * @brief Implementation of Mango class
+ * @author Brayden
+ * @date October 26, 2025
+ */
+
 #include "Mango.h"
 
+Mango::Mango(string colour, CareStrategy* careStrategy, double price)
+    : Plant(colour, careStrategy, price) {}
+
 Plant* Mango::clone() {
-	// TODO - implement Mango::clone
-	throw "Not yet implemented";
+	return new Mango(*this);
 }
 
 void Mango::print() {
-	// TODO - implement Mango::print
-	throw "Not yet implemented";
+	cout << "Mango: " << getType() << ", Colour: " << getColour() << ", Price: R" << getPrice() << endl;
 }
