@@ -2,12 +2,19 @@
 #define BASICRECEIPTBUILDER_H
 
 #include "ReceiptBuilder.h"
-#include "Receipt.h"
+
+#include "Plant.h"
+#include <vector>
 
 class BasicReceiptBuilder :public ReceiptBuilder {
+private:
+	string sellerName;
+	vector<Plant*> soldPlants;
 
 
 public:
+	BasicReceiptBuilder( string & seller, vector<Plant*> plants);
+
 	Receipt* getResult();
 
 	virtual void addPrice();

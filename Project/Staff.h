@@ -5,10 +5,13 @@
 
 class Staff :public Person {
 
-public:
-	Staff* successor;
-
-	void handleRequest(Person* person);
+	private:
+		Staff* successor;
+	public:
+		Staff(std::string name);
+		void handleRequest(Person* person);
+		virtual void receiveMessage(Person* person, Section* section);
+		void setSuccessor(Staff* successor);
 };
 
 #endif

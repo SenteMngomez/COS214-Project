@@ -2,10 +2,33 @@
 
 Receipt::Receipt() {
 	// TODO - implement Receipt::Receipt
-	throw "Not yet implemented";
+	this->totalPrice = 0.0;
 }
 
 void Receipt::print() {
 	// TODO - implement Receipt::print
-	throw "Not yet implemented";
+	 cout << "\n------ NURSERY RECEIPT ------" << endl;
+        cout << "Seller: " << seller << endl;
+        cout << "Items:" << endl;
+        for (size_t i = 0; i < plants.size(); ++i) {
+            cout << "  - " << plants[i]->getName()
+                 << " (R" << plants[i]->getPrice() << ")" << endl;
+        }
+        cout << "-----------------------------" << endl;
+        cout << "Total: R" << totalPrice << endl;
+        cout << "-----------------------------" << endl;
+    
+	
+}
+
+void Receipt::setSeller(string seller){
+	this->seller = seller;
+}
+
+void Receipt::setTotalPrice(double price){
+	this->totalPrice = price ;
+}
+
+void Receipt::addPlant(Plant* p){
+	plants.push_back(p);
 }

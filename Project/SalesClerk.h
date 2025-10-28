@@ -5,6 +5,7 @@
 
 
 #include <string>
+#include "SellPlant.h"
 using namespace std;
 class SalesClerk : public Staff {
 
@@ -12,9 +13,13 @@ class SalesClerk : public Staff {
 public:
 	void handleRequest(Person* person);
 
-	void sell(int* tag, string decorator);
+	void purchaseComplete(std::string msg);
 
-	void purchaseComplete(int string);
+	void setSellPlantCommannd(SellPlant* sellPlantCommand);
+
+private:
+	SellPlant* sellPlantCommand;
+	void sell(std::vector<int>* tags, string decorator);
 };
 
 #endif

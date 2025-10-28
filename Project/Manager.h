@@ -5,9 +5,9 @@
 
 class Manager :public Staff {
 
-
-public:
-	void handleRequest(Person* person);
+	public:
+		Manager(std::string name);
+		void handleRequest(Person* person);
 };
 
 #endif

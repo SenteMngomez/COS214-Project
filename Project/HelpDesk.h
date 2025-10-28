@@ -6,8 +6,7 @@
 class HelpDesk :public Section {
 
 public:
-	Person* personList;
-
+	HelpDesk(std::string name);
 	void notify(Person* person);
 };
 
