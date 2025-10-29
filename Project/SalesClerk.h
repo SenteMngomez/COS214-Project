@@ -21,6 +21,7 @@ using namespace std;
 class SalesClerk : public Staff {
 
 	public:
+		SalesClerk(string name):Staff(name){}
 
 		SalesClerk(std::string name);
 
@@ -45,6 +46,7 @@ class SalesClerk : public Staff {
 		void setSellPlantCommand(SellPlant* sellPlantCommand);
 
 	private:
+		
 		SellPlant* sellPlantCommand;
 
 		/**

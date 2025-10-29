@@ -15,7 +15,7 @@ Plant* Cactus::clone() {
 }
 
 void Cactus::print() {
-	cout << "Type: " << getType() << ", Colour: " << getColour() << ", Price: R" << getPrice() << endl;
+	cout << "Type: " << getType() << ", Colour: " << getColour() << ", Tag: " << getTag() << ", Price: R" << getPrice() << endl;
 }
 
 Plant* Cactus::getChild(int tag){

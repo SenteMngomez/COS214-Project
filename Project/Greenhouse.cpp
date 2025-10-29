@@ -34,12 +34,17 @@ void Greenhouse::giveSunlight(int tag) {
 
 	if (it != plants.end()){
 
-		sunBathedPlant =*it;
+		sunBathedPlant = *it;
 		sunBathedPlant->receiveWater();
 		notify(sunBathedPlant); 
 		
 	}
 
+}
+
+Iterator *Greenhouse::createIterator()
+{
+    return new PlantIterator(plants);
 }
 
 void Greenhouse::addPlant(Plant* plant) {

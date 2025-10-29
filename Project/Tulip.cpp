@@ -15,7 +15,7 @@ Plant* Tulip::clone() {
 }
 
 void Tulip::print() {
-	cout << "Tulip: " << getType() << ", Colour: " << getColour() << ", Price: R" << getPrice() << endl;
+	cout << "Type: " << getType() << ", Colour: " << getColour() << ", Tag: " << getTag()  << ", Price: R" << getPrice() << endl;
 }
 
 Plant* Tulip::getChild(int tag){

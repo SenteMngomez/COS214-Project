@@ -1,18 +1,110 @@
 #include <iostream>
 #include <string>
 #include <limits>
+
 #include "Plant.h"
 #include "FlowerFactory.h"
 #include "SucculentFactory.h"
 #include "TreeFactory.h"
 #include "SeedState.h"
 #include "Greenhouse.h"
+#include "GreenhouseInterface.h"
+#include "PlantBuilder.h"
+#include "Command.h"
+#include "SellPlant.h"
 #include "Customer.h"
-#include "GroundStaff.h"
+#include "Person.h"
+#include "Staff.h"
+#include "Section.h"
 #include "Manager.h"
+#include "GroundStaff.h"
 #include "SalesClerk.h"
 #include "SalesRoom.h"
 #include "HelpDesk.h"
+#include "Command.h"
+
+
+Customer* newCustomer(vector<Section*> sections){
+
+	cout<<"Please enter your name: ";
+	string name;
+
+	std::getline(std::cin>>std::ws, name);
+	cout<<"\nWelcome, "<<name<<"!\n";
+
+	Customer* nCustomer=new Customer(name);
+
+	for(Section* s:sections){
+
+		s->addPerson(nCustomer);
+		// nCustomer->addSection(s);
+	}
+
+	return nCustomer;
+}
+
+void customerRequest(Customer* customer,string type){
+
+	string message;
+	cout<<"Please enter the message for your "<<type<<" request: ";
+	std::getline(std::cin>>std::ws, message);
+
+	if(type=="Purchase"){
+
+		cout<<"Please enter the tags of the plants you would like (Type -1 to finish):\n";
+
+		int tag;
+		vector<int>* tags=new vector<int>();
+
+		while(true){
+            cout<<"Tag: ";
+            if(!(std::cin>>tag)){
+                
+                cout<<"Invalid input. Please enter a valid tag (or -1 to finish)."<<endl;
+                std::cin.clear();
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+                continue;
+            }
+            if(tag==-1)break;
+            tags->push_back(tag);
+        }
+
+		int decorate;
+		cout<<"Would you like your plants in:\n\t1.Wrap\n\t2.Flower Pot\n\t3.None\n";
+		cout<<"Enter here: ";
+		std::cin>>decorate;
+
+		if(decorate==1||decorate==2){
+			
+			string decorator=(decorate==1)?"wrap":"pot";
+
+			customer->sendMessage(message,type,tags,decorator);
+
+		}else{
+			customer->sendMessage(message,type,tags);
+		}
+		
+	}else if(type=="Help"){
+
+		customer->sendMessage(message,type);
+	}else{
+
+		cout<<"Invalid request type\n";
+	}
+
+}
+
+void clearScreen() {
+    std::cout << "\033[2J\033[H" << std::flush;
+}
+
+void handleSales(){
+
+}
+
+
+
+
 
 using namespace std;
 
@@ -90,16 +182,46 @@ void clearScreen() {
     std::cout << "\033[2J\033[H" << std::flush;
 }
 
-int main() {
 
-	cout<<"=========GreenGreenGreen=========\nAre you a:\n\t1.Customer\n\t2.Admin\n";
-	int choicePerson;
+
+int main() {
+    cout<<"Welcome to greenHome"<<endl;
+    vector<Staff*> staffMembers;
+
+    Greenhouse greenhouse("Green Home");
+
+    FlowerFactory flowerFactory;
+    SucculentFactory succulentFactory;
+    TreeFactory treeFactory;
+    PlantBuilder* pd ;
+    SellPlant* saleCommand = new SellPlant(pd);
+
+    Plant* rose = flowerFactory.createPlant("Rose");
+    Plant* cactus = succulentFactory.createPlant("Cactus");
+    Plant* oak = treeFactory.createPlant("Oak");
+
+    greenhouse.addPlant(rose);
+    greenhouse.addPlant(cactus);
+    greenhouse.addPlant(oak);
+
+    greenhouse.showPlants();
+
+   int choicePerson;
 	
 	vector<Section*> rooms;
 
-	Staff* salesMan1=new SalesClerk("Brett Hands");
+	SalesClerk* salesMan1=new SalesClerk("Brett Hands");
 	Staff* groundsMan1=new GroundStaff("Mick Jagger");
 	Manager* manager1=new Manager("Franklin Saint");
+
+    staffMembers.push_back(salesMan1);
+    staffMembers.push_back(groundsMan1);
+    staffMembers.push_back(manager1);
+
+    
+    salesMan1->setSellPlantCommand(saleCommand);
+
+    
 
 	manager1->setSuccessor(salesMan1);
 	salesMan1->setSuccessor(groundsMan1);
@@ -119,6 +241,7 @@ int main() {
 	rooms.push_back(help1);
 	rooms.push_back(sales1);
 
+    cout<<"Please enter option 1 for customer or option 2 if you are part of staff :) ";
 	if(std::cin>>choicePerson){
 
 		Person* person;
@@ -157,6 +280,9 @@ int main() {
 
 		cout<<"Invalid option. Enter 1 or 2.";
 	}
+
+    cout<<manager1->getMessage()<<endl;
+    
     
     return 0;
 }
