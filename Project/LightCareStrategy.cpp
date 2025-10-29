@@ -17,7 +17,7 @@ using namespace std;
  */
 void LightCareStrategy::water(Plant* plant) {
 
-	cout<<"Giving the plant 50ml of water."<<endl;
+	cout<<"Giving the "<< plant->getType() << " 50ml of water."<<endl;
 }
 
 /**
@@ -26,7 +26,7 @@ void LightCareStrategy::water(Plant* plant) {
  */
 void LightCareStrategy::sunlight(Plant* plant) {
 
-	cout<<"Placing the plant in partial sunlight for 5 hours."<<endl;
+	cout<<"Placing the "<< plant->getType() <<" in partial sunlight for 5 hours."<<endl;
 }
 
 /**
@@ -35,5 +35,5 @@ void LightCareStrategy::sunlight(Plant* plant) {
  */
 void LightCareStrategy::soil(Plant* plant) {
 
-	cout<<"Using sandy or well-drained soil."<<endl;
+	cout<<"Using sandy or well-drained soil for the " <<plant->getType()<<endl;
 }
