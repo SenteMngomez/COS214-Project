@@ -25,6 +25,8 @@ class SalesClerk : public Staff {
 
 		//SalesClerk(std::string name);
 
+		// void setReceipt(Receipt* r);
+
 		/**
 		 * @brief Handles a request sent by a person. SalesClerk will handle
 		 *        requests of type "Purchase"; otherwise it should delegate to the
@@ -45,16 +47,19 @@ class SalesClerk : public Staff {
 		 */
 		void setSellPlantCommand(SellPlant* sellPlantCommand);
 
-	private:
-		
-		SellPlant* sellPlantCommand;
-
 		/**
 		 * @brief Performs the sale using provided plant tags and decorator.
 		 * @param tags Vector of plant tag IDs to sell.
 		 * @param decorator The decorator to apply to sold plants.
 		 */
 		void sell(std::vector<int>* tags, string decorator);
+
+	private:
+		
+		SellPlant* sellPlantCommand;
+		Receipt* CustomerReceipt;
+
+		
 };
 
 #endif

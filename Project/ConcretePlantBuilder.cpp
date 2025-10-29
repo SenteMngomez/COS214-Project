@@ -1,6 +1,6 @@
 #include "ConcretePlantBuilder.h"
 
-Plant* ConcretePlantBuilder::buildCompositePlant(const vector<Plant*>& plants ,const std::string& decorator){
+Plant* ConcretePlantBuilder::buildCompositePlant( vector<Plant*> plants , std::string& decorator){
         if (plants.empty()) return nullptr;
 
         Plant* result = nullptr;

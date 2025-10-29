@@ -3,6 +3,7 @@
 BasicReceiptBuilder::BasicReceiptBuilder(string &seller , vector<Plant*> plants){
 	this->sellerName = seller ;
 	this->soldPlants = plants;
+	this->receipt = new Receipt();;
 
 }
 

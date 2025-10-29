@@ -12,6 +12,7 @@ protected:
 	Inventory* inventory;
 
 public:
+	virtual void setGreenhouse(Greenhouse* gh)=0;
 	virtual void execute(vector<int>* tag,string decorator="") = 0;
 };
 

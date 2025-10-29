@@ -9,7 +9,7 @@ class PlantBuilder {
 public:
     virtual ~PlantBuilder() = default;
 
-    virtual Plant* buildCompositePlant(const std::vector<Plant*>& plants, const std::string& decorator) = 0;
+    virtual Plant* buildCompositePlant(std::vector<Plant*> plants,std::string& decorator) = 0;
 };
 
 

@@ -22,8 +22,6 @@
 #include "SalesRoom.h"
 #include "HelpDesk.h"
 #include "Command.h"
-#include "ConcretePlantBuilder.h"
-using namespace std;
 
 
 Customer* newCustomer(vector<Section*> sections){
@@ -191,8 +189,11 @@ int main() {
     FlowerFactory flowerFactory;
     SucculentFactory succulentFactory;
     TreeFactory treeFactory;
-    PlantBuilder* pd= new ConcretePlantBuilder();
+    PlantBuilder* pd = new ConcretePlantBuilder();
+    SalesAssistance* sa = new SalesAssistance();  // Create SalesAssistance
     SellPlant* saleCommand = new SellPlant(pd);
+    saleCommand->setGreenhouse(&greenhouse);
+    saleCommand->setSalesAssitance(sa);
 
     Plant* rose = flowerFactory.createPlant("Rose");
     Plant* cactus = succulentFactory.createPlant("Cactus");
@@ -233,6 +234,9 @@ int main() {
 
 	sales1->addPerson(manager1);
 	sales1->addPerson(salesMan1);
+
+    // salesMan1->addSection(help1);
+    salesMan1->addSection(sales1);
 
 	rooms.push_back(help1);
 	rooms.push_back(sales1);
@@ -304,9 +308,9 @@ int main() {
 
 		cout<<"Invalid option. Enter 1 or 2.";
 	}
+   
 
-    cout<<manager1->getMessage()<<endl;
-    
+
     
     return 0;
 }
