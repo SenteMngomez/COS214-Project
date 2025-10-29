@@ -256,6 +256,34 @@ int main() {
 
 			if(choiceReq==1){
 				greenhouse.showPlants();
+				cout<<"Select next action:\n\t1.Purchase a plant\n\t2.Ask for help\n\t3.Exit\n";
+				int choiceReq2;
+				cout<<"Enter here: ";
+				if (std::cin>>choiceReq2){
+
+				
+					if (choiceReq2 == 3){
+						std::cout<<"Thank you visiting GreenHome. Goodbye!"<<endl;
+						return 0;
+					}
+					else if (choiceReq2 == 1|| choiceReq2 == 2){
+
+						string type=(choiceReq==1)?"Purchase":"Help";
+
+						Customer* customer=dynamic_cast<Customer*>(person);
+
+						if(customer){
+							customerRequest(customer,type);
+						}else{
+
+							std::cerr << "Error: selected person is not a Customer\n";
+						}
+
+					}
+				}else{
+					cout<<"Invalid option. Enter 1, 2 or 3";
+				}
+
 			}else if(choiceReq==2||choiceReq==3){
 
 				string type=(choiceReq==2)?"Purchase":"Help";
