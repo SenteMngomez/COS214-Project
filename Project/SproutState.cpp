@@ -16,10 +16,10 @@ using namespace std;
 
 void SproutState::handle(Plant* plant) {
 	
-	cout<<"The sprout is growing and needs care."<<endl;
+	cout<<"The " <<plant->getType() <<" sprout is growing and needs care."<<endl;
 	plant->receiveWater();
 	plant->receiveSunlight();
 
-	cout<<"The sprout has finally matured into a full plant. #grown"<<endl;
+	cout<<"The sprout has finally matured into a full "<<plant->getType()<<". #grown"<<endl;
 	plant->setState(new MatureState());
 }
