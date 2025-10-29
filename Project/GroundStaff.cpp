@@ -21,7 +21,7 @@ void GroundStaff::handleRequest(Person* person){
 
 		}
 
-		std::cout<<"Ground staff-"<<this->getName()<<" will care for plants: "<<plants<<"\nRequest made by "<<person->getName()<<std::endl;
+		std::cout<<"(Ground staff)"<<this->getName()<<" will care for plants: "<<plants<<"\nRequest made by "<<person->getName()<<std::endl;
 
 		careForPlant(person->getTags());
 		
@@ -38,7 +38,7 @@ void GroundStaff::careForPlant(std::vector<int>* tags) {
 		waterPlantCmd->execute(tags);
 	}else{
 
-		std::cout<<getName()<<": Unable to water plant(s)\n";
+		std::cout<<getName()<<"Unable to water plant(s)\n";
 	}
 	
 	if(giveSunCmd){
@@ -46,7 +46,7 @@ void GroundStaff::careForPlant(std::vector<int>* tags) {
 		giveSunCmd->execute(tags);
 	}else{
 
-		std::cout<<getName()<<": Unable to give sunlight to plant(s)\n";
+		std::cout<<getName()<<"Unable to give sunlight to plant(s)\n";
 	}
 	
 

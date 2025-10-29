@@ -108,7 +108,79 @@ void handleSales(){
 
 using namespace std;
 
+Customer* newCustomer(vector<Section*> sections){
 
+	cout<<"Please enter your name: ";
+	string name;
+
+	std::getline(std::cin>>std::ws, name);
+	cout<<"\nWelcome, "<<name<<"!\n";
+
+	Customer* nCustomer=new Customer(name);
+
+	for(Section* s:sections){
+
+		s->addPerson(nCustomer);
+		nCustomer->addSection(s);
+	}
+
+	return nCustomer;
+}
+
+void customerRequest(Customer* customer,string type){
+
+	string message;
+	cout<<"Please enter the message for your "<<type<<" request: ";
+	std::getline(std::cin>>std::ws, message);
+
+	if(type=="Purchase"){
+
+		cout<<"Please enter the tags of the plants you would like (Type -1 to finish):\n";
+
+		int tag;
+		vector<int>* tags=new vector<int>();
+
+		while(true){
+            cout<<"Tag: ";
+            if(!(std::cin>>tag)){
+                
+                cout<<"Invalid input. Please enter a valid tag (or -1 to finish)."<<endl;
+                std::cin.clear();
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+                continue;
+            }
+            if(tag==-1)break;
+            tags->push_back(tag);
+        }
+
+		int decorate;
+		cout<<"Would you like your plants in:\n\t1.Wrap\n\t2.Flower Pot\n\t3.None\n";
+		cout<<"Enter here: ";
+		std::cin>>decorate;
+
+		if(decorate==1||decorate==2){
+			
+			string decorator=(decorate==1)?"wrap":"pot";
+
+			customer->sendMessage(message,type,tags,decorator);
+
+		}else{
+			customer->sendMessage(message,type,tags);
+		}
+		
+	}else if(type=="Help"){
+
+		customer->sendMessage(message,type);
+	}else{
+
+		cout<<"Invalid request type\n";
+	}
+
+}
+
+void clearScreen() {
+    std::cout << "\033[2J\033[H" << std::flush;
+}
 
 
 
@@ -213,5 +285,4 @@ int main() {
     
     
     return 0;
-
 }

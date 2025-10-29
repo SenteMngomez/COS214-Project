@@ -32,7 +32,7 @@ class Staff :public Person {
 		 *        handle the request it should pass it to its successor.
 		 * @param person The person who made the request.
 		 */
-		void handleRequest(Person* person);
+		virtual void handleRequest(Person* person);
 
 		/**
 		 * @brief Receives a message from another person sent through a section.

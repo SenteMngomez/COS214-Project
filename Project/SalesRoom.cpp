@@ -10,6 +10,8 @@
 			p->receiveMessage(person,this);
 		}
 
+		addToHistory(person);
+
 		if(admin){
 			admin->handleRequest(person);
 			return;
