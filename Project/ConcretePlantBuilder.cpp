@@ -18,7 +18,7 @@ Plant* ConcretePlantBuilder::buildCompositePlant(vector<Plant*> plants ,std::str
 
         // Apply decorator if any
         if (decorator == "pot") {
-            result = new DecorativePot(result, "Decorative", result->getColour(), nullptr, result->getPrice());
+            result = new DecorativePot(result,decorator,result->getColour(),result->getCareStrategy(),result->getPrice());
         } else if (decorator == "wrap") {
             result = new GiftWrapDecorator(result, "Gift Wrap", result->getColour(), nullptr, result->getPrice());
         }
