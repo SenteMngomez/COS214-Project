@@ -185,7 +185,6 @@ void handleSales(){
 
 int main() {
     cout<<"Welcome to greenHome"<<endl;
-    vector<Staff*> staffMembers;
 
     Greenhouse greenhouse("Green Home");
 
@@ -193,7 +192,7 @@ int main() {
     SucculentFactory succulentFactory;
     TreeFactory treeFactory;
     PlantBuilder* pd = new ConcretePlantBuilder();
-    SalesAssistance* sa = new SalesAssistance();  // Create SalesAssistance
+    SalesAssistance* sa = new SalesAssistance();  
     SellPlant* saleCommand = new SellPlant(pd);
     saleCommand->setGreenhouse(&greenhouse);
     saleCommand->setSalesAssitance(sa);
@@ -213,10 +212,6 @@ int main() {
 	SalesClerk* salesMan1=new SalesClerk("Brett Hands");
 	Staff* groundsMan1=new GroundStaff("Mick Jagger");
 	Manager* manager1=new Manager("Franklin Saint");
-
-    staffMembers.push_back(salesMan1);
-    staffMembers.push_back(groundsMan1);
-    staffMembers.push_back(manager1);
 
     
     salesMan1->setSellPlantCommand(saleCommand);
@@ -245,7 +240,8 @@ int main() {
 	rooms.push_back(sales1);
 
     cout<<"Please enter option 1 for customer or option 2 if you are part of staff :) ";
-	if(std::cin>>choicePerson){
+    std::cin>>choicePerson;
+	if(choicePerson == 1){
 
 		Person* person;
 
@@ -253,63 +249,89 @@ int main() {
 
 			person=newCustomer(rooms);
 		}
+        //loop prob goes here 
+        //bool flag 
+        /*
+            while(flag){
+            }       
+        */
+       bool flag = true ;
+       while(flag==true){
+          clearScreen();
 
-		clearScreen();
+            cout<<"Select next action:\n\t1.View Plants\n\t2.Purchase a plant\n\t3.Ask for help\n";
+            int choiceReq;
+            cout<<"Enter here: ";
+            if(std::cin>>choiceReq){
 
-		cout<<"Select next action:\n\t1.View Plants\n\t2.Purchase a plant\n\t3.Ask for help\n";
-		int choiceReq;
-		cout<<"Enter here: ";
-		if(std::cin>>choiceReq){
+                if(choiceReq==1){
+                    greenhouse.showPlants();
+                    cout<<"Select next action:\n\t1.Purchase a plant\n\t2.Ask for help\n\t3.Exit\n";
+                    int choiceReq2;
+                    cout<<"Enter here: ";
+                    if (std::cin>>choiceReq2){
 
-			if(choiceReq==1){
-				greenhouse.showPlants();
-				cout<<"Select next action:\n\t1.Purchase a plant\n\t2.Ask for help\n\t3.Exit\n";
-				int choiceReq2;
-				cout<<"Enter here: ";
-				if (std::cin>>choiceReq2){
+                    
+                        if (choiceReq2 == 3){
+                            std::cout<<"Thank you visiting GreenHome. Goodbye!"<<endl;
+                            return 0;
+                        }
+                        else if (choiceReq2 == 1|| choiceReq2 == 2){
 
-				
-					if (choiceReq2 == 3){
-						std::cout<<"Thank you visiting GreenHome. Goodbye!"<<endl;
-						return 0;
-					}
-					else if (choiceReq2 == 1|| choiceReq2 == 2){
+                            string type=(choiceReq==1)?"Purchase":"Help";
 
-						string type=(choiceReq==1)?"Purchase":"Help";
+                            Customer* customer=dynamic_cast<Customer*>(person);
 
-						Customer* customer=dynamic_cast<Customer*>(person);
+                            if(customer){
+                                customerRequest(customer,type);
+                            }else{
 
-						if(customer){
-							customerRequest(customer,type);
-						}else{
+                                std::cerr << "Error: selected person is not a Customer\n";
+                            }
 
-							std::cerr << "Error: selected person is not a Customer\n";
-						}
+                        }
+                    }else{
+                        cout<<"Invalid option. Enter 1, 2 or 3";
+                    }
 
-					}
-				}else{
-					cout<<"Invalid option. Enter 1, 2 or 3";
-				}
+                }else if(choiceReq==2||choiceReq==3){
 
-			}else if(choiceReq==2||choiceReq==3){
+                    string type=(choiceReq==2)?"Purchase":"Help";
 
-				string type=(choiceReq==2)?"Purchase":"Help";
+                    Customer* customer=dynamic_cast<Customer*>(person);
 
-				Customer* customer=dynamic_cast<Customer*>(person);
+                    if(customer){
+                        customerRequest(customer,type);
+                    }else{
 
-				if(customer){
-					customerRequest(customer,type);
-				}else{
+                        std::cerr << "Error: selected person is not a Customer\n";
+                    }
 
-					std::cerr << "Error: selected person is not a Customer\n";
-				}
+                }
+            }
+            cout<<"need anything else ?\n1.yes \n2.No";
+            int op ;
+            cin>>op;
+            if(op==1){
+                flag = true;
+            }else{
+                flag = false ;
+            }
+       }
+		
+        /*
+            as in loop ends here  no need to ask the user anything more :)
+        */
 
-			}
-		}
 
+        //add the loop to ask if theres anything else 
 	}else{
+        //adding new plants to the inventory 
+        //removing plants from the inventory
+        //sending the request to the ground staff ?? how cause the request the could reach manager is in the first if block ??
+        //
+        cout<< "Welcome back staff member :) hope you are ready to work"<<endl;
 
-		cout<<"Invalid option. Enter 1 or 2.";
 	}
    
 
