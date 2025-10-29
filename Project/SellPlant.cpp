@@ -1,6 +1,8 @@
 #include "SellPlant.h"
 #include "PlantBuilder.h"
 
+SellPlant::SellPlant(PlantBuilder* pb):Command(){}
+
 void SellPlant::execute(vector<int>* tag, string decorator) {
 	// TODO - implement SellPlant::execute
 	if(!tag){

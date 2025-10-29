@@ -22,6 +22,7 @@
 #include "SalesRoom.h"
 #include "HelpDesk.h"
 #include "Command.h"
+#include "ConcretePlantBuilder.h"
 using namespace std;
 
 
@@ -190,7 +191,7 @@ int main() {
     FlowerFactory flowerFactory;
     SucculentFactory succulentFactory;
     TreeFactory treeFactory;
-    PlantBuilder* pd ;
+    PlantBuilder* pd= new ConcretePlantBuilder();
     SellPlant* saleCommand = new SellPlant(pd);
 
     Plant* rose = flowerFactory.createPlant("Rose");
@@ -200,8 +201,6 @@ int main() {
     greenhouse.addPlant(rose);
     greenhouse.addPlant(cactus);
     greenhouse.addPlant(oak);
-
-    greenhouse.showPlants();
 
    int choicePerson;
 	
@@ -256,7 +255,7 @@ int main() {
 		if(std::cin>>choiceReq){
 
 			if(choiceReq==1){
-
+				greenhouse.showPlants();
 			}else if(choiceReq==2||choiceReq==3){
 
 				string type=(choiceReq==2)?"Purchase":"Help";
