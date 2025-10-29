@@ -21,6 +21,7 @@ using namespace std;
 class SalesClerk : public Staff {
 
 	public:
+		SalesClerk(string name):Staff(name){}
 
 		/**
 		 * @brief Handles a request sent by a person. SalesClerk will handle
@@ -43,6 +44,7 @@ class SalesClerk : public Staff {
 		void setSellPlantCommand(SellPlant* sellPlantCommand);
 
 	private:
+		
 		SellPlant* sellPlantCommand;
 
 		/**
