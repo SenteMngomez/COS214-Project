@@ -19,7 +19,7 @@ public:
 	void setSeller( string seller);
 	void addPlant(Plant* P);
 	void setTotalPrice(double price);
-
+	string toString();  // New method to get receipt as string so it can returned to customer 
 	void print();
 };
 

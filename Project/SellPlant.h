@@ -25,6 +25,7 @@ public:
 
 	void setGreenhouse(Greenhouse* gh);
 	void setSalesAssitance(SalesAssistance* sBuild);
+	string getReceipt();
 	void execute(vector<int>* tag, string decorator="");
 };
 

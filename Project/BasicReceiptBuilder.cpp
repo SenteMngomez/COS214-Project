@@ -15,7 +15,7 @@ Receipt* BasicReceiptBuilder::getResult() {
 void BasicReceiptBuilder::addPrice(){
 	double price =0.0 ;
 	for(size_t i = 0; i < soldPlants.size(); ++i){
-		// price = soldPlants[i].getPrice();
+		price += soldPlants[i]->getPrice();
 	}
 	receipt->setTotalPrice(price);
 }

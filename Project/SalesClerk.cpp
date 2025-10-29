@@ -20,7 +20,7 @@ void SalesClerk::sell(std::vector<int>* tags, string decorator) {
 	
 	if(sellPlantCommand){
 		sellPlantCommand->execute(tags,decorator);
-
+		// purchaseComplete(sellPlantCommand->getReceipt());
 	}else{
 
 		std::cout<<"Unable to make sale\n";

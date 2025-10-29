@@ -22,6 +22,9 @@
 #include "SalesRoom.h"
 #include "HelpDesk.h"
 #include "Command.h"
+#include "ConcretePlantBuilder.h"
+using namespace std;
+
 
 
 Customer* newCustomer(vector<Section*> sections){
@@ -37,7 +40,7 @@ Customer* newCustomer(vector<Section*> sections){
 	for(Section* s:sections){
 
 		s->addPerson(nCustomer);
-		// nCustomer->addSection(s);
+		nCustomer->addSection(s);
 	}
 
 	return nCustomer;

@@ -32,3 +32,18 @@ void Receipt::setTotalPrice(double price){
 void Receipt::addPlant(Plant* p){
 	plants.push_back(p);
 }
+
+string Receipt::toString(){
+    string result;
+    result += "\n------ NURSERY RECEIPT ------\n";
+    result += "Seller: " + seller + "\n";
+    result += "Items:\n";
+    for(size_t i = 0; i < plants.size(); ++i){
+        result += "  - " + plants[i]->getType() + 
+                 " (R" + to_string(plants[i]->getPrice()) + ")\n";
+    }
+    result += "-----------------------------\n";
+    result += "Total: R" + to_string(totalPrice) + "\n";
+    result += "-----------------------------\n";
+    return result;
+}

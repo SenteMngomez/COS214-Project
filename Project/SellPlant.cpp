@@ -18,12 +18,13 @@ void SellPlant::setSalesAssitance(SalesAssistance* sa){
     }
 }
 void SellPlant::execute(vector<int>* tag, string decorator){
+	// cout<<"HII"<<endl;
 	vector<Plant*> soldPlants;
 	for(int i :*tag){
-		if(inventory){
-			 Plant* p = greenHouse->removePlant(i);
-        	if (p) soldPlants.push_back(p);
-		}
+		// cout<<"hello"<<endl;
+		Plant* p = greenHouse->removePlant(i);
+		if (p) soldPlants.push_back(p);
+		
 	}
 
 	if (soldPlants.empty()) return;
@@ -32,15 +33,23 @@ void SellPlant::execute(vector<int>* tag, string decorator){
 	string sellerName = "Green Home"; // Or get from somewhere
     BasicReceiptBuilder* receiptBuilder = new BasicReceiptBuilder(sellerName, soldPlants);
 
+	// if(sBuild){
+	// 	delete sBuild;
+	// }
 	sBuild->setBuilder(receiptBuilder);
 	r = sBuild->constructReceipt();
-	if(r){
-		r->print();
-	}
+
     std::cout << "Selling " 
               << (soldPlants.size() > 1 ? "group of plants" : "single plant")
               << " from greenhouse " << greenHouse->getName() << std::endl;
 
 	delete receiptBuilder;
-	
 }
+
+string SellPlant::getReceipt(){
+    if(r){
+        return r->toString();
+    }
+    return "No receipt available";
+}
+
