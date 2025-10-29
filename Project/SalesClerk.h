@@ -21,9 +21,9 @@ using namespace std;
 class SalesClerk : public Staff {
 
 	public:
-		SalesClerk(string name):Staff(name){}
+		SalesClerk(string name);
 
-		SalesClerk(std::string name);
+		//SalesClerk(std::string name);
 
 		/**
 		 * @brief Handles a request sent by a person. SalesClerk will handle

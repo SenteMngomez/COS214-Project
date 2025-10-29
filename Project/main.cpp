@@ -22,6 +22,7 @@
 #include "SalesRoom.h"
 #include "HelpDesk.h"
 #include "Command.h"
+using namespace std;
 
 
 Customer* newCustomer(vector<Section*> sections){
@@ -104,83 +105,79 @@ void handleSales(){
 
 
 
+// Customer* newCustomer(vector<Section*> sections){
 
+// 	cout<<"Please enter your name: ";
+// 	string name;
 
-using namespace std;
+// 	std::getline(std::cin>>std::ws, name);
+// 	cout<<"\nWelcome, "<<name<<"!\n";
 
-Customer* newCustomer(vector<Section*> sections){
+// 	Customer* nCustomer=new Customer(name);
 
-	cout<<"Please enter your name: ";
-	string name;
+// 	for(Section* s:sections){
 
-	std::getline(std::cin>>std::ws, name);
-	cout<<"\nWelcome, "<<name<<"!\n";
+// 		s->addPerson(nCustomer);
+// 		nCustomer->addSection(s);
+// 	}
 
-	Customer* nCustomer=new Customer(name);
+// 	return nCustomer;
+// }
 
-	for(Section* s:sections){
+// void customerRequest(Customer* customer,string type){
 
-		s->addPerson(nCustomer);
-		nCustomer->addSection(s);
-	}
+// 	string message;
+// 	cout<<"Please enter the message for your "<<type<<" request: ";
+// 	std::getline(std::cin>>std::ws, message);
 
-	return nCustomer;
-}
+// 	if(type=="Purchase"){
 
-void customerRequest(Customer* customer,string type){
+// 		cout<<"Please enter the tags of the plants you would like (Type -1 to finish):\n";
 
-	string message;
-	cout<<"Please enter the message for your "<<type<<" request: ";
-	std::getline(std::cin>>std::ws, message);
+// 		int tag;
+// 		vector<int>* tags=new vector<int>();
 
-	if(type=="Purchase"){
-
-		cout<<"Please enter the tags of the plants you would like (Type -1 to finish):\n";
-
-		int tag;
-		vector<int>* tags=new vector<int>();
-
-		while(true){
-            cout<<"Tag: ";
-            if(!(std::cin>>tag)){
+// 		while(true){
+//             cout<<"Tag: ";
+//             if(!(std::cin>>tag)){
                 
-                cout<<"Invalid input. Please enter a valid tag (or -1 to finish)."<<endl;
-                std::cin.clear();
-                std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
-                continue;
-            }
-            if(tag==-1)break;
-            tags->push_back(tag);
-        }
+//                 cout<<"Invalid input. Please enter a valid tag (or -1 to finish)."<<endl;
+//                 std::cin.clear();
+//                 std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+//                 continue;
+//             }
+//             if(tag==-1)break;
+//             tags->push_back(tag);
+//         }
 
-		int decorate;
-		cout<<"Would you like your plants in:\n\t1.Wrap\n\t2.Flower Pot\n\t3.None\n";
-		cout<<"Enter here: ";
-		std::cin>>decorate;
+// 		int decorate;
+// 		cout<<"Would you like your plants in:\n\t1.Wrap\n\t2.Flower Pot\n\t3.None\n";
+// 		cout<<"Enter here: ";
+// 		std::cin>>decorate;
 
-		if(decorate==1||decorate==2){
+// 		if(decorate==1||decorate==2){
 			
-			string decorator=(decorate==1)?"wrap":"pot";
+// 			string decorator=(decorate==1)?"wrap":"pot";
 
-			customer->sendMessage(message,type,tags,decorator);
+// 			customer->sendMessage(message,type,tags,decorator);
 
-		}else{
-			customer->sendMessage(message,type,tags);
-		}
+// 		}else{
+// 			customer->sendMessage(message,type,tags);
+// 		}
 		
-	}else if(type=="Help"){
+// 	}else if(type=="Help"){
 
-		customer->sendMessage(message,type);
-	}else{
+// 		customer->sendMessage(message,type);
+// 	}else{
 
-		cout<<"Invalid request type\n";
-	}
+// 		cout<<"Invalid request type\n";
+// 	}
 
-}
+// }
 
-void clearScreen() {
-    std::cout << "\033[2J\033[H" << std::flush;
-}
+// void clearScreen() {
+//     std::cout << "\033[2J\033[H" << std::flush;
+// }
 
 
 
