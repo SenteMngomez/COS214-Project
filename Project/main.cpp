@@ -101,7 +101,12 @@ void clearScreen() {
     std::cout << "\033[2J\033[H" << std::flush;
 }
 
-void handleAddPlant(){
+void handleCarePlant(Manager* manager,string Type){/*calls the ground stuff through the mediator
+                                                    to handle the plants that need to be cared for */ 
+
+}
+
+void handleAddPlant(Manager* manager,string Type){
 
 }
 
@@ -274,10 +279,19 @@ int main() {
         bool flag = true ;
         while(flag == true){
 
-
-            
+            cout<<"1.CareForPlant \n2.addPlant "<<endl;
+            int op2;
+            cout<<"What will we be doing today ? ";
+            cin>>op2;
+            if(op2==1){
+                string type= "Care";
+                handleCarePlant(manager1,type);
+            }else{
+                string type;
+                handleAddPlant(manager1,type);
+            }
           
-              cout<<"\nneed anything else ?\n1.yes \n2.No";
+            cout<<"\nneed anything else ?\n1.yes \n2.No";
             int op ;
             cin>>op;
             if(op==1){
