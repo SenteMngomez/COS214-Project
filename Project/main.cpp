@@ -103,10 +103,60 @@ void clearScreen() {
 
 void handleCarePlant(Manager* manager,string Type){/*calls the ground stuff through the mediator
                                                     to handle the plants that need to be cared for */ 
+    
+    string message;
+	cout<<"Please enter the message for your  request: ";
+	std::getline(std::cin>>std::ws, message);
 
+    
+
+    cout<<"Please enter the tags of the plants you would like (Type -1 to finish):\n";
+
+    int tag;
+    vector<int>* tags=new vector<int>();
+
+    while(true){
+        cout<<"Tag: ";
+        if(!(std::cin>>tag)){
+            
+            cout<<"Invalid input. Please enter a valid tag (or -1 to finish)."<<endl;
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+            continue;
+        }
+        if(tag==-1)break;
+        tags->push_back(tag);
+    }
+
+    manager->sendMessage(message,Type,tags);
 }
 
 void handleAddPlant(Manager* manager,string Type){
+    string message;
+	cout<<"Please enter the message for your  request: ";
+	std::getline(std::cin>>std::ws, message);
+
+    
+
+    cout<<"Please enter the tags of the plants you would like (Type -1 to finish):\n";
+
+    int tag;
+    vector<int>* tags=new vector<int>();
+
+    while(true){
+        cout<<"Tag: ";
+        if(!(std::cin>>tag)){
+            
+            cout<<"Invalid input. Please enter a valid tag (or -1 to finish)."<<endl;
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+            continue;
+        }
+        if(tag==-1)break;
+        tags->push_back(tag);
+    }
+
+    manager->sendMessage(message,Type,tags);
 
 }
 
@@ -161,6 +211,8 @@ int main() {
 
 	sales1->addPerson(manager1);
 	sales1->addPerson(salesMan1);
+
+    manager1->addSection(help1);
 
     // salesMan1->addSection(help1);
     salesMan1->addSection(sales1);
@@ -285,12 +337,14 @@ int main() {
             cin>>op2;
             if(op2==1){
                 string type= "Care";
+                greenhouse.showPlants();
                 handleCarePlant(manager1,type);
             }else{
-                string type;
+                string type="Add";
                 handleAddPlant(manager1,type);
             }
           
+            // clearScreen();
             cout<<"\nneed anything else ?\n1.yes \n2.No";
             int op ;
             cin>>op;
