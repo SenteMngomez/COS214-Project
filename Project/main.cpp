@@ -340,6 +340,7 @@ int main() {
                 greenhouse.showPlants();
                 handleCarePlant(manager1,type);
             }else{
+                //firgure out th plant to add 
                 string type="Add";
                 handleAddPlant(manager1,type);
             }
