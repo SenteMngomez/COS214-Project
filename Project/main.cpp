@@ -331,7 +331,7 @@ int main() {
         bool flag = true ;
         while(flag == true){
 
-            cout<<"1.CareForPlant \n2.addPlant "<<endl;
+            cout<<"1.CareForPlant \n2.addPlant \n3.RemovePlant "<<endl;
             int op2;
             cout<<"What will we be doing today ? ";
             cin>>op2;
@@ -339,10 +339,64 @@ int main() {
                 string type= "Care";
                 greenhouse.showPlants();
                 handleCarePlant(manager1,type);
-            }else{
+            }else if(op2 == 2){
                 //firgure out th plant to add 
-                string type="Add";
-                handleAddPlant(manager1,type);
+                cout<<"Please select what you would like to add\nNext action : 1.Flower \n2.Tree \n3.Succulent";
+                int option ;
+                cin>>option;
+                if(option == 1){
+                    string type;
+                    cout<<"What type of flower is it ";
+                    std::getline(std::cin>>std::ws, type);
+
+                    Plant* adding = flowerFactory.createPlant(type);
+                    greenhouse.addPlant(adding);
+                    cout<<"the flower "<<type<<" has been added to the greenhouse";
+                }else if(option ==2){
+                    string type;
+                    cout<<"What type of Tree is it ";
+                    std::getline(std::cin>>std::ws, type);
+
+                    Plant* adding = flowerFactory.createPlant(type);
+                    greenhouse.addPlant(adding);
+                    cout<<"the Tree "<<type<<" has been added to the greenhouse";
+
+                }else{
+                    string type;
+                    cout<<"What type of Succulent is it ";
+                    std::getline(std::cin>>std::ws, type);
+
+                    Plant* adding = flowerFactory.createPlant(type);
+                    greenhouse.addPlant(adding);
+                    cout<<"the Succulent "<<type<<" has been added to the greenhouse";
+
+                }
+            }else{
+                clearScreen();
+                greenhouse.showPlants();
+                cout<<"Which plant(s) will you be removing from the inventory"<<endl;
+                cout<<"Please enter the tags of the plants you would like (Type -1 to finish):\n";
+
+                int tag;
+                vector<int>* tags=new vector<int>();
+
+                while(true){
+                    cout<<"Tag: ";
+                    if(!(std::cin>>tag)){
+                        
+                        cout<<"Invalid input. Please enter a valid tag (or -1 to finish)."<<endl;
+                        std::cin.clear();
+                        std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+                        continue;
+                    }
+                    if(tag==-1)break;
+                    tags->push_back(tag);
+                }
+
+                for(int i :*tags){
+                    greenhouse.removePlant(i);
+                }
+                cout<<"The plants you have selected have been successfully be remove from the inventory "<<endl;
             }
           
             // clearScreen();
