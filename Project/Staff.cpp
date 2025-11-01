@@ -39,7 +39,11 @@ void Staff::receiveMessage(Person* person, Section* section){
 
 	}
 
+	if(person->getMessageType()!="Purchase Complete"){
+
 		std::cout<<"["<<section->getName()<<"] "<<getName()<<" received --"<<person->getMessageType()<<" request-- \""<<person->getMessage()<<"\" from "<<person->getName()<<plants<<decorate<<"\n";
+	}
+		
 }
 
 void Staff::handleRequest(Person* person) {

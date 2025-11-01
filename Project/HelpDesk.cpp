@@ -8,7 +8,7 @@ HelpDesk::HelpDesk(std::string name):Section(name){
 void HelpDesk::notify(Person* person){
 	
 	for(Person* p:personList){
-
+			if(p==person) continue;
 			p->receiveMessage(person,this);
 		}
 

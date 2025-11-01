@@ -101,88 +101,6 @@ void clearScreen() {
     std::cout << "\033[2J\033[H" << std::flush;
 }
 
-void handleSales(){
-
-}
-
-
-
-// Customer* newCustomer(vector<Section*> sections){
-
-// 	cout<<"Please enter your name: ";
-// 	string name;
-
-// 	std::getline(std::cin>>std::ws, name);
-// 	cout<<"\nWelcome, "<<name<<"!\n";
-
-// 	Customer* nCustomer=new Customer(name);
-
-// 	for(Section* s:sections){
-
-// 		s->addPerson(nCustomer);
-// 		nCustomer->addSection(s);
-// 	}
-
-// 	return nCustomer;
-// }
-
-// void customerRequest(Customer* customer,string type){
-
-// 	string message;
-// 	cout<<"Please enter the message for your "<<type<<" request: ";
-// 	std::getline(std::cin>>std::ws, message);
-
-// 	if(type=="Purchase"){
-
-// 		cout<<"Please enter the tags of the plants you would like (Type -1 to finish):\n";
-
-// 		int tag;
-// 		vector<int>* tags=new vector<int>();
-
-// 		while(true){
-//             cout<<"Tag: ";
-//             if(!(std::cin>>tag)){
-                
-//                 cout<<"Invalid input. Please enter a valid tag (or -1 to finish)."<<endl;
-//                 std::cin.clear();
-//                 std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
-//                 continue;
-//             }
-//             if(tag==-1)break;
-//             tags->push_back(tag);
-//         }
-
-// 		int decorate;
-// 		cout<<"Would you like your plants in:\n\t1.Wrap\n\t2.Flower Pot\n\t3.None\n";
-// 		cout<<"Enter here: ";
-// 		std::cin>>decorate;
-
-// 		if(decorate==1||decorate==2){
-			
-// 			string decorator=(decorate==1)?"wrap":"pot";
-
-// 			customer->sendMessage(message,type,tags,decorator);
-
-// 		}else{
-// 			customer->sendMessage(message,type,tags);
-// 		}
-		
-// 	}else if(type=="Help"){
-
-// 		customer->sendMessage(message,type);
-// 	}else{
-
-// 		cout<<"Invalid request type\n";
-// 	}
-
-// }
-
-// void clearScreen() {
-//     std::cout << "\033[2J\033[H" << std::flush;
-// }
-
-
-
 int main() {
     cout<<"Welcome to greenHome"<<endl;
 
@@ -278,7 +196,7 @@ int main() {
                         }
                         else if (choiceReq2 == 1|| choiceReq2 == 2){
 
-                            string type=(choiceReq==1)?"Purchase":"Help";
+                            string type=(choiceReq2==1)?"Purchase":"Help";
 
                             Customer* customer=dynamic_cast<Customer*>(person);
 
@@ -309,7 +227,8 @@ int main() {
 
                 }
             }
-            cout<<"need anything else ?\n1.yes \n2.No";
+            cout<<"Need anything else?\n1.Yes \n2.No\n";
+			cout<<"Enter here: ";
             int op ;
             cin>>op;
             if(op==1){

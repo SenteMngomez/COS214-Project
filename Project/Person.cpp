@@ -11,13 +11,13 @@ void Person::sendMessage(string message, string type,std::vector<int>* tags, str
 
 	if(sections.empty()){
 
-		std::cout<<"####"<<name<<" is not in any room ####";
+		std::cout<<"####"<<name<<" is not in any room ####\n";
 		return;
 	}
 
 	int room=0;
 
-	if(type=="Purchase"){
+	if(type=="Purchase"||type=="Purchase Complete"){
 		room=1;
 	}
 
