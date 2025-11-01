@@ -186,14 +186,17 @@ int main() {
     Plant* rose = flowerFactory.createPlant("Rose");
     Plant* cactus = succulentFactory.createPlant("Cactus");
     Plant* oak = treeFactory.createPlant("Oak");
+	Plant* tulip= flowerFactory.createPlant("Tulip","Blue");
 
 	rose->setTag(1);
 	cactus->setTag(2);
 	oak->setTag(3);
+	tulip->setTag(4);
 
     greenhouse.addPlant(rose);
     greenhouse.addPlant(cactus);
     greenhouse.addPlant(oak);
+	greenhouse.addPlant(tulip);
 
    	int choicePerson;
 	
@@ -350,9 +353,11 @@ int main() {
                 greenhouse.showPlants();
                 handleCarePlant(manager1,type);
             }else{
-                //firgure out th plant to add 
+                //figure out the plant to add 
                 string type="Add";
                 handleAddPlant(manager1,type);
+
+				
             }
           
             cout<<"\nNeed anything else?\n\t1.Yes \n\t2.No\n";

@@ -35,7 +35,7 @@ void Greenhouse::giveSunlight(int tag) {
 	if (it != plants.end()){
 
 		sunBathedPlant = *it;
-		sunBathedPlant->receiveWater();
+		sunBathedPlant->receiveSunlight();
 		notify(sunBathedPlant); 
 		
 	}

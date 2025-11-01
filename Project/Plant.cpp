@@ -45,3 +45,9 @@ void Plant::setState(PlantState* newState) {
     state = newState;
 }
 
+void Plant::setCareStrategy(CareStrategy* careStrategy){
+	this->careStrategy=careStrategy;
+}
+
+
+
