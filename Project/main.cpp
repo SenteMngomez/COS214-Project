@@ -101,7 +101,68 @@ void clearScreen() {
     std::cout << "\033[2J\033[H" << std::flush;
 }
 
+void handleCarePlant(Manager* manager,string Type){/*calls the ground stuff through the mediator
+                                                    to handle the plants that need to be cared for */ 
+    
+    string message;
+	cout<<"Please enter the message for your  request: ";
+	std::getline(std::cin>>std::ws, message);
+
+    
+
+    cout<<"Please enter the tags of the plants you would like (Type -1 to finish):\n";
+
+    int tag;
+    vector<int>* tags=new vector<int>();
+
+    while(true){
+        cout<<"Tag: ";
+        if(!(std::cin>>tag)){
+            
+            cout<<"Invalid input. Please enter a valid tag (or -1 to finish)."<<endl;
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+            continue;
+        }
+        if(tag==-1)break;
+        tags->push_back(tag);
+    }
+
+    manager->sendMessage(message,Type,tags);
+}
+
+void handleAddPlant(Manager* manager,string Type){
+    string message;
+	cout<<"Please enter the message for your  request: ";
+	std::getline(std::cin>>std::ws, message);
+
+    
+
+    cout<<"Please enter the tags of the plants you would like (Type -1 to finish):\n";
+
+    int tag;
+    vector<int>* tags=new vector<int>();
+
+    while(true){
+        cout<<"Tag: ";
+        if(!(std::cin>>tag)){
+            
+            cout<<"Invalid input. Please enter a valid tag (or -1 to finish)."<<endl;
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+            continue;
+        }
+        if(tag==-1)break;
+        tags->push_back(tag);
+    }
+
+    manager->sendMessage(message,Type,tags);
+
+}
+
+
 int main() {
+    string password = "StartingFive";
     cout<<"Welcome to greenHome"<<endl;
 
     Greenhouse greenhouse("Green Home");
@@ -150,6 +211,8 @@ int main() {
 
 	sales1->addPerson(manager1);
 	sales1->addPerson(salesMan1);
+
+    manager1->addSection(help1);
 
     // salesMan1->addSection(help1);
     salesMan1->addSection(sales1);
@@ -245,11 +308,53 @@ int main() {
 
         //add the loop to ask if theres anything else 
 	}else{
+        //password check ??
+        cout<<"enter Password : ";
+        string enteredPassword;
+        cin>>enteredPassword;
+        try{
+            if(enteredPassword != password){
+                throw "Incorrect password";
+            }
+        }catch(const char* c){
+            cout<<c;
+            return 0;
+        }
+        
+
         //adding new plants to the inventory 
         //removing plants from the inventory
         //sending the request to the ground staff ?? how cause the request the could reach manager is in the first if block ??
         //
+        clearScreen();
         cout<< "Welcome back staff member :) hope you are ready to work"<<endl;
+       
+        bool flag = true ;
+        while(flag == true){
+
+            cout<<"1.CareForPlant \n2.addPlant "<<endl;
+            int op2;
+            cout<<"What will we be doing today ? ";
+            cin>>op2;
+            if(op2==1){
+                string type= "Care";
+                greenhouse.showPlants();
+                handleCarePlant(manager1,type);
+            }else{
+                string type="Add";
+                handleAddPlant(manager1,type);
+            }
+          
+            // clearScreen();
+            cout<<"\nneed anything else ?\n1.yes \n2.No";
+            int op ;
+            cin>>op;
+            if(op==1){
+                flag = true;
+            }else{
+                flag = false ;
+            }
+        }
 
 	}
    
