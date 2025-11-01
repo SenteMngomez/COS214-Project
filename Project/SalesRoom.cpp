@@ -6,7 +6,7 @@
 	void SalesRoom::notify(Person* person){
 
 		for(Person* p:personList){
-
+			if(p==person) continue;
 			p->receiveMessage(person,this);
 		}
 

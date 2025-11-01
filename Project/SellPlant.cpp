@@ -1,14 +1,10 @@
 #include "SellPlant.h"
 #include "PlantBuilder.h"
 
-SellPlant::SellPlant(PlantBuilder* pb){
+SellPlant::SellPlant(PlantBuilder* pb):Command(){
 	this->builder = pb;
 	sBuild = new SalesAssistance();
 	r = nullptr;
-}
-
-void SellPlant::setGreenhouse(Greenhouse* gh){
-	this->greenHouse = gh ;
 }
 
 void SellPlant::setSalesAssitance(SalesAssistance* sa){
