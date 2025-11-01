@@ -38,7 +38,7 @@ void GroundStaff::careForPlant(std::vector<int>* tags) {
 		waterPlantCmd->execute(tags);
 	}else{
 
-		std::cout<<getName()<<"Unable to water plant(s)\n";
+		std::cout<<getName()<<" is unable to water plant(s)\n";
 	}
 	
 	if(giveSunCmd){
@@ -46,7 +46,7 @@ void GroundStaff::careForPlant(std::vector<int>* tags) {
 		giveSunCmd->execute(tags);
 	}else{
 
-		std::cout<<getName()<<"Unable to give sunlight to plant(s)\n";
+		std::cout<<getName()<<" is unable to give sunlight to plant(s)\n";
 	}
 	
 

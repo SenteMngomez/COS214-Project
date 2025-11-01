@@ -1,6 +1,6 @@
 #include "GIveSunlight.h"
 
-
+GiveSunlight::GiveSunlight():Command(){}
 
 void GiveSunlight::execute(vector<int> *tag, string decorator)
 {

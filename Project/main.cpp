@@ -110,7 +110,7 @@ void handleCarePlant(Manager* manager,string Type){/*calls the ground stuff thro
 
     
 
-    cout<<"Please enter the tags of the plants you would like (Type -1 to finish):\n";
+    cout<<"Please enter the tags of the plants you would like to care for (Type -1 to finish):\n";
 
     int tag;
     vector<int>* tags=new vector<int>();
@@ -160,12 +160,15 @@ void handleAddPlant(Manager* manager,string Type){
 
 }
 
-
 int main() {
     string password = "StartingFive";
     cout<<"Welcome to greenHome"<<endl;
 
     Greenhouse greenhouse("Green Home");
+
+	Inventory* inventory=Inventory::instance();
+
+	greenhouse.attach(inventory);
 
     FlowerFactory flowerFactory;
     SucculentFactory succulentFactory;
@@ -173,6 +176,10 @@ int main() {
     PlantBuilder* pd = new ConcretePlantBuilder();
     SalesAssistance* sa = new SalesAssistance();  
     SellPlant* saleCommand = new SellPlant(pd);
+	WaterPlant* waterCommand= new WaterPlant();
+	GiveSunlight* sunlightCommand=new GiveSunlight();
+	waterCommand->setGreenhouse(&greenhouse);
+	sunlightCommand->setGreenhouse(&greenhouse);
     saleCommand->setGreenhouse(&greenhouse);
     saleCommand->setSalesAssitance(sa);
 
@@ -180,22 +187,25 @@ int main() {
     Plant* cactus = succulentFactory.createPlant("Cactus");
     Plant* oak = treeFactory.createPlant("Oak");
 
+	rose->setTag(1);
+	cactus->setTag(2);
+	oak->setTag(3);
+
     greenhouse.addPlant(rose);
     greenhouse.addPlant(cactus);
     greenhouse.addPlant(oak);
 
-   int choicePerson;
+   	int choicePerson;
 	
 	vector<Section*> rooms;
 
 	SalesClerk* salesMan1=new SalesClerk("Brett Hands");
-	Staff* groundsMan1=new GroundStaff("Mick Jagger");
+	GroundStaff* groundsMan1=new GroundStaff("Mick Jagger");
 	Manager* manager1=new Manager("Franklin Saint");
 
-    
+	groundsMan1->setGiveSunlightCommand(sunlightCommand);
+	groundsMan1->setWaterPlantCommand(waterCommand);
     salesMan1->setSellPlantCommand(saleCommand);
-
-    
 
 	manager1->setSuccessor(salesMan1);
 	salesMan1->setSuccessor(groundsMan1);
@@ -232,10 +242,7 @@ int main() {
 		}
         //loop prob goes here 
         //bool flag 
-        /*
-            while(flag){
-            }       
-        */
+    
        bool flag = true ;
        while(flag==true){
           clearScreen();
@@ -308,8 +315,10 @@ int main() {
 
         //add the loop to ask if theres anything else 
 	}else{
+		//Staff logic allows for caring for plants, adding plants, removing plants
+
         //password check ??
-        cout<<"enter Password : ";
+        cout<<"Enter Password: ";
         string enteredPassword;
         cin>>enteredPassword;
         try{
@@ -332,12 +341,12 @@ int main() {
         bool flag = true ;
         while(flag == true){
 
-            cout<<"1.CareForPlant \n2.addPlant "<<endl;
+            cout<<"\t1.CareForPlant \n\t2.addPlant "<<endl;
             int op2;
-            cout<<"What will we be doing today ? ";
+            cout<<"What will we be doing today? ";
             cin>>op2;
             if(op2==1){
-                string type= "Care";
+                string type="Care";
                 greenhouse.showPlants();
                 handleCarePlant(manager1,type);
             }else{
@@ -345,8 +354,8 @@ int main() {
                 handleAddPlant(manager1,type);
             }
           
-            // clearScreen();
-            cout<<"\nneed anything else ?\n1.yes \n2.No";
+            cout<<"\nNeed anything else?\n\t1.Yes \n\t2.No\n";
+			cout<<"Enter Here: ";
             int op ;
             cin>>op;
             if(op==1){
@@ -358,7 +367,7 @@ int main() {
 
 	}
    
-
+	greenhouse.detach(inventory);
 
     
     return 0;
