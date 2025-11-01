@@ -133,6 +133,10 @@ public:
      */
 	void receiveSunlight();
 
+     PlantState* getState() const{
+          return state;
+     }
+
 };
 
 #endif
