@@ -10,7 +10,7 @@ class GreenhouseInterfaceTest : public ::testing::Test {
         Inventory* inventory;
         FlowerFactory factory;
 
-        void SetUP() override {
+        void SetUp() override {
             inventory = Inventory::instance();
         }
 
@@ -33,7 +33,7 @@ TEST_F(GreenhouseInterfaceTest, NotifyObservers) {
     Plant* rose = factory.createPlant("Rose");
     ASSERT_NE(rose, nullptr);
 
-    EXPECT_NO_THROW(greenhouse.detach(inventory));
+    EXPECT_NO_THROW(greenhouse.notify(rose));
 }
 
 int main(int argc, char** argv) {
