@@ -9,8 +9,8 @@
 #include "SeedState.h"
 
 Plant::Plant(string colour, CareStrategy* careStrategy, double price)
-    : colour(colour), careStrategy(careStrategy), state(new SeedState()), tag(0), price(price){
-    // Initialize with default SeedState
+    : colour(colour), careStrategy(careStrategy), state(NULL), tag(""), price(price){
+    // come back for review on initializing state 
 }
 
 void Plant::receiveWater() {
@@ -27,11 +27,11 @@ void Plant::receiveSunlight() {
     //cout << getType() << " plant received sunlight." << endl;
 }
 
-int Plant::getTag() const{
+string Plant::getTag() const{
 	return tag;
 }
 
-void Plant::setTag(int t){
+void Plant::setTag(string t){
 	tag = t;
 }
 

@@ -7,7 +7,7 @@ class GiveSunlight :public Command {
 
 public:
 	GiveSunlight();
-	virtual void execute(std::vector<int>* tags,string decorator="");
+	virtual void execute(std::vector<string>* tags,string decorator="");
 };
 
 #endif

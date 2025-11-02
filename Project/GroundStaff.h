@@ -42,7 +42,7 @@ class GroundStaff :public Staff {
          * @brief Performs care actions (watering and sunlight) for the given plant tags.
          * @param tags Vector of plant tag IDs to care for.
          */
-		void careForPlant(std::vector<int>* tags);
+		void careForPlant(std::vector<std::string>* tags);
 
 		/**
          * @brief Adds a plant of the given type to the specified greenhouse.

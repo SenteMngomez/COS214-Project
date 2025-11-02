@@ -32,7 +32,7 @@ public:
      * @brief Get the type of the plant
      * @return "Mango"
      */
-    string getType() const override { return "Mango"; }
+    string getType() const override { return "Mango"; };
 
 	/**
      * @brief Clone the mango
@@ -48,7 +48,7 @@ public:
 	// Composite methods (stubs for leaf plant)
     void add(Plant& plant) override {}
     void remove(Plant& plant) override {}
-    Plant* getChild(int tag) override;
+    Plant* getChild(string tag) override;
 };
 
 #endif

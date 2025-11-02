@@ -54,21 +54,21 @@ void customerRequest(Customer* customer,string type){
 
 	if(type=="Purchase"){
 
-		cout<<"Please enter the tags of the plants you would like (Type -1 to finish):\n";
+		cout<<"Please enter the tags of the plants you would like (Type s to finish):\n";
 
-		int tag;
-		vector<int>* tags=new vector<int>();
+		std::string tag;
+		vector<std::string>* tags=new vector<std::string>();
 
 		while(true){
             cout<<"Tag: ";
             if(!(std::cin>>tag)){
                 
-                cout<<"Invalid input. Please enter a valid tag (or -1 to finish)."<<endl;
+                cout<<"Invalid input. Please enter a valid tag (or s to finish)."<<endl;
                 std::cin.clear();
                 std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
                 continue;
             }
-            if(tag==-1)break;
+            if(tag=="s")break;
             tags->push_back(tag);
         }
 
@@ -110,21 +110,21 @@ void handleCarePlant(Manager* manager,string Type){/*calls the ground stuff thro
 
     
 
-    cout<<"Please enter the tags of the plants you would like to care for (Type -1 to finish):\n";
+    cout<<"Please enter the tags of the plants you would like to care for (Type s to finish):\n";
 
-    int tag;
-    vector<int>* tags=new vector<int>();
+    std::string tag;
+    vector<std::string>* tags=new vector<std::string>();
 
     while(true){
         cout<<"Tag: ";
         if(!(std::cin>>tag)){
             
-            cout<<"Invalid input. Please enter a valid tag (or -1 to finish)."<<endl;
+            cout<<"Invalid input. Please enter a valid tag (or s to finish)."<<endl;
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
             continue;
         }
-        if(tag==-1)break;
+        if(tag=="s")break;
         tags->push_back(tag);
     }
 
@@ -138,21 +138,21 @@ void handleAddPlant(Manager* manager,string Type){
 
     
 
-    cout<<"Please enter the tags of the plants you would like (Type -1 to finish):\n";
+    cout<<"Please enter the tags of the plants you would like (Type s to finish):\n";
 
-    int tag;
-    vector<int>* tags=new vector<int>();
+    std::string tag;
+    vector<std::string>* tags=new vector<std::string>();
 
     while(true){
         cout<<"Tag: ";
         if(!(std::cin>>tag)){
             
-            cout<<"Invalid input. Please enter a valid tag (or -1 to finish)."<<endl;
+            cout<<"Invalid input. Please enter a valid tag (or s to finish)."<<endl;
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
             continue;
         }
-        if(tag==-1)break;
+        if(tag=="s")break;
         tags->push_back(tag);
     }
 
@@ -187,11 +187,6 @@ int main() {
     Plant* cactus = succulentFactory.createPlant("Cactus");
     Plant* oak = treeFactory.createPlant("Oak");
 	Plant* tulip= flowerFactory.createPlant("Tulip","Blue");
-
-	rose->setTag(1);
-	cactus->setTag(2);
-	oak->setTag(3);
-	tulip->setTag(4);
 
     greenhouse.addPlant(rose);
     greenhouse.addPlant(cactus);
@@ -311,16 +306,9 @@ int main() {
             }
        }
 		
-        /*
-            as in loop ends here  no need to ask the user anything more :)
-        */
-
-
-        //add the loop to ask if theres anything else 
-	}else{
-		//Staff logic allows for caring for plants, adding plants, removing plants
-
-        //password check ??
+       
+	}else if(choicePerson==2){
+		
         cout<<"Enter Password: ";
         string enteredPassword;
         cin>>enteredPassword;
@@ -334,10 +322,7 @@ int main() {
         }
         
 
-        //adding new plants to the inventory 
-        //removing plants from the inventory
-        //sending the request to the ground staff ?? how cause the request the could reach manager is in the first if block ??
-        //
+        
         clearScreen();
         cout<< "Welcome back staff member :) hope you are ready to work"<<endl;
        
@@ -388,25 +373,25 @@ int main() {
                 clearScreen();
                 greenhouse.showPlants();
                 cout<<"Which plant(s) will you be removing from the inventory"<<endl;
-                cout<<"Please enter the tags of the plants you would like (Type -1 to finish):\n";
+                cout<<"Please enter the tags of the plants you would like (Type s to finish):\n";
 
-                int tag;
-                vector<int>* tags=new vector<int>();
+                std::string tag;
+                vector<std::string>* tags=new vector<std::string>();
 
                 while(true){
                     cout<<"Tag: ";
                     if(!(std::cin>>tag)){
                         
-                        cout<<"Invalid input. Please enter a valid tag (or -1 to finish)."<<endl;
+                        cout<<"Invalid input. Please enter a valid tag (or s to finish)."<<endl;
                         std::cin.clear();
                         std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
                         continue;
                     }
-                    if(tag==-1)break;
+                    if(tag=="s")break;
                     tags->push_back(tag);
                 }
 
-                for(int i :*tags){
+                for(std::string i :*tags){
                     greenhouse.removePlant(i);
                 }
                 cout<<"The plants you have selected have been successfully be remove from the inventory "<<endl;
@@ -423,6 +408,9 @@ int main() {
             }
         }
 
+	}else{
+
+		cout<<"Invalid input. Please enter 1 or 2";
 	}
    
 	greenhouse.detach(inventory);

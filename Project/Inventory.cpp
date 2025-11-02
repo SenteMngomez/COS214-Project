@@ -49,7 +49,7 @@ void Inventory::addStock(string plantName, int stock) {
 
 }
 
-Plant* Inventory::removePlant(int id) {
+Plant* Inventory::removePlant(std::string id) {
 	
 	Plant* removedPlant = nullptr;
 

@@ -27,7 +27,7 @@ private:
 	string name;
 	string messageType;
 	string message;
-	std::vector<int>* tags;
+	std::vector<string>* tags;
 	std::string decorator;
 
 public:
@@ -46,7 +46,7 @@ public:
 	 * @param tags A vector that stores the tags of plants to be purchased/cared for. Optional
 	 * @param decorator The type of decorator that a customer wants to add to their plant(s) when purchasing. Optional
 	 */
-	virtual void sendMessage(string message, string type, std::vector<int>* tags=nullptr, string decorator="");
+	virtual void sendMessage(string message, string type, std::vector<string>* tags=nullptr, string decorator="",string sectionName="");
 
 	/**
 	 * @brief Receives a message from another person sent through a section
@@ -77,7 +77,7 @@ public:
 	 * @brief Gives access to tags attribute
 	 * @return tags
 	 */
-	std::vector<int>* getTags();
+	std::vector<string>* getTags();
 
 	void addSection(Section* section);
 

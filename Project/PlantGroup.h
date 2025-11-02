@@ -71,7 +71,7 @@ public:
 	 * @param tag The tag of the child plant
 	 * @return Pointer to the child plant, or nullptr if not found
 	 */
-	Plant* getChild(int tag) override;
+	Plant* getChild(string tag) override;
 
 	/**
      * @brief Destructor to clean up children
