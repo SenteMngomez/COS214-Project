@@ -118,6 +118,12 @@ public:
      */
     void setState(PlantState* newState);
 
+    /**
+     * @brief Get the current state of the plant
+     * @return Pointer to the current PlantState
+     */
+    PlantState* getState() const;
+
 	/**
      * @brief destructor
      */

@@ -6,10 +6,11 @@
  */
 
 #include "Plant.h"
+#include "SeedState.h"
 
 Plant::Plant(string colour, CareStrategy* careStrategy, double price)
-    : colour(colour), careStrategy(careStrategy), state(NULL), tag(0), price(price){
-    // come back for review on initializing state 
+    : colour(colour), careStrategy(careStrategy), state(new SeedState()), tag(0), price(price){
+    // Initialize with default SeedState
 }
 
 void Plant::receiveWater() {
@@ -45,9 +46,15 @@ void Plant::setState(PlantState* newState) {
     state = newState;
 }
 
+PlantState* Plant::getState() const {
+    return state;
+}
+
 void Plant::setCareStrategy(CareStrategy* careStrategy){
 	this->careStrategy=careStrategy;
 }
+
+
 
 
 
