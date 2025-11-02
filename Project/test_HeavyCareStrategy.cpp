@@ -26,7 +26,7 @@ TEST(HeavyCareStrategyIntegrationTest, WaterOutputIsCorrect){
 
     string output = testing::internal::GetCapturedStdout();
 
-    EXPECT_NE(output.find("Giving the MockPlant 300ml of water."), string::npos);
+    EXPECT_NE(output.find("Giving the MockPlant 300-350ml of water."), string::npos);
 }
 
 TEST(HeavyCareStrategyIntegrationTest, SunlightOutputIsCorrect){
@@ -36,7 +36,7 @@ TEST(HeavyCareStrategyIntegrationTest, SunlightOutputIsCorrect){
     strategy.sunlight(&plant);
 
     string output = testing::internal::GetCapturedStdout();
-    EXPECT_NE(output.find("Placing the MockPlant in direct sunlight for 7-9 hours."), string::npos);
+    EXPECT_NE(output.find("Placing the MockPlant in direct sunlight for 6-9 hours."), string::npos);
 }
 
 int main(int argc,char**argv){

@@ -17,7 +17,7 @@ using namespace std;
  */
 void ModerateCareStrategy::water(Plant* plant) {
 
-	cout<<"Giving the " << plant->getType()<<" 150ml of water."<<endl;
+	cout<<"Giving the " << plant->getType()<<" 200-250ml of water."<<endl;
 }
 
 /**
@@ -26,7 +26,7 @@ void ModerateCareStrategy::water(Plant* plant) {
  */
 void ModerateCareStrategy::sunlight(Plant* plant){
 
-	cout<<"Placing the "<< plant->getType() <<" in indirect sunlight for 6-8 hours."<<endl;
+	cout<<"Placing the "<< plant->getType() <<" in indirect sunlight for 4-6 hours."<<endl;
 }
 
 /**
