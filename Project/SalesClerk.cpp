@@ -1,7 +1,7 @@
 #include "SalesClerk.h"
 
-SalesClerk::SalesClerk(std::string name):Staff(name){
-	CustomerReceipt = new Receipt();
+SalesClerk::SalesClerk(std::string name):Staff(name),sellPlantCommand(nullptr){
+	
 }
 
 void SalesClerk::handleRequest(Person* person){

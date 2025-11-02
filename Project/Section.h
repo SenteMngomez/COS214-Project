@@ -93,6 +93,11 @@ class Section {
          */
 		void addToHistory(Person* person);
 
+		/** 
+		 * @brief Returns type of section
+		 */
+		string getType();
+
 	private:
 		std::string name;
 		std::vector<std::string> history;
@@ -100,6 +105,7 @@ class Section {
 	protected:
 		Staff* admin;
 		std::vector<Person*> personList;
+		string type;
 };
 
 #endif

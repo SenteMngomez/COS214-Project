@@ -1,7 +1,9 @@
 
 #include "SalesRoom.h"
 
-	SalesRoom::SalesRoom(std::string name):Section(name){}
+	SalesRoom::SalesRoom(std::string name):Section(name){
+		type="Sales";
+	}
 
 	void SalesRoom::notify(Person* person){
 

@@ -7,7 +7,7 @@ string Person::getName() {
 	return name;
 }
 
-void Person::sendMessage(string message, string type,std::vector<int>* tags, string decorator) {
+void Person::sendMessage(string message, string type,std::vector<int>* tags, string decorator,string sectionName) {
 
 	if(sections.empty()){
 
@@ -17,9 +17,31 @@ void Person::sendMessage(string message, string type,std::vector<int>* tags, str
 
 	int room=0;
 
-	if(sections.size()==2&&("Purchase"||type=="Purchase Complete")){
-		room=1;
-	}
+	if (!sectionName.empty()) {
+        for (size_t i = 0; i < sections.size(); i++) {
+            if (sections[i]->getName() == sectionName) {
+                room = i;
+                break;
+            }
+        }
+
+    }else if(sections.size() >= 2 && (type == "Purchase" || type == "Purchase Complete")) {
+        
+        for(size_t i=0; i<sections.size(); i++){
+
+            if(sections[i]->getType()=="Sales") {
+                room=i;
+                break;
+            }
+        }
+    } else {
+        for(size_t i=0; i<sections.size(); i++){
+            if(sections[i]->getType() != "Sales"){
+                room=i;
+                break;
+            }
+        }
+    }
 
 	this->message=message;
 	this->messageType=type;
@@ -30,6 +52,7 @@ void Person::sendMessage(string message, string type,std::vector<int>* tags, str
 	sections[room]->notify(this);
 
 }
+
 
 string Person::getMessageType() const{
 	return this->messageType;

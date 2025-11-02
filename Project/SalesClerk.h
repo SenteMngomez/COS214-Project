@@ -23,10 +23,6 @@ class SalesClerk : public Staff {
 	public:
 		SalesClerk(string name);
 
-		//SalesClerk(std::string name);
-
-		// void setReceipt(Receipt* r);
-
 		/**
 		 * @brief Handles a request sent by a person. SalesClerk will handle
 		 *        requests of type "Purchase"; otherwise it should delegate to the
@@ -57,7 +53,6 @@ class SalesClerk : public Staff {
 	private:
 		
 		SellPlant* sellPlantCommand;
-		Receipt* CustomerReceipt;
 
 		
 };

@@ -1,6 +1,7 @@
 #include "GroundStaff.h"
 
-GroundStaff::GroundStaff(std::string name):Staff(name){}
+GroundStaff::GroundStaff(std::string name):Staff(name),waterPlantCmd(nullptr)
+,giveSunCmd(nullptr){}
 
 void GroundStaff::handleRequest(Person* person){
 
