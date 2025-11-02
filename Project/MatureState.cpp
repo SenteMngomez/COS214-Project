@@ -16,11 +16,11 @@ using namespace std;
 
 void MatureState::handle(Plant* plant) {
 	
-	cout<<"The plant needs normal care."<<endl;
+	cout<<"The "<< plant->getType()<< " needs normal care."<<endl;
 	plant->receiveWater();
 	plant->receiveSunlight();
 
-	cout<<"The plant is aging and may soon die."<<endl;
+	cout<<"The " << plant->getType()<< " is aging and may soon die."<<endl;
 	plant->setState(new DeadState());
 
 }

@@ -1,20 +1,23 @@
 #include "Person.h"
 
-Person::Person(std::string name):name(name){
-
-	messageType="";
-	string messageType="";
-	string message="";
-}
+Person::Person(std::string name):name(name),messageType(""),message(""),tags(nullptr)
+,decorator(""){}
 
 string Person::getName() {
 	return name;
 }
 
 void Person::sendMessage(string message, string type,std::vector<int>* tags, string decorator) {
+
+	if(sections.empty()){
+
+		std::cout<<"####"<<name<<" is not in any room ####\n";
+		return;
+	}
+
 	int room=0;
 
-	if(type=="Purchase"){
+	if(type=="Purchase"||type=="Purchase Complete"){
 		room=1;
 	}
 
@@ -42,4 +45,8 @@ std::vector<int>* Person::getTags() {
 
 std::string Person::getDecorator() const{
 	return decorator;
+}
+
+void Person::addSection(Section* section){
+	sections.push_back(section);
 }

@@ -9,12 +9,14 @@
 #include "Begonia.h"
 #include "Cactus.h"
 
-Plant* SucculentFactory::createPlant(string type) {
+Plant* SucculentFactory::createPlant(string type, string colour) {
     if(type == "Begonia"){
-        setProduct(new Begonia("Pink", nullptr, 10.99));
+		colour=colour.empty()?"Pink":colour;
+        setProduct(new Begonia(colour, new LightCareStrategy(), 10.99));
         return getProduct();
     }else if(type == "Cactus") {
-        setProduct(new Cactus("Green", nullptr, 8.99));
+		colour=colour.empty()?"Green":colour;
+        setProduct(new Cactus(colour, new LightCareStrategy(), 8.99));
         return getProduct();
     }
     return nullptr;

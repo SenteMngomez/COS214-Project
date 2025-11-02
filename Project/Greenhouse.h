@@ -1,7 +1,15 @@
+/**
+ * @file Greenhouse.h
+ * @brief Declaration of Greenhouse class
+ * @author Kundai
+ * @date October 24, 2025
+ */
+
 #ifndef GREENHOUSE_H
 #define GREENHOUSE_H
 
 #include "GreenhouseInterface.h"
+#include "PlantIterator.h"
 #include <vector>
 #include <string>
 #include <iostream>
@@ -25,23 +33,30 @@ protected:
 	std::string name;
  
 public:
+
 	/**
+	 * @brief Constructor for Greenhouse
+	 * @param name The name of the greenhouse
+	 * 
+	 */
+	Greenhouse(std::string name) : name(name) {};
+	/** 
 	 * @brief Waters a specific plant and notifies observers.
 	 * @param plant The plant to water.
 	 */
-	void waterPlant(Plant* plant);
+	void waterPlant(int tag);
 
 	/**
 	 * @brief Gives sunlight to a specific plant and notifies observers.
 	 * @param plant The plant to give sunlight to.
 	 */
-	void giveSunlight(Plant* plant);
+	void giveSunlight(int tag);
 
 	/**
-	 * @brief A factory method to create an iterator for the plants in this greenhouse.
-	 * @return A pointer to an Iterator.
+	 * @brief Creates an iterator for the plants in the greenhouse.
+	 * @return Pointer to an Iterator for the plants.
 	 */
-	virtual Iterator* createIterator() = 0;
+	Iterator* createIterator();
 
 	/**
 	 * @brief Adds a new plant to the greenhouse and notifies observers.

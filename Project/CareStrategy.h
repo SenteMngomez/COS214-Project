@@ -9,7 +9,7 @@
 
 #ifndef CARESTRATEGY_H
 #define CARESTRATEGY_H
-#include "Plant.h"
+
 
 /**
  * @class CareStrategy
@@ -19,7 +19,7 @@
  * providing sunlight, and soil care. Concrete implementations of this class will provide
  * specific care instructions based on the type of plant.
  */
-
+class Plant;
 class CareStrategy {
 
 
@@ -44,3 +44,4 @@ public:
 };
 
 #endif
+#include "Plant.h"

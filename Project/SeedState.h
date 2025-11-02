@@ -8,7 +8,6 @@
 #define SEEDSTATE_H
 
 #include "PlantState.h"
-#include "Plant.h"
 #include "SproutState.h"
 
 /**

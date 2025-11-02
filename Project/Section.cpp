@@ -1,4 +1,6 @@
 #include "Section.h"
+#include "Person.h"
+#include "Staff.h"
 #include <algorithm>
 
 Section::Section(std::string name):name(name){
@@ -32,8 +34,7 @@ Person* Section::removePerson(Person* person){
 }
 
 Iterator* Section::createIterator(){
-
-	return new ChatIterator(this);
+	return new ChatIterator(&history);
 }
 
 std::string Section::getHistory() const{

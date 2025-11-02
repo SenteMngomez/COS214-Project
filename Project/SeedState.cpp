@@ -20,6 +20,6 @@ void SeedState::handle(Plant* plant) {
 	plant->receiveWater();
 	plant->receiveSunlight();
 
-	cout<<"Seed has successfully germinated into a sprout!"<<endl;
+	cout<<"Seed has successfully germinated into a " << plant->getType()<< " sprout!"<<endl;
 	plant->setState(new SproutState());
 }

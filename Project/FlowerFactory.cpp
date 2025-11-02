@@ -7,12 +7,14 @@
 
 #include "FlowerFactory.h"
 
-Plant* FlowerFactory::createPlant(string type){
+Plant* FlowerFactory::createPlant(string type, string colour){
 	if(type == "Rose"){
-        setProduct(new Rose("Red", nullptr, 15.99));
+		colour=colour.empty()?"Red":colour;
+        setProduct(new Rose(colour, new HeavyCareStrategy(), 15.99));
         return getProduct();
     }else if(type == "Tulip"){
-        setProduct(new Tulip("Yellow", nullptr, 12.49));
+		colour=colour.empty()?"Yellow":colour;
+        setProduct(new Tulip(colour, new HeavyCareStrategy(), 12.49));
         return getProduct();
     }
     return nullptr;

@@ -43,7 +43,7 @@ public:
      * @param type The type of plant to create (e.g., "Cactus")
      * @return Pointer to the created Plant
      */
-	virtual Plant* createPlant(string type) = 0;
+	virtual Plant* createPlant(string type, string colour) = 0;
 
 	/**
      * @brief Get the last created product

@@ -8,8 +8,9 @@
 #ifndef PLANT_H
 #define PLANT_H
 
-#include "PlantState.h"
+
 #include "CareStrategy.h"
+class PlantState;
 
 #include <string>
 using namespace std;
@@ -105,6 +106,12 @@ public:
      */
     void setTag(int t);
 
+	/**
+	 * @brief Get the careStrategy of the plant
+	 * @return CareStrategy careStrategy
+	 */
+	CareStrategy* getCareStrategy();
+
     /**
      * @brief Set the state of the plant (for state transitions)
      * @param newState Pointer to the new PlantState
@@ -126,6 +133,12 @@ public:
      */
 	void receiveSunlight();
 
+	/**
+     * @brief Set the care strategy for the plant. Determines how the plantt  is watered and given sunlight
+     */
+	void setCareStrategy(CareStrategy* careStrategy);
+
 };
 
 #endif
+#include "PlantState.h"

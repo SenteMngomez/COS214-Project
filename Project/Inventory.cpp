@@ -1,3 +1,9 @@
+/**
+ * @file Inventory.cpp
+ * @brief Implementation of Inventory class
+ * @author Kundai
+ * @date October 26, 2025
+ */
 #include "Inventory.h"
 #include "Plant.h"
 
@@ -30,8 +36,9 @@ void Inventory::updateInventory(Plant* plant) {
 	//If plant not found, add to inventory
 	if (it == plants.end()){
 		plants.push_back(plant);
+		stockCount[plant->getType()]++;
 	}
-
+	
 	//If it is found we don't need to do anything since we already have a pointer
 
 }
@@ -48,7 +55,7 @@ Plant* Inventory::removePlant(int id) {
 
 	//Find plant by the id
 	auto it = std::find_if(plants.begin(), plants.end(), [id](Plant* p){
-		return p->getChild(id);
+		return p->getTag() == id;
 	});
 
 	if (it != plants.end()){

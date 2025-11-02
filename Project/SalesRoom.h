@@ -3,7 +3,8 @@
 #define SALESROOM_H
 
 #include "Section.h"
-
+#include "Person.h" 
+#include "Staff.h"
 /**
  * @file SalesRoom.h
  * @brief Concrete Section used for sales-related chat and requests.

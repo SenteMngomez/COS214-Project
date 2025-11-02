@@ -14,3 +14,23 @@ void DecorativePot::print(){
 	PlantDecorator::print();
     cout << "In " << potType << " pot." << endl;
 }
+
+Plant* DecorativePot::clone() {
+    return new DecorativePot(component->clone(), potType, getColour(), nullptr, getPrice());
+}
+
+string DecorativePot::getType() const {
+    return component->getType() + " in " + potType;
+}
+
+void DecorativePot::add(Plant& plant) {
+    component->add(plant);
+}
+
+void DecorativePot::remove(Plant& plant) {
+    component->remove(plant);
+}
+
+Plant* DecorativePot::getChild(int tag) {
+    return component->getChild(tag);
+}

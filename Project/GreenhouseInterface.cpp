@@ -1,3 +1,9 @@
+/**
+ * @file GreenhouseInterface.h
+ * @brief Implementation of GreenhouseInterface class
+ * @author Kundai
+ * @date October 24, 2025
+ */
 #include "GreenhouseInterface.h"
 
 void GreenhouseInterface::attach(InventoryInterface* obs) {

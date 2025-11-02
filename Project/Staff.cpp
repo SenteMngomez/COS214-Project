@@ -1,6 +1,6 @@
 #include "Staff.h"
 
-Staff::Staff(std::string name):Person(name){}
+Staff::Staff(std::string name):Person(name),successor(nullptr){}
 
 void Staff::receiveMessage(Person* person, Section* section){
 
@@ -39,12 +39,17 @@ void Staff::receiveMessage(Person* person, Section* section){
 
 	}
 
-		std::cout<<"["<<section->getName()<<"] --"<<person->getMessageType()<<" request-- \""<<person->getMessage()<<"\" from "<<person->getName()<<plants<<decorate;
+	if(person->getMessageType()!="Purchase Complete"){
+
+		std::cout<<"["<<section->getName()<<"] "<<getName()<<" received --"<<person->getMessageType()<<" request-- \""<<person->getMessage()<<"\" from "<<person->getName()<<plants<<decorate<<"\n";
+	}
+		
 }
 
 void Staff::handleRequest(Person* person) {
 
 	if(successor){
+		std::cout<<"Passing on request to "<<successor->getName()<<"\n";
 		successor->handleRequest(person);
 	}else{
 		std::cout<<"Request Unhandled"<<std::endl;

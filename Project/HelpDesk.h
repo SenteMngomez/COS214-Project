@@ -2,6 +2,8 @@
 #define HELPDESK_H
 
 #include "Section.h"
+#include "Person.h" 
+#include "Staff.h"
 
 /**
  * @file HelpDesk.h

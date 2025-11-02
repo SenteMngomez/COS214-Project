@@ -8,7 +8,6 @@
 #define DEADSTATE_H
 
 #include "PlantState.h"
-#include "Plant.h"
 
 /**
  * @class DeadState

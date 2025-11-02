@@ -15,5 +15,9 @@ Plant* Oak::clone() {
 }
 
 void Oak::print() {
-	 cout << "Oak: " << getType() << ", Colour: " << getColour() << ", Price: R" << getPrice() << endl;
+	 cout << "Type: " << getType() << ", Colour: " << getColour() << ", Tag: " << getTag()  << ", Price: R" << getPrice() << endl;
+}
+
+Plant* Oak::getChild(int tag){
+	return nullptr;
 }

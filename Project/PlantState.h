@@ -10,6 +10,7 @@
 
 #ifndef PLANTSTATE_H
 #define PLANTSTATE_H
+
 #include "Plant.h"
 
 /**
@@ -19,6 +20,7 @@
  * Each concrete state class will implement the handle method to define
  * how the plant behaves in that particular state.
  */
+class Plant;
 class PlantState {
 
 

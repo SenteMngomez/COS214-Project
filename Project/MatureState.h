@@ -8,7 +8,6 @@
 #define MATURESTATE_H
 
 #include "PlantState.h"
-#include "Plant.h"
 #include "DeadState.h"
 
 /**

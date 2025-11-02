@@ -1,3 +1,9 @@
+/**
+ * @file GreenhouseInterface.h
+ * @brief Interface for Greenhouse class (Subject in Observer pattern)
+ * @author Kundai
+ * @date October 24, 2025
+ */
 #ifndef GREENHOUSEINTERFACE_H
 #define GREENHOUSEINTERFACE_H
 
