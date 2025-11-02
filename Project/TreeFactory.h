@@ -9,6 +9,7 @@
 #define TREEFACTORY_H
 
 #include "PlantFactory.h"
+#include "ModerateCareStrategy.h"
 #include "Mango.h"
 #include "Oak.h"
 
@@ -30,7 +31,7 @@ public:
      * @param type The tree type
      * @return Pointer to the created plant
      */
-	Plant* createPlant(string type);
+	Plant* createPlant(string type,string colour="");
 };
 
 #endif

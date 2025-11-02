@@ -20,6 +20,7 @@ void SalesClerk::sell(std::vector<int>* tags, string decorator) {
 	
 	if(sellPlantCommand){
 		sellPlantCommand->execute(tags,decorator);
+		std::cout<<"I got here-sell function";
 		purchaseComplete(sellPlantCommand->getReceipt());
 	}else{
 
@@ -30,6 +31,7 @@ void SalesClerk::sell(std::vector<int>* tags, string decorator) {
 
 void SalesClerk::purchaseComplete(std::string msg) {
 
+	std::cout<<"I got here-purchaseComplete function";
 	sendMessage(msg,"Purchase Complete");
 }
 

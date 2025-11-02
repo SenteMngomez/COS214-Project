@@ -49,12 +49,6 @@ public:
 	SellPlant(PlantBuilder* pb);
 
 	/**
-	 * @brief Set the Greenhouse instance the command operates on.
-	 * @param gh Pointer to the Greenhouse
-	 */
-	void setGreenhouse(Greenhouse* gh);
-
-	/**
 	 * @brief Set the SalesAssistance helper used to build receipts.
 	 * @param sBuild Pointer to a SalesAssistance instance
 	 */

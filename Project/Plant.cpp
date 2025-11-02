@@ -16,14 +16,14 @@ void Plant::receiveWater() {
 	if(careStrategy){
         careStrategy->water(this);
     }
-    cout << getType() << " plant received water." << endl;
+    //cout << getType() << " plant received water." << endl;
 }
 
 void Plant::receiveSunlight() {
 	if(careStrategy) {
         careStrategy->sunlight(this);
     }
-    cout << getType() << " plant received sunlight." << endl;
+    //cout << getType() << " plant received sunlight." << endl;
 }
 
 int Plant::getTag() const{
@@ -44,4 +44,10 @@ void Plant::setState(PlantState* newState) {
     }
     state = newState;
 }
+
+void Plant::setCareStrategy(CareStrategy* careStrategy){
+	this->careStrategy=careStrategy;
+}
+
+
 
