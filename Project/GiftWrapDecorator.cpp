@@ -31,6 +31,6 @@ void GiftWrapDecorator::remove(Plant& plant) {
     component->remove(plant);
 }
 
-Plant* GiftWrapDecorator::getChild(int tag) {
+Plant* GiftWrapDecorator::getChild(std::string tag) {
     return component->getChild(tag);
 }

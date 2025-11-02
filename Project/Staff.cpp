@@ -20,7 +20,7 @@ void Staff::receiveMessage(Person* person, Section* section){
 
 		for(int i=0;i<numPlants;i++){
 
-			plants+="Plant-"+to_string((*person->getTags())[i]);
+			plants+="Plant-"+(*person->getTags())[i];
 
 			if(i<numPlants-1){
 
@@ -46,7 +46,7 @@ void Staff::receiveMessage(Person* person, Section* section){
 
 		for(int i=0;i<numPlants;i++){
 
-			plants+="Plant-"+to_string((*person->getTags())[i]);
+			plants+="Plant-"+(*person->getTags())[i];
 
 			if(i<numPlants-1){
 

@@ -8,7 +8,10 @@
 #include "Tulip.h"
 
 Tulip::Tulip(string colour, CareStrategy* careStrategy, double price)
-    : Plant(colour, careStrategy, price) {}
+    : Plant(colour, careStrategy, price) {
+
+		setTag(getType()+"#"+colour);
+	}
 
 Plant* Tulip::clone() {
     return new Tulip(*this);
@@ -18,6 +21,6 @@ void Tulip::print() {
 	cout << "Type: " << getType() << ", Colour: " << getColour() << ", Tag: " << getTag()  << ", Price: R" << getPrice() << endl;
 }
 
-Plant* Tulip::getChild(int tag){
+Plant* Tulip::getChild(string tag){
 	return nullptr;
 }

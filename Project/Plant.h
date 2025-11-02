@@ -31,7 +31,7 @@ private:
 	PlantState* state;
 	CareStrategy* careStrategy;
 	string colour;
-	int tag;
+	string tag;
 	double price;
 
 public:
@@ -63,7 +63,7 @@ public:
 	 * @param tag The tag of the child plant
 	 * @return Pointer to the child plant, or nullptr if not found
 	 */
-	virtual Plant* getChild(int tag) = 0;
+	virtual Plant* getChild(string tag) = 0;
 
 	/**
      * @brief Construct a Plant with colour and care strategy
@@ -98,13 +98,13 @@ public:
     * @brief Get the tag (unique id) of the plant
     * @return Integer tag
      */
-    int getTag() const;
+    string getTag() const;
 
     /**
     * @brief Set the tag (unique id) of the plant
     * @param t Integer tag to set
      */
-    void setTag(int t);
+    void setTag(string t);
 
 	/**
 	 * @brief Get the careStrategy of the plant
@@ -121,7 +121,7 @@ public:
 	/**
      * @brief destructor
      */
-    virtual ~Plant() {}
+    virtual ~Plant() {};
 
 	/**
      * @brief Receive water from care operations

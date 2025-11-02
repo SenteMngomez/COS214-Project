@@ -21,7 +21,7 @@ void SalesClerk::handleRequest(Person* person){
 	}
 }
 
-void SalesClerk::sell(std::vector<int>* tags, string decorator, string name) {
+void SalesClerk::sell(std::vector<string>* tags, string decorator, string name) {
 	
 	if(sellPlantCommand){
 		sellPlantCommand->execute(tags,decorator);

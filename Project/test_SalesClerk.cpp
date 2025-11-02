@@ -57,7 +57,7 @@ class MockSellPlant : public SellPlant {
 public:
     MockSellPlant() : SellPlant(nullptr) {}
     
-    void execute(vector<int>* tags, string decorator="") override {
+    void execute(vector<std::string>* tags, string decorator="") override {
         executeCalled = true;
         lastTags = tags;
         lastDecorator = decorator;
@@ -74,7 +74,7 @@ public:
     }
     
     bool executeCalled = false;
-    vector<int>* lastTags = nullptr;
+    vector<std::string>* lastTags = nullptr;
     string lastDecorator = "";
     string receipt = "";
 };
@@ -124,7 +124,7 @@ TEST_F(SalesClerkTest, ConstructorSetsName) {
 }
 
 TEST_F(SalesClerkTest, HandlesPurchaseRequests) {
-    vector<int> plants = {1, 2, 3};
+    vector<std::string> plants = {"1", "2", "3"};
     mockPerson->sendMessage("Buy plants", "Purchase", &plants, "pot");
     
     salesClerk->handleRequest(mockPerson);
@@ -154,7 +154,7 @@ TEST_F(SalesClerkTest, DelegatesNonPurchaseRequests) {
 TEST_F(SalesClerkTest, DelegatesCareRequests) {
     salesClerk->setSuccessor(mockStaffSuccessor);
     
-    vector<int> plants = {1, 2};
+    vector<std::string> plants = {"1", "2"};
     mockPerson->sendMessage("Water plants", "Care", &plants);
     salesClerk->handleRequest(mockPerson);
     
@@ -165,7 +165,7 @@ TEST_F(SalesClerkTest, DelegatesCareRequests) {
 }
 
 TEST_F(SalesClerkTest, IgnoresEmptyPurchaseRequests) {
-    vector<int> emptyPlants;
+    vector<std::string> emptyPlants;
     mockPerson->sendMessage("Buy nothing", "Purchase", &emptyPlants);
     
     salesClerk->handleRequest(mockPerson);
@@ -179,7 +179,7 @@ TEST_F(SalesClerkTest, IgnoresEmptyPurchaseRequests) {
 }
 
 TEST_F(SalesClerkTest, SellExecutesCommandCorrectly) {
-    vector<int> plants = {5, 10};
+    vector<std::string> plants = {"5", "10"};
     string decorator = "wrap";
     string customerName = "Finn";
     
@@ -195,7 +195,7 @@ TEST_F(SalesClerkTest, SellWithoutCommandShowsError) {
     
     SalesClerk clerkWithoutCommand("Benson");
     
-    vector<int> plants = {1, 2};
+    vector<std::string> plants = {"1", "2"};
     clerkWithoutCommand.sell(&plants, "pot", "Jake");
     
     std::string output = outputStream.str();
@@ -224,7 +224,7 @@ TEST_F(SalesClerkTest, SetSellPlantCommandWorks) {
     MockSellPlant* newCommand = new MockSellPlant();
     salesClerk->setSellPlantCommand(newCommand);
     
-    vector<int> plants = {7, 8};
+    vector<std::string> plants = {"7", "8"};
     salesClerk->sell(&plants, "pot", "Princess Bubblegum");
     
     //Should use the new command
@@ -240,7 +240,7 @@ TEST_F(SalesClerkTest, FullPurchaseWorkflow) {
     mockSection->addPerson(salesClerk);
     mockSection->addPerson(mockPerson);
     
-    vector<int> plants = {1, 2, 3};
+    vector<std::string> plants = {"1", "2", "3"};
     mockPerson->sendMessage("Buy rare plants", "Purchase", &plants, "fancy_pot");
     
     salesClerk->handleRequest(mockPerson);

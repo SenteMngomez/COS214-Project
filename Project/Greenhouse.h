@@ -44,13 +44,13 @@ public:
 	 * @brief Waters a specific plant and notifies observers.
 	 * @param plant The plant to water.
 	 */
-	void waterPlant(int tag);
+	void waterPlant(std::string tag);
 
 	/**
 	 * @brief Gives sunlight to a specific plant and notifies observers.
 	 * @param plant The plant to give sunlight to.
 	 */
-	void giveSunlight(int tag);
+	void giveSunlight(std::string tag);
 
 	/**
 	 * @brief Creates an iterator for the plants in the greenhouse.
@@ -74,7 +74,7 @@ public:
 	 * @param tag The unique tag of the plant to remove.
 	 * @return A pointer to the removed plant, or nullptr if not found.
 	 */
-	Plant* removePlant(int tag);
+	Plant* removePlant(std::string tag);
 
 	string getName();
 };

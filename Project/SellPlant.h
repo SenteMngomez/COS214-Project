@@ -69,7 +69,7 @@ public:
 	 * @param tag Pointer to a vector of plant tag ids to sell
 	 * @param decorator Optional decorator type (e.g., "wrap" or "pot")
 	 */
-	virtual void execute(vector<int>* tag, string decorator = "");
+	virtual void execute(vector<string>* tag, string decorator = "");
 };
 
 #endif

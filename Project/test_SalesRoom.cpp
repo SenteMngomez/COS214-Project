@@ -163,7 +163,7 @@ TEST_F(SalesRoomTest, NotifyWithAdminCallsAdminHandleRequest) {
     salesRoom->addPerson(staff1);
     
     customer1->addSection(salesRoom);
-	vector<int> plants={1,2};
+	vector<std::string> plants={"1","2"};
     customer1->sendMessage("I need flowers", "Purchase",&plants);
     
     //Admin should handle the request

@@ -196,7 +196,7 @@ TEST_F(HelpDeskTest, NotifyAcceptsCareMessage) {
     helpDesk->addPerson(staff1);
     
     customer1->addSection(helpDesk);
-    std::vector<int> plants = {1, 2, 3};
+    std::vector<std::string> plants = {"1", "2", "3"};
     customer1->sendMessage("Help with plant care", "Care", &plants);
     
     //Should not output error message

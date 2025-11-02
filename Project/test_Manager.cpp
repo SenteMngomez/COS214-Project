@@ -105,7 +105,7 @@ TEST_F(ManagerTest, DelegatesNonHelpRequests) {
 TEST_F(ManagerTest, DelegatesCareRequests) {
     manager->setSuccessor(mockStaffSuccessor);
     
-    std::vector<int> plants = {1, 2};
+    std::vector<std::string> plants = {"1", "2"};
     mockPerson->sendMessage("Water plants", "Care", &plants);
     manager->handleRequest(mockPerson);
     

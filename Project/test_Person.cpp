@@ -130,7 +130,7 @@ TEST_F(PersonTest, AddSectionWorks) {
 TEST_F(PersonTest, SendMessageWithSingleSection) {
     person->addSection(mockSection1);
     
-    std::vector<int> tags = {1, 2, 3};
+    std::vector<std::string> tags = {"1", "2", "3"};
     person->sendMessage("Help me", "Help", &tags);
     
     //Check message attributes are set correctly
@@ -163,7 +163,7 @@ TEST_F(PersonTest, SendMessageWithTwoSectionsPurchase) {
     person->addSection(mockSection2); 
     
     //Send Purchase message - should use second section
-    std::vector<int> tags = {5, 6};
+    std::vector<std::string> tags = {"5", "6"};
     person->sendMessage("Buy plants", "Purchase", &tags, "pot");
     
     EXPECT_TRUE(mockSection2->notifyCalled);
@@ -203,7 +203,7 @@ TEST_F(PersonTest, SendMessageWithOptionalParameters) {
 TEST_F(PersonTest, SendMessageWithAllParameters) {
     person->addSection(mockSection1);
     
-    std::vector<int> tags = {10, 20, 30};
+    std::vector<std::string> tags = {"10", "20", "30"};
     person->sendMessage("Complex message", "Care", &tags, "special");
     
     EXPECT_EQ(person->getMessage(), "Complex message");
@@ -216,7 +216,7 @@ TEST_F(PersonTest, MessageAttributesOverwritten) {
     person->addSection(mockSection1);
     
     //Send first message
-    std::vector<int> tags1 = {1, 2};
+    std::vector<std::string> tags1 = {"1", "2"};
     person->sendMessage("First message", "Help", &tags1, "first");
     
     EXPECT_EQ(person->getMessage(), "First message");
@@ -225,7 +225,7 @@ TEST_F(PersonTest, MessageAttributesOverwritten) {
     EXPECT_EQ(person->getDecorator(), "first");
     
     //Send second message - should overwrite
-    std::vector<int> tags2 = {3, 4, 5};
+    std::vector<std::string> tags2 = {"3", "4", "5"};
     person->sendMessage("Second message", "Purchase", &tags2, "second");
     
     EXPECT_EQ(person->getMessage(), "Second message");
@@ -252,7 +252,7 @@ TEST_F(PersonTest, ReceiveMessageIsVirtual) {
 TEST_F(PersonTest, GettersReturnCorrectValues) {
     person->addSection(mockSection1);
     
-    std::vector<int> tags = {100, 200};
+    std::vector<std::string> tags = {"100", "200"};
     person->sendMessage("Getter test", "Test Type", &tags, "test decorator");
     
     //Test all getters
@@ -282,7 +282,7 @@ TEST_F(PersonTest, AddMultipleSectionsSpecify) {
 TEST_F(PersonTest, EmptyTagsVector) {
     person->addSection(mockSection1);
     
-    std::vector<int> emptyTags;
+    std::vector<std::string> emptyTags;
     person->sendMessage("Empty tags test", "Care", &emptyTags);
     
     EXPECT_EQ(person->getTags(), &emptyTags);

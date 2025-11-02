@@ -57,21 +57,21 @@ class MockWaterPlant : public WaterPlant {
 public:
     MockWaterPlant() : WaterPlant() {}
     
-    void execute(vector<int>* tags, string decorator = "") override {
+    void execute(vector<std::string>* tags, string decorator = "") override {
         executeCalled = true;
         lastTags = tags;
         lastDecorator = decorator;
         
         //Simulate watering output
         if (tags && !tags->empty()) {
-            for (int id : *tags) {
+            for (std::string id : *tags) {
                 std::cout << "Mock: Plants with the following id has been watered: " << id << std::endl;
             }
         }
     }
     
     bool executeCalled = false;
-    vector<int>* lastTags = nullptr;
+    vector<std::string>* lastTags = nullptr;
     string lastDecorator = "";
 };
 
@@ -80,21 +80,21 @@ class MockGiveSunlight : public GiveSunlight {
 public:
     MockGiveSunlight() : GiveSunlight() {}
     
-    void execute(vector<int>* tags, string decorator = "") override {
+    void execute(vector<std::string>* tags, string decorator = "") override {
         executeCalled = true;
         lastTags = tags;
         lastDecorator = decorator;
         
         //Simulate giving sunlight output
         if (tags && !tags->empty()) {
-            for (int id : *tags) {
+            for (std::string id : *tags) {
                 std::cout << "Mock: The plant with the following id is being left in the sun for some time : " << id << std::endl;
             }
         }
     }
     
     bool executeCalled = false;
-    vector<int>* lastTags = nullptr;
+    vector<std::string>* lastTags = nullptr;
     string lastDecorator = "";
 };
 
@@ -151,7 +151,7 @@ TEST_F(GroundStaffTest, ConstructorSetsName) {
 }
 
 TEST_F(GroundStaffTest, HandlesCareRequests) {
-    vector<int> plants = {1, 2, 3};
+    vector<std::string> plants = {"1", "2", "3"};
     mockPerson->sendMessage("Water and care for plants", "Care", &plants);
     
     groundStaff->handleRequest(mockPerson);
@@ -168,7 +168,7 @@ TEST_F(GroundStaffTest, HandlesCareRequests) {
 }
 
 TEST_F(GroundStaffTest, HandlesCareSinglePlant) {
-    vector<int> plants = {42};
+    vector<std::string> plants = {"42"};
     mockPerson->sendMessage("Care for my cactus", "Care", &plants);
     
     groundStaff->handleRequest(mockPerson);
@@ -184,7 +184,7 @@ TEST_F(GroundStaffTest, HandlesCareSinglePlant) {
 }
 
 TEST_F(GroundStaffTest, IgnoresEmptyCareRequests) {
-    vector<int> emptyPlants;
+    vector<std::string> emptyPlants;
     mockPerson->sendMessage("Care for nothing", "Care", &emptyPlants);
     
     groundStaff->handleRequest(mockPerson);
@@ -218,7 +218,7 @@ TEST_F(GroundStaffTest, DelegatesNonCareRequests) {
 TEST_F(GroundStaffTest, DelegatesPurchaseRequests) {
     groundStaff->setSuccessor(mockStaffSuccessor);
     
-    vector<int> plants = {1, 2};
+    vector<std::string> plants = {"1", "2"};
     mockPerson->sendMessage("Buy plants", "Purchase", &plants, "pot");
     groundStaff->handleRequest(mockPerson);
     
@@ -233,7 +233,7 @@ TEST_F(GroundStaffTest, DelegatesPurchaseRequests) {
 }
 
 TEST_F(GroundStaffTest, CareForPlantWithBothCommands) {
-    vector<int> plants = {5, 10, 15};
+    vector<std::string> plants = {"5", "10", "15"};
     
     groundStaff->careForPlant(&plants);
     
@@ -249,7 +249,7 @@ TEST_F(GroundStaffTest, CareForPlantWithoutWaterCommand) {
     GroundStaff staffWithoutWater("Skips");
     staffWithoutWater.setGiveSunlightCommand(mockGiveSunlight);
     
-    vector<int> plants = {7, 8};
+    vector<std::string> plants = {"7", "8"};
     staffWithoutWater.careForPlant(&plants);
     
     std::string output = outputStream.str();
@@ -267,7 +267,7 @@ TEST_F(GroundStaffTest, CareForPlantWithoutSunlightCommand) {
     GroundStaff staffWithoutSunlight("Pops");
     staffWithoutSunlight.setWaterPlantCommand(mockWaterPlant);
     
-    vector<int> plants = {9, 10};
+    vector<std::string> plants = {"9", "10"};
     staffWithoutSunlight.careForPlant(&plants);
     
     std::string output = outputStream.str();
@@ -283,7 +283,7 @@ TEST_F(GroundStaffTest, CareForPlantWithoutSunlightCommand) {
 TEST_F(GroundStaffTest, CareForPlantWithoutAnyCommands) {
     GroundStaff staffWithoutCommands("Muscle Man");
     
-    vector<int> plants = {11, 12};
+    vector<std::string> plants = {"11", "12"};
     staffWithoutCommands.careForPlant(&plants);
     
     std::string output = outputStream.str();
@@ -297,7 +297,7 @@ TEST_F(GroundStaffTest, SetWaterPlantCommandWorks) {
     MockWaterPlant* newWaterCommand = new MockWaterPlant();
     groundStaff->setWaterPlantCommand(newWaterCommand);
     
-    vector<int> plants = {20, 21};
+    vector<std::string> plants = {"20", "21"};
     groundStaff->careForPlant(&plants);
     
     //Should use the new command
@@ -312,7 +312,7 @@ TEST_F(GroundStaffTest, SetGiveSunlightCommandWorks) {
     MockGiveSunlight* newSunlightCommand = new MockGiveSunlight();
     groundStaff->setGiveSunlightCommand(newSunlightCommand);
     
-    vector<int> plants = {25, 26};
+    vector<std::string> plants = {"25", "26"};
     groundStaff->careForPlant(&plants);
     
     //Should use the new command
@@ -326,7 +326,7 @@ TEST_F(GroundStaffTest, SetGiveSunlightCommandWorks) {
 TEST_F(GroundStaffTest, FullCareWorkflow) {
     // Set up complete workflow
     
-    vector<int> plants = {100, 101, 102};
+    vector<std::string> plants = {"100", "101", "102"};
     mockPerson->sendMessage("Please care for my plants", "Care", &plants);
     
     groundStaff->handleRequest(mockPerson);

@@ -7,7 +7,7 @@ string Person::getName() {
 	return name;
 }
 
-void Person::sendMessage(string message, string type,std::vector<int>* tags, string decorator,string sectionName) {
+void Person::sendMessage(string message, string type,std::vector<string>* tags, string decorator,string sectionName) {
 
 	if(sections.empty()){
 
@@ -62,7 +62,7 @@ string Person::getMessage() const{
 	return this->message;
 }
 
-std::vector<int>* Person::getTags() {
+std::vector<string>* Person::getTags() {
 	return this->tags;
 }
 

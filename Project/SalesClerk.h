@@ -48,7 +48,7 @@ class SalesClerk : public Staff {
 		 * @param tags Vector of plant tag IDs to sell.
 		 * @param decorator The decorator to apply to sold plants.
 		 */
-		void sell(std::vector<int>* tags, string decorator, string name);
+		void sell(std::vector<string>* tags, string decorator, string name);
 
 	private:
 		

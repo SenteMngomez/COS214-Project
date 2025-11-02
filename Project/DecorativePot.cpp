@@ -31,6 +31,6 @@ void DecorativePot::remove(Plant& plant) {
     component->remove(plant);
 }
 
-Plant* DecorativePot::getChild(int tag) {
+Plant* DecorativePot::getChild(std::string tag) {
     return component->getChild(tag);
 }

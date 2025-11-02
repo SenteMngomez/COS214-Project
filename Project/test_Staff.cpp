@@ -122,7 +122,7 @@ TEST_F(StaffTest, HandleRequestCallsSuccessorWhenCantHandle) {
 
 TEST_F(StaffTest, ReceiveMessageProcessesPurchaseType) {
     //Set up sender with Purchase message
-	vector<int> plants={1,2};
+	vector<std::string> plants={"1","2"};
     mockSender->sendMessage("Buy plants", "Purchase",&plants);
     
     //Staff should process Purchase messages
@@ -136,7 +136,7 @@ TEST_F(StaffTest, ReceiveMessageProcessesPurchaseType) {
 
 TEST_F(StaffTest, ReceiveMessageProcessesCareType) {
     //Set up sender with Care message
-	vector<int> plants={1,2};
+	vector<std::string> plants={"1","2"};
     mockSender->sendMessage("Water plants", "Care",&plants);
     
     //Staff should process Care messages
