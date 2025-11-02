@@ -186,10 +186,12 @@ int main() {
     Plant* rose = flowerFactory.createPlant("Rose");
     Plant* cactus = succulentFactory.createPlant("Cactus");
     Plant* oak = treeFactory.createPlant("Oak");
+	Plant* tulip= flowerFactory.createPlant("Tulip","Blue");
 
     greenhouse.addPlant(rose);
     greenhouse.addPlant(cactus);
     greenhouse.addPlant(oak);
+	greenhouse.addPlant(tulip);
 
    	int choicePerson;
 	
@@ -327,7 +329,7 @@ int main() {
         bool flag = true ;
         while(flag == true){
 
-            cout<<"\t1.CareForPlant \n\t2.addPlant "<<endl;
+            cout<<"1.CareForPlant \n2.addPlant \n3.RemovePlant "<<endl;
             int op2;
             cout<<"What will we be doing today? ";
             cin>>op2;
@@ -335,9 +337,64 @@ int main() {
                 string type="Care";
                 greenhouse.showPlants();
                 handleCarePlant(manager1,type);
+            }else if(op2 == 2){
+                //firgure out th plant to add 
+                cout<<"Please select what you would like to add\nNext action : 1.Flower \n2.Tree \n3.Succulent";
+                int option ;
+                cin>>option;
+                if(option == 1){
+                    string type;
+                    cout<<"What type of flower is it ";
+                    std::getline(std::cin>>std::ws, type);
+
+                    Plant* adding = flowerFactory.createPlant(type);
+                    greenhouse.addPlant(adding);
+                    cout<<"the flower "<<type<<" has been added to the greenhouse";
+                }else if(option ==2){
+                    string type;
+                    cout<<"What type of Tree is it ";
+                    std::getline(std::cin>>std::ws, type);
+
+                    Plant* adding = flowerFactory.createPlant(type);
+                    greenhouse.addPlant(adding);
+                    cout<<"the Tree "<<type<<" has been added to the greenhouse";
+
+                }else{
+                    string type;
+                    cout<<"What type of Succulent is it ";
+                    std::getline(std::cin>>std::ws, type);
+
+                    Plant* adding = flowerFactory.createPlant(type);
+                    greenhouse.addPlant(adding);
+                    cout<<"the Succulent "<<type<<" has been added to the greenhouse";
+
+                }
             }else{
-                string type="Add";
-                
+                clearScreen();
+                greenhouse.showPlants();
+                cout<<"Which plant(s) will you be removing from the inventory"<<endl;
+                cout<<"Please enter the tags of the plants you would like (Type s to finish):\n";
+
+                std::string tag;
+                vector<std::string>* tags=new vector<std::string>();
+
+                while(true){
+                    cout<<"Tag: ";
+                    if(!(std::cin>>tag)){
+                        
+                        cout<<"Invalid input. Please enter a valid tag (or s to finish)."<<endl;
+                        std::cin.clear();
+                        std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+                        continue;
+                    }
+                    if(tag=="s")break;
+                    tags->push_back(tag);
+                }
+
+                for(std::string i :*tags){
+                    greenhouse.removePlant(i);
+                }
+                cout<<"The plants you have selected have been successfully be remove from the inventory "<<endl;
             }
           
             cout<<"\nNeed anything else?\n\t1.Yes \n\t2.No\n";

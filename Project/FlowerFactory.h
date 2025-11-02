@@ -9,6 +9,7 @@
 #define FLOWERFACTORY_H
 
 #include "PlantFactory.h"
+#include "HeavyCareStrategy.h"
 #include "Rose.h"
 #include "Tulip.h"
 
@@ -30,7 +31,7 @@ public:
      * @param type The flower type
      * @return Pointer to the created plant
      */
-	Plant* createPlant(string type);
+	Plant* createPlant(string type,string colour="");
 };
 
 #endif

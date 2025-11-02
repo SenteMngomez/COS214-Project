@@ -9,12 +9,14 @@
 #include "Mango.h"
 #include "Oak.h"
 
-Plant* TreeFactory::createPlant(string type) {
+Plant* TreeFactory::createPlant(string type, string colour) {
     if(type == "Mango"){
-        setProduct(new Mango("Green", nullptr, 25.99));
+		colour=colour.empty()?"Brown":colour;
+        setProduct(new Mango(colour, new ModerateCareStrategy(), 25.99));
         return getProduct();
     }else if(type == "Oak") {
-        setProduct(new Oak("Brown", nullptr, 30.99));
+		colour=colour.empty()?"Brown":colour;
+        setProduct(new Oak(colour, new ModerateCareStrategy, 30.99));
         return getProduct();
     }
     return nullptr;

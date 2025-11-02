@@ -6,6 +6,7 @@
  */
 
 #include "Plant.h"
+#include "SeedState.h"
 
 Plant::Plant(string colour, CareStrategy* careStrategy, double price)
     : colour(colour), careStrategy(careStrategy), state(NULL), tag(""), price(price){
@@ -44,4 +45,16 @@ void Plant::setState(PlantState* newState) {
     }
     state = newState;
 }
+
+PlantState* Plant::getState() const {
+    return state;
+}
+
+void Plant::setCareStrategy(CareStrategy* careStrategy){
+	this->careStrategy=careStrategy;
+}
+
+
+
+
 
