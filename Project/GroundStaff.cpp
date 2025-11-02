@@ -6,6 +6,10 @@ void GroundStaff::handleRequest(Person* person){
 
 	if(person->getMessageType()=="Care"){
 
+		if(person->getTags()->empty()){
+			return;
+		}
+
 		std::string plants="";
 
 		int numPlants=person->getTags()->size();

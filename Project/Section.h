@@ -38,7 +38,7 @@ class Section {
 		/**
          * @brief Destroys the Section and releases any runtime resources.
          */
-		~Section();
+		virtual ~Section();
 
 		friend class Iterator;
 

@@ -39,7 +39,7 @@ class SalesClerk : public Staff {
 		 * @brief Callback invoked when a purchase is complete to notify others.
 		 * @param msg Message describing the purchase completion.
 		 */
-		void purchaseComplete(std::string msg);
+		void purchaseComplete(std::string msg, string name);
 
 		/**
 		 * @brief Sets the SellPlant command used to perform sales.
@@ -52,7 +52,7 @@ class SalesClerk : public Staff {
 		 * @param tags Vector of plant tag IDs to sell.
 		 * @param decorator The decorator to apply to sold plants.
 		 */
-		void sell(std::vector<int>* tags, string decorator);
+		void sell(std::vector<int>* tags, string decorator, string name);
 
 	private:
 		

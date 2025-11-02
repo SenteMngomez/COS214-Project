@@ -17,7 +17,7 @@ void Person::sendMessage(string message, string type,std::vector<int>* tags, str
 
 	int room=0;
 
-	if(type=="Purchase"||type=="Purchase Complete"){
+	if(sections.size()==2&&("Purchase"||type=="Purchase Complete")){
 		room=1;
 	}
 
