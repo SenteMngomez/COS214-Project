@@ -115,8 +115,8 @@ protected:
 
     void TearDown() override {
         delete sellCommand;
-        delete salesHelper;
-        delete builder;
+        // delete salesHelper;  // SellPlant takes ownership and deletes it
+        // delete builder;  // SellPlant takes ownership and deletes it
         
         delete greenhouse;
     }

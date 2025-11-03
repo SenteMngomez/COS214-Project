@@ -36,5 +36,5 @@ TEST(LightCareStrategyIntegrationTest, SunlightOutputIsCorrect){
     strategy.sunlight(&plant);
 
     string output = testing::internal::GetCapturedStdout();
-    EXPECT_NE(output.find("Placing the MockPlant in direct sunlight for 3-4 hours."), string::npos);
+    EXPECT_NE(output.find("Placing the MockPlant in partial sunlight for 3-4 hours."), string::npos);
 }

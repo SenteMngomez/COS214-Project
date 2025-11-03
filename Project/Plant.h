@@ -144,6 +144,11 @@ public:
      */
 	void setCareStrategy(CareStrategy* careStrategy);
 
+	/**
+	 * 
+	 */
+	void progressState();
+
 };
 
 #endif
