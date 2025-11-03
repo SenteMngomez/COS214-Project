@@ -9,6 +9,7 @@
 #define SUCCULENTFACTORY_H
 
 #include "PlantFactory.h"
+#include "LightCareStrategy.h"
 #include "Begonia.h"
 #include "Cactus.h"
 
@@ -30,7 +31,7 @@ public:
      * @param type The succulent type
      * @return Pointer to the created plant
      */
-	Plant* createPlant(string type);
+	Plant* createPlant(string type, string colour="");
 };
 
 #endif

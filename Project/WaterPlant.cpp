@@ -3,9 +3,9 @@
 WaterPlant::WaterPlant():Command(){}
 
 
-void WaterPlant::execute(vector<int> *tag, string decorator)
+void WaterPlant::execute(vector<string> *tag, string decorator)
 {
-    for(int id : *tag){
+    for(string id : *tag){
         greenHouse->waterPlant(id);
         cout<<"Plants with the following id has been watered: "<<id<<endl;
     }

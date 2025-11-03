@@ -1,12 +1,26 @@
 
 #include "SalesRoom.h"
 
-	SalesRoom::SalesRoom(std::string name):Section(name){}
+	SalesRoom::SalesRoom(std::string name):Section(name){
+		type="Sales";
+	}
 
 	void SalesRoom::notify(Person* person){
 
-		for(Person* p:personList){
+		if(person->getMessageType()=="Purchase Complete"){
 
+			for(Person* p:personList){
+				if(p->getName()==person->getDecorator()){
+					p->receiveMessage(person,this);
+					break;
+				}	
+			}
+			addToHistory(person);
+			return;
+		}
+
+		for(Person* p:personList){
+			if(p==person) continue;
 			p->receiveMessage(person,this);
 		}
 

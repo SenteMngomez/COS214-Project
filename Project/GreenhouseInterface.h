@@ -34,15 +34,15 @@ public:
 	 */
 	void detach(InventoryInterface* obs);
 
-protected:
-	/// @brief A list of pointers to all attached observers.
-	std::vector<InventoryInterface*> observers;
-
 	/**
 	 * @brief Notifies all attached observers of a change.
 	 * @param plant A pointer to the plant that has been affected.
 	 */
 	void notify(Plant* plant);
+
+protected:
+	/// @brief A list of pointers to all attached observers.
+	std::vector<InventoryInterface*> observers;
 	
 };
 

@@ -1,14 +1,14 @@
 #include "SellPlant.h"
 #include "PlantBuilder.h"
 
-SellPlant::SellPlant(PlantBuilder* pb){
+SellPlant::SellPlant(PlantBuilder* pb):Command(){
 	this->builder = pb;
 	sBuild = new SalesAssistance();
 	r = nullptr;
 }
 
-void SellPlant::setGreenhouse(Greenhouse* gh){
-	this->greenHouse = gh ;
+SellPlant::~SellPlant(){
+
 }
 
 void SellPlant::setSalesAssitance(SalesAssistance* sa){
@@ -17,10 +17,10 @@ void SellPlant::setSalesAssitance(SalesAssistance* sa){
         sBuild = sa;
     }
 }
-void SellPlant::execute(vector<int>* tag, string decorator){
+void SellPlant::execute(vector<string>* tag, string decorator){
 	// cout<<"HII"<<endl;
 	vector<Plant*> soldPlants;
-	for(int i :*tag){
+	for(string i :*tag){
 		// cout<<"hello"<<endl;
 		Plant* p = greenHouse->removePlant(i);
 		if (p) soldPlants.push_back(p);

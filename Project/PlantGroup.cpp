@@ -51,7 +51,7 @@ void PlantGroup::remove(Plant& plant){
     }
 }
 
-Plant* PlantGroup::getChild(int tag){
+Plant* PlantGroup::getChild(string tag){
     for(Plant* child : children){
         if(child && child->getTag() == tag){
             return child;

@@ -36,8 +36,9 @@ void Inventory::updateInventory(Plant* plant) {
 	//If plant not found, add to inventory
 	if (it == plants.end()){
 		plants.push_back(plant);
+		stockCount[plant->getType()]++;
 	}
-
+	
 	//If it is found we don't need to do anything since we already have a pointer
 
 }
@@ -48,7 +49,7 @@ void Inventory::addStock(string plantName, int stock) {
 
 }
 
-Plant* Inventory::removePlant(int id) {
+Plant* Inventory::removePlant(std::string id) {
 	
 	Plant* removedPlant = nullptr;
 

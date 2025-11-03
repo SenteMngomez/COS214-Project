@@ -6,7 +6,15 @@
  */
 #include "Greenhouse.h"
 
-void Greenhouse::waterPlant(int tag) {
+Greenhouse::~Greenhouse(){
+
+	for(Plant* plant:plants){
+        delete plant;
+    }
+    plants.clear();
+}
+
+void Greenhouse::waterPlant(std::string tag) {
 	
 	Plant* wateredPlant = nullptr;
 
@@ -24,7 +32,7 @@ void Greenhouse::waterPlant(int tag) {
 
 }
 
-void Greenhouse::giveSunlight(int tag) {
+void Greenhouse::giveSunlight(std::string tag) {
 	
 	Plant* sunBathedPlant = nullptr;
 
@@ -35,7 +43,7 @@ void Greenhouse::giveSunlight(int tag) {
 	if (it != plants.end()){
 
 		sunBathedPlant = *it;
-		sunBathedPlant->receiveWater();
+		sunBathedPlant->receiveSunlight();
 		notify(sunBathedPlant); 
 		
 	}
@@ -69,7 +77,7 @@ void Greenhouse::showPlants() {
 	}
 }
 
-Plant* Greenhouse::removePlant(int tag) {
+Plant* Greenhouse::removePlant(std::string tag) {
 	
 	Plant* removedPlant = nullptr;
 

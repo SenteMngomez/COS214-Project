@@ -54,21 +54,21 @@ void customerRequest(Customer* customer,string type){
 
 	if(type=="Purchase"){
 
-		cout<<"Please enter the tags of the plants you would like (Type -1 to finish):\n";
+		cout<<"Please enter the tags of the plants you would like (Type s to finish):\n";
 
-		int tag;
-		vector<int>* tags=new vector<int>();
+		std::string tag;
+		vector<std::string>* tags=new vector<std::string>();
 
 		while(true){
             cout<<"Tag: ";
             if(!(std::cin>>tag)){
                 
-                cout<<"Invalid input. Please enter a valid tag (or -1 to finish)."<<endl;
+                cout<<"Invalid input. Please enter a valid tag (or s to finish)."<<endl;
                 std::cin.clear();
                 std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
                 continue;
             }
-            if(tag==-1)break;
+            if(tag=="s")break;
             tags->push_back(tag);
         }
 
@@ -110,92 +110,68 @@ void handleCarePlant(Manager* manager,string Type){/*calls the ground stuff thro
 
     
 
-    cout<<"Please enter the tags of the plants you would like (Type -1 to finish):\n";
+    cout<<"Please enter the tags of the plants you would like to care for (Type s to finish):\n";
 
-    int tag;
-    vector<int>* tags=new vector<int>();
-
-    while(true){
-        cout<<"Tag: ";
-        if(!(std::cin>>tag)){
-            
-            cout<<"Invalid input. Please enter a valid tag (or -1 to finish)."<<endl;
-            std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
-            continue;
-        }
-        if(tag==-1)break;
-        tags->push_back(tag);
-    }
-
-    manager->sendMessage(message,Type,tags);
-}
-
-void handleAddPlant(Manager* manager,string Type){
-    string message;
-	cout<<"Please enter the message for your  request: ";
-	std::getline(std::cin>>std::ws, message);
-
-    
-
-    cout<<"Please enter the tags of the plants you would like (Type -1 to finish):\n";
-
-    int tag;
-    vector<int>* tags=new vector<int>();
+    std::string tag;
+    vector<std::string>* tags=new vector<std::string>();
 
     while(true){
         cout<<"Tag: ";
         if(!(std::cin>>tag)){
             
-            cout<<"Invalid input. Please enter a valid tag (or -1 to finish)."<<endl;
+            cout<<"Invalid input. Please enter a valid tag (or s to finish)."<<endl;
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
             continue;
         }
-        if(tag==-1)break;
+        if(tag=="s")break;
         tags->push_back(tag);
     }
 
     manager->sendMessage(message,Type,tags);
-
 }
-
 
 int main() {
     string password = "StartingFive";
     cout<<"Welcome to greenHome"<<endl;
 
     Greenhouse greenhouse("Green Home");
+	Inventory* inventory=Inventory::instance();
+
+	greenhouse.attach(inventory);
 
     FlowerFactory flowerFactory;
     SucculentFactory succulentFactory;
     TreeFactory treeFactory;
+
     PlantBuilder* pd = new ConcretePlantBuilder();
     SalesAssistance* sa = new SalesAssistance();  
     SellPlant* saleCommand = new SellPlant(pd);
+	WaterPlant* waterCommand= new WaterPlant();
+	GiveSunlight* sunlightCommand=new GiveSunlight();
+
+	waterCommand->setGreenhouse(&greenhouse);
+	sunlightCommand->setGreenhouse(&greenhouse);
     saleCommand->setGreenhouse(&greenhouse);
     saleCommand->setSalesAssitance(sa);
 
     Plant* rose = flowerFactory.createPlant("Rose");
     Plant* cactus = succulentFactory.createPlant("Cactus");
     Plant* oak = treeFactory.createPlant("Oak");
+	Plant* tulip= flowerFactory.createPlant("Tulip","Blue");
 
     greenhouse.addPlant(rose);
     greenhouse.addPlant(cactus);
     greenhouse.addPlant(oak);
-
-   int choicePerson;
-	
-	vector<Section*> rooms;
+	greenhouse.addPlant(tulip);
 
 	SalesClerk* salesMan1=new SalesClerk("Brett Hands");
-	Staff* groundsMan1=new GroundStaff("Mick Jagger");
+	GroundStaff* groundsMan1=new GroundStaff("Mick Jagger");
 	Manager* manager1=new Manager("Franklin Saint");
 
-    
+	groundsMan1->setGiveSunlightCommand(sunlightCommand);
+	groundsMan1->setWaterPlantCommand(waterCommand);
     salesMan1->setSellPlantCommand(saleCommand);
-
-    
 
 	manager1->setSuccessor(salesMan1);
 	salesMan1->setSuccessor(groundsMan1);
@@ -213,29 +189,23 @@ int main() {
 	sales1->addPerson(salesMan1);
 
     manager1->addSection(help1);
-
-    // salesMan1->addSection(help1);
     salesMan1->addSection(sales1);
+
+	vector<Section*> rooms;
 
 	rooms.push_back(help1);
 	rooms.push_back(sales1);
+
+	int choicePerson;
+
+	Person* person = nullptr;
 
     cout<<"Please enter option 1 for customer or option 2 if you are part of staff :) ";
     std::cin>>choicePerson;
 	if(choicePerson == 1){
 
-		Person* person;
-
-		if(choicePerson==1){
-
-			person=newCustomer(rooms);
-		}
-        //loop prob goes here 
-        //bool flag 
-        /*
-            while(flag){
-            }       
-        */
+		person=newCustomer(rooms);
+	
        bool flag = true ;
        while(flag==true){
           clearScreen();
@@ -259,7 +229,7 @@ int main() {
                         }
                         else if (choiceReq2 == 1|| choiceReq2 == 2){
 
-                            string type=(choiceReq==1)?"Purchase":"Help";
+                            string type=(choiceReq2==1)?"Purchase":"Help";
 
                             Customer* customer=dynamic_cast<Customer*>(person);
 
@@ -290,7 +260,8 @@ int main() {
 
                 }
             }
-            cout<<"need anything else ?\n1.yes \n2.No";
+            cout<<"Need anything else?\n1.Yes \n2.No\n";
+			cout<<"Enter here: ";
             int op ;
             cin>>op;
             if(op==1){
@@ -300,15 +271,10 @@ int main() {
             }
        }
 		
-        /*
-            as in loop ends here  no need to ask the user anything more :)
-        */
-
-
-        //add the loop to ask if theres anything else 
-	}else{
-        //password check ??
-        cout<<"enter Password : ";
+       
+	}else if(choicePerson==2){
+		
+        cout<<"Enter Password: ";
         string enteredPassword;
         cin>>enteredPassword;
         try{
@@ -320,33 +286,168 @@ int main() {
             return 0;
         }
         
-
-        //adding new plants to the inventory 
-        //removing plants from the inventory
-        //sending the request to the ground staff ?? how cause the request the could reach manager is in the first if block ??
-        //
         clearScreen();
         cout<< "Welcome back staff member :) hope you are ready to work"<<endl;
        
         bool flag = true ;
         while(flag == true){
 
-            cout<<"1.CareForPlant \n2.addPlant "<<endl;
+            cout<<"\t1.Care For Plant(s)\n\t2.Add Plant \n\t3.Remove Plant(s)\n\t4.View Plants\n\t5.Rooms"<<endl;
             int op2;
-            cout<<"What will we be doing today ? ";
+            cout<<"What will we be doing today?\n";
+			cout<<"Enter here: ";
             cin>>op2;
             if(op2==1){
-                string type= "Care";
+                string type="Care";
                 greenhouse.showPlants();
                 handleCarePlant(manager1,type);
-            }else{
-                //firgure out th plant to add 
-                string type="Add";
-                handleAddPlant(manager1,type);
-            }
+            }else if(op2 == 2){
+                //figure out the plant to add 
+                cout<<"Please select what you would like to add:\n\t1.Flower\n\t2.Tree\n\t3.Succulent\n";
+				cout<<"Enter here: ";
+                int option;
+                cin>>option;
+                if(option == 1){
+                    string type;
+                    cout<<"What type of flower do you want to add: ";
+                    std::getline(std::cin>>std::ws, type);
+
+					cout<<"What colour is this "<<type<<": ";
+                	string col;
+                	cin>>col;
+
+					Plant* adding=nullptr;
+
+						if(!col.empty()){
+
+							adding = flowerFactory.createPlant(type,col);
+						}else{
+
+							adding = flowerFactory.createPlant(type);
+						}
+ 
+					if(adding){
+						greenhouse.addPlant(adding);
+                    	cout<<"A "<<type<<" has been added to the greenhouse";
+					}else{
+						cout<<"No seeds are available for "<<type<<" at the moment\n";
+					}
+                    
+                }else if(option ==2){
+                    string type;
+                    cout<<"What type of tree do you want to add: ";
+                    std::getline(std::cin>>std::ws, type);
+
+					cout<<"What colour is this "<<type<<": ";
+                	string col;
+                	cin>>col;
+
+					Plant* adding=nullptr;
+
+						if(!col.empty()){
+
+							adding = treeFactory.createPlant(type,col);
+						}else{
+
+							adding = treeFactory.createPlant(type);
+						}
+ 
+					if(adding){
+						greenhouse.addPlant(adding);
+                    	cout<<"A "<<type<<" has been added to the greenhouse";
+					}else{
+						cout<<"No seeds are available for "<<type<<" at the moment\n";
+					}
+
+                }else{
+                    string type;
+                    cout<<"What type of succulent do you want to add: ";
+                    std::getline(std::cin>>std::ws, type);
+
+					cout<<"What colour is this "<<type<<": ";
+                	string col;
+                	cin>>col;
+
+					Plant* adding=nullptr;
+
+						if(!col.empty()){
+
+							adding = succulentFactory.createPlant(type,col);
+						}else{
+
+							adding = succulentFactory.createPlant(type);
+						}
+ 
+					if(adding){
+						greenhouse.addPlant(adding);
+                    	cout<<"A "<<type<<" has been added to the greenhouse";
+					}else{
+						cout<<"No seeds are available for "<<type<<" at the moment\n";
+					}
+
+                }
+            }else if(op2==3){
+                clearScreen();
+                greenhouse.showPlants();
+                cout<<"Which plant(s) will you be removing from the greenhouse\n"<<endl;
+                cout<<"Please enter the tags of the plants you would like to remove (Type s to finish):\n";
+
+                std::string tag;
+                vector<std::string>* tags=new vector<std::string>();
+
+                while(true){
+                    cout<<"Tag: ";
+                    if(!(std::cin>>tag)){
+                        
+                        cout<<"Invalid input. Please enter a valid tag (or s to finish)."<<endl;
+                        std::cin.clear();
+                        std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+                        continue;
+                    }
+                    if(tag=="s")break;
+                    tags->push_back(tag);
+                }
+
+                for(std::string i :*tags){
+					Plant* removedPlant=greenhouse.removePlant(i);
+                    if(removedPlant){
+
+						cout<<"Successfully removed Plant-"<<i<<"\n";
+						delete removedPlant;
+					}else{
+
+						cout<<"Unable to remove Plant-"<<i<<"\n";
+					}
+                }
+
+				delete tags;
+                
+            }else if(op2==4){
+				clearScreen();
+                greenhouse.showPlants();
+
+			}else if(op2==5){
+
+				cout<<"\t1.View "<<help1->getName()<<"\n\t2.View "<<sales1->getName()<<"\n";
+
+				int roomOp;
+				cout<<"Enter here: ";
+
+				if(std::cin>>roomOp){
+					
+					if(roomOp==1){
+						cout<<help1->getHistory();
+					}else if(roomOp==2){
+						cout<<sales1->getHistory();
+					}else{
+						cout<<"Invalid option.";
+					}
+                }
+
+			}
           
-            // clearScreen();
-            cout<<"\nneed anything else ?\n1.yes \n2.No";
+            cout<<"\nNeed anything else?\n\t1.Yes \n\t2.No\n";
+			cout<<"Enter Here: ";
             int op ;
             cin>>op;
             if(op==1){
@@ -356,10 +457,34 @@ int main() {
             }
         }
 
+	}else{
+
+		cout<<"Invalid input. Please enter 1 or 2";
 	}
    
+	greenhouse.detach(inventory);
 
+	if(person){
 
-    
+		for(Section* section:rooms){
+			section->removePerson(person);
+		}
+		delete person;
+	}
+
+	delete salesMan1;
+    delete groundsMan1;
+    delete manager1;
+
+	delete help1;
+    delete sales1;
+
+	delete pd;
+	delete sa;
+
+	delete waterCommand;
+	delete sunlightCommand;
+	delete saleCommand;
+
     return 0;
 }

@@ -49,10 +49,9 @@ public:
 	SellPlant(PlantBuilder* pb);
 
 	/**
-	 * @brief Set the Greenhouse instance the command operates on.
-	 * @param gh Pointer to the Greenhouse
+	 * @brief Deletes receipt
 	 */
-	void setGreenhouse(Greenhouse* gh);
+	~SellPlant();
 
 	/**
 	 * @brief Set the SalesAssistance helper used to build receipts.
@@ -75,7 +74,7 @@ public:
 	 * @param tag Pointer to a vector of plant tag ids to sell
 	 * @param decorator Optional decorator type (e.g., "wrap" or "pot")
 	 */
-	void execute(vector<int>* tag, string decorator = "");
+	virtual void execute(vector<string>* tag, string decorator = "");
 };
 
 #endif

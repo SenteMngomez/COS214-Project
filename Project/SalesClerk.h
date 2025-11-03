@@ -23,10 +23,6 @@ class SalesClerk : public Staff {
 	public:
 		SalesClerk(string name);
 
-		//SalesClerk(std::string name);
-
-		// void setReceipt(Receipt* r);
-
 		/**
 		 * @brief Handles a request sent by a person. SalesClerk will handle
 		 *        requests of type "Purchase"; otherwise it should delegate to the
@@ -39,7 +35,7 @@ class SalesClerk : public Staff {
 		 * @brief Callback invoked when a purchase is complete to notify others.
 		 * @param msg Message describing the purchase completion.
 		 */
-		void purchaseComplete(std::string msg);
+		void purchaseComplete(std::string msg, string name);
 
 		/**
 		 * @brief Sets the SellPlant command used to perform sales.
@@ -52,12 +48,11 @@ class SalesClerk : public Staff {
 		 * @param tags Vector of plant tag IDs to sell.
 		 * @param decorator The decorator to apply to sold plants.
 		 */
-		void sell(std::vector<int>* tags, string decorator);
+		void sell(std::vector<string>* tags, string decorator, string name);
 
 	private:
 		
 		SellPlant* sellPlantCommand;
-		Receipt* CustomerReceipt;
 
 		
 };

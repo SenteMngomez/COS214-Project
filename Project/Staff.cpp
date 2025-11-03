@@ -9,13 +9,18 @@ void Staff::receiveMessage(Person* person, Section* section){
 
 	if(person->getMessageType()=="Purchase"){
 
+		if(person->getTags()->empty()){
+			std::cout<<"Plants to purchase not specified.\n";
+			return;
+		}
+
 		plants+="\n\tPurchasing plants: ";
 
 		int numPlants=person->getTags()->size();
 
 		for(int i=0;i<numPlants;i++){
 
-			plants+="Plant-"+to_string((*person->getTags())[i]);
+			plants+="Plant-"+(*person->getTags())[i];
 
 			if(i<numPlants-1){
 
@@ -30,16 +35,32 @@ void Staff::receiveMessage(Person* person, Section* section){
 		}
 	} else if(person->getMessageType()=="Care"){
 
+		if(person->getTags()->empty()){
+			std::cout<<"Plants to care for not specified.\n";
+			return;
+		}
+
 		plants+="\n\tPlants to care for: ";
 
-		for(int i=0;i<person->getTags()->size();i++){
+		int numPlants=person->getTags()->size();
 
-			plants+="Plant-"+to_string((*person->getTags())[i])+", ";
+		for(int i=0;i<numPlants;i++){
+
+			plants+="Plant-"+(*person->getTags())[i];
+
+			if(i<numPlants-1){
+
+				plants+=", ";
+			}
 		}
 
 	}
 
+	if(person->getMessageType()!="Purchase Complete"){
+
 		std::cout<<"["<<section->getName()<<"] "<<getName()<<" received --"<<person->getMessageType()<<" request-- \""<<person->getMessage()<<"\" from "<<person->getName()<<plants<<decorate<<"\n";
+	}
+		
 }
 
 void Staff::handleRequest(Person* person) {
