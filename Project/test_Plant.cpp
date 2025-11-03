@@ -65,8 +65,8 @@ TEST_F(PlantTest, BasicProperties) {
     EXPECT_EQ(rose->getType(), "Rose");
 
     // Test tag setting/getting
-    rose->setTag(42);
-    EXPECT_EQ(rose->getTag(), 42);
+    rose->setTag("42");
+    EXPECT_EQ(rose->getTag(), "42");
 }
 
 // Test state management
@@ -95,7 +95,7 @@ TEST_F(PlantTest, CareStrategy) {
 
 // Test Prototype (clone)
 TEST_F(PlantTest, Clone) {
-    rose->setTag(1);
+    rose->setTag("1");
 
     Plant* clone = rose->clone();
     ASSERT_NE(clone, nullptr);
@@ -121,7 +121,7 @@ TEST_F(PlantTest, TulipProperties) {
 
 // Test Tulip clone
 TEST_F(PlantTest, TulipClone) {
-    tulip->setTag(2);
+    tulip->setTag("2");
 
     Plant* clone = tulip->clone();
     ASSERT_NE(clone, nullptr);
@@ -140,7 +140,7 @@ TEST_F(PlantTest, MangoProperties) {
 
 // Test Mango clone
 TEST_F(PlantTest, MangoClone) {
-    mango->setTag(3);
+    mango->setTag("3");
 
     Plant* clone = mango->clone();
     ASSERT_NE(clone, nullptr);
@@ -159,7 +159,7 @@ TEST_F(PlantTest, OakProperties) {
 
 // Test Oak clone
 TEST_F(PlantTest, OakClone) {
-    oak->setTag(4);
+    oak->setTag("4");
 
     Plant* clone = oak->clone();
     ASSERT_NE(clone, nullptr);
@@ -178,7 +178,7 @@ TEST_F(PlantTest, BegoniaProperties) {
 
 // Test Begonia clone
 TEST_F(PlantTest, BegoniaClone) {
-    begonia->setTag(5);
+    begonia->setTag("5");
 
     Plant* clone = begonia->clone();
     ASSERT_NE(clone, nullptr);
@@ -197,7 +197,7 @@ TEST_F(PlantTest, CactusProperties) {
 
 // Test Cactus clone
 TEST_F(PlantTest, CactusClone) {
-    cactus->setTag(6);
+    cactus->setTag("6");
 
     Plant* clone = cactus->clone();
     ASSERT_NE(clone, nullptr);
