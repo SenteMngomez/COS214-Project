@@ -426,7 +426,8 @@ int main() {
 	}
    
 	greenhouse.detach(inventory);
-
+    delete pd;
+    delete saleCommand;
     
     return 0;
 }
