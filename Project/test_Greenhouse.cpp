@@ -6,7 +6,7 @@
 
 class GreenhouseTest : public ::testing::Test {
     protected:
-        Greenhouse greenhouse;
+        Greenhouse greenhouse{"Test Greenhouse"};
         FlowerFactory flowerFactory;
         SucculentFactory succulentFactory;
         TreeFactory treeFactory;
