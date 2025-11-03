@@ -38,5 +38,8 @@ run: $(TARGET)
 valgrind: $(TARGET)
 	valgrind --leak-check=full --show-leak-kinds=all ./$(TARGET)
 
+test-valgrind: $(TEST_TARGET)
+	valgrind --leak-check=full --show-leak-kinds=all ./$(TEST_TARGET)
+
 clean:
 	rm -f $(OBJ) $(TARGET) $(TEST_OBJ) $(TEST_TARGET)
