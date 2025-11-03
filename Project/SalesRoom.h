@@ -36,6 +36,9 @@ class SalesRoom :public Section {
          * @param person The person that triggered the notification.
          */
 		void notify(Person* person);
+
+
+		virtual ~SalesRoom() = default ;
 };
 
 #endif

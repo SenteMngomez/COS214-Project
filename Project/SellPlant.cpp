@@ -8,6 +8,16 @@ SellPlant::SellPlant(PlantBuilder* pb):Command(){
 }
 
 SellPlant::~SellPlant(){
+	if(r != nullptr){
+		delete r ;
+	}
+	if(sBuild != nullptr){
+		delete sBuild ;
+	}
+	if(builder != nullptr){
+		delete builder;
+	}
+
 
 }
 
@@ -21,16 +31,20 @@ void SellPlant::execute(vector<string>* tag, string decorator){
 	// cout<<"HII"<<endl;
 	vector<Plant*> soldPlants;
 	for(string i :*tag){
-		// cout<<"hello"<<endl;
-		Plant* p = greenHouse->removePlant(i);
-		if (p) soldPlants.push_back(p);
-		
+		if(greenHouse != nullptr){
+			Plant* p = greenHouse->removePlant(i);
+			if (p) soldPlants.push_back(p);
+		}
+		cout<<"Initialsed incomplete";
 	}
 
-	if (soldPlants.empty()) return;
+	if(soldPlants.empty()){
+		r = nullptr;
+		return ;	
+	}
 
     Plant* saleItem = builder->buildCompositePlant(soldPlants, decorator);
-	string sellerName = "Green Home"; // Or get from somewhere
+	string sellerName = "Green Home"; 
     BasicReceiptBuilder* receiptBuilder = new BasicReceiptBuilder(sellerName, soldPlants);
 
 	// if(sBuild){
@@ -44,6 +58,7 @@ void SellPlant::execute(vector<string>* tag, string decorator){
               << " from greenhouse " << greenHouse->getName() << std::endl;
 
 	delete receiptBuilder;
+	delete saleItem;
 }
 
 string SellPlant::getReceipt(){

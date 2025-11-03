@@ -86,6 +86,11 @@ void customerRequest(Customer* customer,string type){
 		}else{
 			customer->sendMessage(message,type,tags);
 		}
+        if(tags){
+            delete tags;
+            tags = nullptr;
+        }
+        
 		
 	}else if(type=="Help"){
 
@@ -189,6 +194,8 @@ int main() {
 	sales1->addPerson(salesMan1);
 
     manager1->addSection(help1);
+
+    salesMan1->addSection(help1);
     salesMan1->addSection(sales1);
 
 	vector<Section*> rooms;
@@ -479,12 +486,14 @@ int main() {
 	delete help1;
     delete sales1;
 
-	delete pd;
-	delete sa;
+	// delete pd;
+	// delete sa;
 
 	delete waterCommand;
 	delete sunlightCommand;
 	delete saleCommand;
+
+    delete inventory;
 
     return 0;
 }
