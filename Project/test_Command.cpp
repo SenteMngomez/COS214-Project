@@ -16,7 +16,7 @@ public:
 	virtual void print() override {}
 	virtual void add(Plant& plant) override {}
 	virtual void remove(Plant& plant) override {}
-	virtual Plant* getChild(int tag) override { return nullptr; }
+	virtual Plant* getChild(string tag) override { return nullptr; }
 	virtual std::string getType() const override { return type_; }
     
 private:
@@ -35,8 +35,8 @@ protected:
 
         TestPlant* p1 = new TestPlant("PlantA", 10.0);
         TestPlant* p2 = new TestPlant("PlantB", 15.0);
-        p1->setTag(1);
-        p2->setTag(2);
+        p1->setTag("1");
+        p2->setTag("2");
 
         greenhouse->addPlant(p1);
         greenhouse->addPlant(p2);
@@ -52,17 +52,17 @@ protected:
 };
 
 TEST_F(WaterPlantTest, Execute_SinglePlant_NoCrash) {
-    std::vector<int> tags = {1};
+    std::vector<string> tags = {"1"};
     EXPECT_NO_THROW(waterCommand->execute(&tags));
 }
 
 TEST_F(WaterPlantTest, Execute_MultiplePlants_NoCrash) {
-    std::vector<int> tags = {1, 2};
+    std::vector<string> tags = {"1", "2"};
     EXPECT_NO_THROW(waterCommand->execute(&tags));
 }
 
 TEST_F(WaterPlantTest, Execute_InvalidTag_NoCrash) {
-    std::vector<int> tags = {999};
+    std::vector<string> tags = {"999"};
     EXPECT_NO_THROW(waterCommand->execute(&tags));
 }
 
@@ -72,7 +72,7 @@ TEST_F(WaterPlantTest, Execute_NullTag_NoCrash) {
 
 
 TEST_F(WaterPlantTest, Execute_EmptyList_NoCrash) {
-    std::vector<int> tags;
+    std::vector<string> tags;
     EXPECT_NO_THROW(waterCommand->execute(&tags));
 }
 
@@ -93,8 +93,8 @@ protected:
         std::vector<Plant*> plants = { p1, p2 };
         std::string seller = "TestSeller";
 
-        p1->setTag(1);
-        p2->setTag(2);
+        p1->setTag("1");
+        p2->setTag("2");
 
         builder = new BasicReceiptBuilder(const_cast<std::string&>(seller), plants);
         PlantBuilder* pb = new ConcretePlantBuilder();
@@ -125,7 +125,7 @@ protected:
 
 
 TEST_F(SellPlantTest, Execute_SinglePlant_ReturnsReceipt){
-    std::vector<int> tags = {1}; 
+    std::vector<string> tags = {"1"}; 
 
     sellCommand->execute(&tags, "wrap"); 
     
@@ -138,7 +138,7 @@ TEST_F(SellPlantTest, Execute_SinglePlant_ReturnsReceipt){
 }
 
 TEST_F(SellPlantTest, Execute_InvalidTag_NoReceipt){
-    std::vector<int> tags = {999}; // non-existent tag
+    std::vector<string> tags = {"999"}; // non-existent tag
 
     sellCommand->execute(&tags); // perform the sale
 
@@ -151,7 +151,7 @@ TEST_F(SellPlantTest, Execute_InvalidTag_NoReceipt){
 
 
 TEST_F(SellPlantTest, Execute_MultiplePlants_GeneratesCompositeReceipt) {
-    std::vector<int> tags = {1, 2};
+    std::vector<string> tags = {"1", "2"};
 
     sellCommand->execute(&tags, "pot"); // perform sale with decorator
 
@@ -171,8 +171,8 @@ protected:
 
         TestPlant* p1 = new TestPlant("PlantA", 10.0);
         TestPlant* p2 = new TestPlant("PlantB", 15.0);
-        p1->setTag(1);
-        p2->setTag(2);
+        p1->setTag("1");
+        p2->setTag("2");
 
         greenhouse->addPlant(p1);
         greenhouse->addPlant(p2);
@@ -188,17 +188,17 @@ protected:
 };
 
 TEST_F(GiveSunLightTest, Execute_SinglePlant_NoCrash) {
-    std::vector<int> tags = {1};
+    std::vector<string> tags = {"1"};
     EXPECT_NO_THROW(GiveSunlightCommand->execute(&tags));
 }
 
 TEST_F(GiveSunLightTest, Execute_MultiplePlants_NoCrash) {
-    std::vector<int> tags = {1, 2};
+    std::vector<string> tags = {"1","2"};
     EXPECT_NO_THROW(GiveSunlightCommand->execute(&tags));
 }
 
 TEST_F(GiveSunLightTest, Execute_InvalidTag_NoCrash) {
-    std::vector<int> tags = {999};
+    std::vector<string> tags = {"999"};
     EXPECT_NO_THROW(GiveSunlightCommand->execute(&tags));
 }
 

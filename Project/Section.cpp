@@ -39,7 +39,15 @@ Iterator* Section::createIterator(){
 
 std::string Section::getHistory() const{
 
-	std::string histOut="========"+name+" history========\n";
+	std::string histOut;
+
+	if(history.empty()){
+
+		histOut=name+" has no message history\n";
+		return histOut;
+	}
+
+	histOut="========"+name+" history========\n";
 
 	for(std::string m:history){
 
@@ -63,3 +71,5 @@ void Section::addToHistory(Person* person){
 
 	history.push_back(storeMsg);
 }
+
+string Section::getType(){ return type; }

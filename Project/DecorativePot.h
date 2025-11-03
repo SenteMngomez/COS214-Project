@@ -65,7 +65,7 @@ public:
      * @param tag The tag of the child plant
      * @return Pointer to the child plant, or nullptr
      */
-	Plant* getChild(int tag) override;
+	Plant* getChild(std::string tag) override;
 };
 
 #endif

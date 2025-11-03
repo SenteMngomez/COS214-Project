@@ -18,7 +18,7 @@ public:
 	 * @param gh Pointer to the Greenhouse
 	 */
 	virtual void setGreenhouse(Greenhouse* gh);
-	virtual void execute(vector<int>* tag,string decorator="") = 0;
+	virtual void execute(vector<string>* tag,string decorator="") = 0;
 };
 
 #endif

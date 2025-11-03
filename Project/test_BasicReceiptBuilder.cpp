@@ -10,7 +10,7 @@ public:
 	virtual void print() override {}
 	virtual void add(Plant& plant) override {}
 	virtual void remove(Plant& plant) override {}
-	virtual Plant* getChild(int tag) override { return nullptr; }
+	virtual Plant* getChild(string tag) override { return nullptr; }
 	virtual std::string getType() const override { return type_; }
 
 private:

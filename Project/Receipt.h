@@ -42,6 +42,11 @@ public:
 	Receipt();
 
 	/**
+	 * @brief Destructor for a Receipt 
+	 */
+	virtual ~Receipt() = default;
+
+	/**
 	 * @brief Set the seller name printed on the receipt.
 	 * @param seller The seller/store name
 	 */

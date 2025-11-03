@@ -82,7 +82,7 @@ public:
 	 * @param id The unique identifier of the plant to remove.
 	 * @return A pointer to the removed plant, or nullptr if not found.
 	 */
-	Plant* removePlant(int id);
+	Plant* removePlant(std::string id);
  
 };
 

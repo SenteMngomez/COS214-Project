@@ -38,7 +38,7 @@ public:
 	 * @param decorator Optional decorator string (not used by watering but
 	 *                  provided for API consistency).
 	 */
-	virtual void execute(vector<int>* tag, string decorator = "");
+	virtual void execute(vector<string>* tag, string decorator = "");
 };
 
 #endif

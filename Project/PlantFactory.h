@@ -53,7 +53,7 @@ public:
 		return product; 
 	}
 
-	virtual ~PlantFactory() {}
+	virtual ~PlantFactory()=default;
 };
 
 #endif

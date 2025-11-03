@@ -1,4 +1,3 @@
-
 CXX := g++
 # Require C++14 for GoogleTest and modern STL features
 CXXFLAGS := -g -std=c++14
@@ -8,23 +7,30 @@ SRC := $(filter-out test_%.cpp,$(wildcard *.cpp))
 TEST_SRC := $(wildcard test_*.cpp)
 
 OBJ := $(SRC:.cpp=.o)
+
+# Exclude test files from main build
+MAIN_SRC := $(filter-out test_%.cpp, $(SRC))
+MAIN_OBJ := $(MAIN_SRC:.cpp=.o)
+
+TEST_SRC := $(wildcard test_*.cpp)
 TEST_OBJ := $(TEST_SRC:.cpp=.o)
 
 TARGET := main
-TEST_TARGET := runTests
+TEST_TARGET := test_runner
 
 all: $(TARGET)
 
-$(TARGET): $(OBJ)
+$(TARGET): $(MAIN_OBJ)
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
-# Test runner target: links test objects with GoogleTest
-# Exclude main.o so gtest's main() is used as the program entrypoint
-$(TEST_TARGET): $(OBJ) $(TEST_OBJ)
-	$(CXX) $(CXXFLAGS) -o $@ $(filter-out main.o,$(OBJ)) $(TEST_OBJ) -lgtest -lgtest_main -pthread
+$(TEST_TARGET): $(TEST_OBJ) $(filter-out main.o, $(MAIN_OBJ))
+	$(CXX) $(CXXFLAGS) -o $@ $^ -lgtest -lgtest_main -pthread
 
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+test: $(TEST_TARGET)
+	./$(TEST_TARGET)
 
 run: $(TARGET)
 	./$(TARGET)
@@ -33,4 +39,4 @@ valgrind: $(TARGET)
 	valgrind --leak-check=full --show-leak-kinds=all ./$(TARGET)
 
 clean:
-	rm -f $(OBJ) $(TEST_OBJ) $(TARGET) $(TEST_TARGET)
+	rm -f $(OBJ) $(TARGET)

@@ -1,10 +1,15 @@
 #include "GroundStaff.h"
 
-GroundStaff::GroundStaff(std::string name):Staff(name){}
+GroundStaff::GroundStaff(std::string name):Staff(name),waterPlantCmd(nullptr)
+,giveSunCmd(nullptr){}
 
 void GroundStaff::handleRequest(Person* person){
 
 	if(person->getMessageType()=="Care"){
+
+		if(person->getTags()->empty()){
+			return;
+		}
 
 		std::string plants="";
 
@@ -12,7 +17,7 @@ void GroundStaff::handleRequest(Person* person){
 
 		for(int i=0;i<numPlants;i++){
 
-			plants+="Plant-"+to_string((*person->getTags())[i]);
+			plants+="Plant-"+(*person->getTags())[i];
 
 			if(i<numPlants-1){
 
@@ -31,7 +36,7 @@ void GroundStaff::handleRequest(Person* person){
 	}
 }
 
-void GroundStaff::careForPlant(std::vector<int>* tags) {
+void GroundStaff::careForPlant(std::vector<std::string>* tags) {
 
 	if(waterPlantCmd){
 

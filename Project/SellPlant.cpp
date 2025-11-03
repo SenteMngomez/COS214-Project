@@ -7,16 +7,30 @@ SellPlant::SellPlant(PlantBuilder* pb):Command(){
 	r = nullptr;
 }
 
+SellPlant::~SellPlant(){
+	if(r != nullptr){
+		delete r ;
+	}
+	if(sBuild != nullptr){
+		delete sBuild ;
+	}
+	if(builder != nullptr){
+		delete builder;
+	}
+
+
+}
+
 void SellPlant::setSalesAssitance(SalesAssistance* sa){
     if(sBuild != sa){
         delete sBuild;
         sBuild = sa;
     }
 }
-void SellPlant::execute(vector<int>* tag, string decorator){
+void SellPlant::execute(vector<string>* tag, string decorator){
 	// cout<<"HII"<<endl;
 	vector<Plant*> soldPlants;
-	for(int i :*tag){
+	for(string i :*tag){
 		if(greenHouse != nullptr){
 			Plant* p = greenHouse->removePlant(i);
 			if (p) soldPlants.push_back(p);

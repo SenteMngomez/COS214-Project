@@ -49,6 +49,11 @@ public:
 	SellPlant(PlantBuilder* pb);
 
 	/**
+	 * @brief Deletes receipt
+	 */
+	~SellPlant();
+
+	/**
 	 * @brief Set the SalesAssistance helper used to build receipts.
 	 * @param sBuild Pointer to a SalesAssistance instance
 	 */
@@ -69,7 +74,7 @@ public:
 	 * @param tag Pointer to a vector of plant tag ids to sell
 	 * @param decorator Optional decorator type (e.g., "wrap" or "pot")
 	 */
-	void execute(vector<int>* tag, string decorator = "");
+	virtual void execute(vector<string>* tag, string decorator = "");
 };
 
 #endif
