@@ -17,7 +17,7 @@ class MockPlant : public Plant{
         void print() override{}
         void add(Plant& plant)override{}
         void remove(Plant& plant) override{}
-        Plant* getChild(int) override {return nullptr;}
+        Plant* getChild(string) override {return nullptr;}
 };
 
 // ********************************SEED STATE TEST*****************************************
@@ -93,9 +93,4 @@ TEST(PlantStateTest, DeadStateHandlesCorrectly){
     EXPECT_NE(output.find("The MockPlant is dead and can no longer grow. RIP"), string::npos);
 
     EXPECT_NE(dynamic_cast<DeadState*>(plant.getState()), nullptr);
-}
-
-int main(int argc, char** argv){
-    ::testing::InitGoogleTest(&argc,argv);
-    return RUN_ALL_TESTS();
 }
