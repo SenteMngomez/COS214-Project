@@ -45,7 +45,7 @@ TEST_F(InventoryTest, RemovePlant) {
     Plant* rose = flowerFactory.createPlant("Rose");
     inventory->updateInventory(rose);
 
-    int tag = rose->getTag();
+    std::string tag = rose->getTag();
     Plant* removed = inventory->removePlant(tag);
 
     ASSERT_NE(removed, nullptr);
@@ -55,7 +55,7 @@ TEST_F(InventoryTest, RemovePlant) {
 
 TEST_F(InventoryTest, RemoveNonExistentPlant) {
 
-    Plant* removed = inventory->removePlant(9999);
+    Plant* removed = inventory->removePlant("Test tag");
 
     EXPECT_EQ(removed, nullptr);
 
