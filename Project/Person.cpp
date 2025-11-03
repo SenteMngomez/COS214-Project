@@ -3,6 +3,14 @@
 Person::Person(std::string name):name(name),messageType(""),message(""),tags(nullptr)
 ,decorator(""){}
 
+Person::~Person(){
+
+	for(Section* section:sections) {
+        if(section) section->removePerson(this);
+    }
+	sections.clear();
+}
+
 string Person::getName() {
 	return name;
 }

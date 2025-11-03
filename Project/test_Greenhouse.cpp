@@ -56,7 +56,7 @@ TEST_F(GreenhouseTest, RemovePlant) {
     Plant* rose = flowerFactory.createPlant("Rose");
     greenhouse.addPlant(rose);
 
-    int tag = rose->getTag();
+    std::string tag = rose->getTag();
     Plant* removed = greenhouse.removePlant(tag);
 
     ASSERT_NE(removed, nullptr);
@@ -66,7 +66,7 @@ TEST_F(GreenhouseTest, RemovePlant) {
 
 TEST_F(GreenhouseTest, RemoveNonExistentPlant) {
 
-    Plant* removed = greenhouse.removePlant(9999);
+    Plant* removed = greenhouse.removePlant("Test tag");
     EXPECT_EQ(removed, nullptr);
 
 }
@@ -75,26 +75,26 @@ TEST_F(GreenhouseTest, WaterPlant) {
 
     Plant* rose = flowerFactory.createPlant("Rose");
     greenhouse.addPlant(rose);
-    int tag = rose->getTag();
+    std::string tag = rose->getTag();
     EXPECT_NO_THROW(greenhouse.waterPlant(tag));
 
 }
 
 TEST_F(GreenhouseTest, WaterNonEXistentPlant) {
-    EXPECT_NO_THROW(greenhouse.waterPlant(9999));
+    EXPECT_NO_THROW(greenhouse.waterPlant("Test tag"));
 }
 
 TEST_F(GreenhouseTest, GiveSunlight) {
 
     Plant* rose = flowerFactory.createPlant("Rose");
     greenhouse.addPlant(rose);
-    int tag = rose->getTag();
+    std::string tag = rose->getTag();
     EXPECT_NO_THROW(greenhouse.giveSunlight(tag));
 
 }
 
 TEST_F(GreenhouseTest, GiveSunlightNonEXistentPlant) {
-    EXPECT_NO_THROW(greenhouse.giveSunlight(9999));
+    EXPECT_NO_THROW(greenhouse.giveSunlight("Test tag"));
 }
 
 TEST_F(GreenhouseTest, GetName) {

@@ -33,6 +33,8 @@ private:
 public:
 	Person(std::string name);
 
+	virtual ~Person();
+
 	/**
 	 * @brief Gives access to name attribute
 	 * @return name
