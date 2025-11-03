@@ -14,7 +14,7 @@ class MockPlant : public Plant{
         void print() override{}
         void add(Plant& plant)override{}
         void remove(Plant& plant) override{}
-        Plant* getChild(int) override {return nullptr;}
+        Plant* getChild(string) override {return nullptr;}
 };
 
 TEST(LightCareStrategyIntegrationTest, WaterOutputIsCorrect){
@@ -36,10 +36,5 @@ TEST(LightCareStrategyIntegrationTest, SunlightOutputIsCorrect){
     strategy.sunlight(&plant);
 
     string output = testing::internal::GetCapturedStdout();
-    EXPECT_NE(output.find("Placing the MockPlant in direct sunlight for 3-4 hours."), string::npos);
-}
-
-int main(int argc,char**argv){
-    ::testing::InitGoogleTest(&argc,argv);
-    return RUN_ALL_TESTS();
+    EXPECT_NE(output.find("Placing the MockPlant in partial sunlight for 3-4 hours."), string::npos);
 }

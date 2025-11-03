@@ -70,3 +70,4 @@ TEST(ChatIteratorTest, EmptyVector){
     EXPECT_TRUE(it.isDone());
     EXPECT_EQ(it.currentItem(), "");
 }
+

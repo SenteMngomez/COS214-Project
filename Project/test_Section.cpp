@@ -341,7 +341,3 @@ TEST(SectionBasicTest, DifferentNamesAndTypes) {
     EXPECT_EQ(helpDesk.getType(), "Test");
 }
 
-int main(int argc, char** argv) {
-    ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
-}

@@ -13,7 +13,7 @@ protected:
 public:
 	ReceiptBuilder(){receipt = new Receipt();}
 
-	virtual ~ReceiptBuilder(){};
+	virtual ~ReceiptBuilder()= default;
 
 	virtual void addPrice() = 0;
 

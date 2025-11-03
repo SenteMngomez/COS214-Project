@@ -9,22 +9,20 @@
 #include "SeedState.h"
 
 Plant::Plant(string colour, CareStrategy* careStrategy, double price)
-    : colour(colour), careStrategy(careStrategy), state(NULL), tag(""), price(price){
-    // come back for review on initializing state 
+    : colour(colour), careStrategy(careStrategy), state(new SeedState()), tag(""), price(price){
+    // Plant starts in seed state
 }
 
 void Plant::receiveWater() {
 	if(careStrategy){
         careStrategy->water(this);
     }
-    //cout << getType() << " plant received water." << endl;
 }
 
 void Plant::receiveSunlight() {
 	if(careStrategy) {
         careStrategy->sunlight(this);
     }
-    //cout << getType() << " plant received sunlight." << endl;
 }
 
 string Plant::getTag() const{
@@ -52,6 +50,11 @@ void Plant::setState(PlantState* newState) {
 
 void Plant::setCareStrategy(CareStrategy* careStrategy){
 	this->careStrategy=careStrategy;
+}
+
+void Plant::progressState(){
+
+	if(state) state->handle(this);
 }
 
 

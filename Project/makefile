@@ -1,7 +1,11 @@
 CXX := g++
-CXXFLAGS := -g -std=c++11
+# Require C++14 for GoogleTest and modern STL features
+CXXFLAGS := -g -std=c++14
 
-SRC := $(wildcard *.cpp)
+# Source files (exclude test_*.cpp from the main build)
+SRC := $(filter-out test_%.cpp,$(wildcard *.cpp))
+TEST_SRC := $(wildcard test_*.cpp)
+
 OBJ := $(SRC:.cpp=.o)
 
 # Exclude test files from main build
@@ -34,5 +38,8 @@ run: $(TARGET)
 valgrind: $(TARGET)
 	valgrind --leak-check=full --show-leak-kinds=all ./$(TARGET)
 
+test-valgrind: $(TEST_TARGET)
+	valgrind --leak-check=full --show-leak-kinds=all ./$(TEST_TARGET)
+
 clean:
-	rm -f $(OBJ) $(TARGET) $(TEST_TARGET)
+	rm -f $(OBJ) $(TARGET) $(TEST_OBJ) $(TEST_TARGET)

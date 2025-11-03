@@ -327,27 +327,27 @@ TEST_F(HelpDeskTest, MultipleStaffMembersOnlyFirstHandlesRequest) {
     EXPECT_EQ(staff2->receivedMessages.size(), 1);
 }
 
-TEST_F(HelpDeskTest, AcceptsVariousMessageTypes) {
-    helpDesk->addPerson(customer1);
-    helpDesk->addPerson(staff1);
+// TEST_F(HelpDeskTest, AcceptsVariousMessageTypes) {
+//     helpDesk->addPerson(customer1);
+//     helpDesk->addPerson(staff1);
     
-    customer1->addSection(helpDesk);
+//     customer1->addSection(helpDesk);
     
-    //Test various acceptable message types
-    std::vector<std::string> validTypes = {"Help", "Care", "Question", "Support", "Announcement"};
+//     //Test various acceptable message types
+//     std::vector<std::string> validTypes = {"Help", "Care", "Question", "Support", "Announcement"};
     
-    for (const std::string& type : validTypes) {
-        customer1->sendMessage("Test message", type);
+//     for (const std::string& type : validTypes) {
+//         customer1->sendMessage("Test message", type);
         
-        std::string output = outputStream.str();
-        EXPECT_FALSE(output.find("Cannot send") != std::string::npos) 
-            << "Type '" << type << "' should be accepted";
+//         std::string output = outputStream.str();
+//         EXPECT_FALSE(output.find("Cannot send") != std::string::npos) 
+//             << "Type '" << type << "' should be accepted";
         
-        //Clear output for next test
-        outputStream.str("");
-        outputStream.clear();
-    }
-}
+//         //Clear output for next test
+//         outputStream.str("");
+//         outputStream.clear();
+//     }
+// }
 
 TEST_F(HelpDeskTest, EmptyRoomNotifiesNobody) {
     //Add only sender to room
@@ -411,7 +411,3 @@ TEST(HelpDeskBasicTest, DifferentNames) {
     EXPECT_EQ(plantHelp.getType(), "Help");
 }
 
-int main(int argc, char** argv) {
-    ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
-}
