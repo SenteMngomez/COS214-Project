@@ -139,9 +139,6 @@ public:
      */
 	void receiveSunlight();
 
-     PlantState* getState() const{
-          return state;
-     }
 	/**
      * @brief Set the care strategy for the plant. Determines how the plantt  is watered and given sunlight
      */

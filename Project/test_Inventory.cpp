@@ -33,7 +33,7 @@ TEST_F(InventoryTest, UpdateInventory) {
 
 }
 
-TEST_F(InventoryTest, UpdateInventory) {
+TEST_F(InventoryTest, AddStock) {
 
     EXPECT_NO_THROW(inventory->addStock("Rose", 5));
     EXPECT_NO_THROW(inventory->addStock("Rose", 3));
