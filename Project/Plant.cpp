@@ -44,9 +44,9 @@ void Plant::setState(PlantState* newState) {
     state = newState;
 }
 
-// PlantState* Plant::getState() const {
-//     return state;
-// }
+PlantState* Plant::getState() const {
+    return state;
+}
 
 void Plant::setCareStrategy(CareStrategy* careStrategy){
 	this->careStrategy=careStrategy;
