@@ -16,6 +16,6 @@ using namespace std;
 
 void DeadState::handle(Plant* plant) {
 	
-	cout<<"The " << plant->getType()<<" is dead and can no longer grow. RIP :"<<endl;
+	cout<<"The " << plant->getType()<<" is dead and can no longer grow. RIP"<<endl;
 	
 }
