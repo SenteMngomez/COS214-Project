@@ -27,7 +27,7 @@ public:
 
 	/**
 	 * @brief Constructor for PlantIterator.
-	 * @param plantsVec Vector of Plant pointers to iterate over.
+	 * @param plantsVec Vector of Plant pointers to iterate over and sort them according to the tag
 	 */
 	PlantIterator(const vector<Plant*>& plantsVec);
 
