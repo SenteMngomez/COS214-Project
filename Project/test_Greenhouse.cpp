@@ -125,9 +125,3 @@ TEST_F(GreenhouseTest, ShowPlantsEmpty) {
     EXPECT_NO_THROW(greenhouse.showPlants());
 }
 
-int main(int argc, char** argv){
-
-    ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
-
-}

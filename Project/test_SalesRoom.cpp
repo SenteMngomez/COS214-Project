@@ -364,7 +364,3 @@ TEST(SalesRoomBasicTest, DifferentNames) {
     EXPECT_EQ(plantSales.getType(), "Sales");
 }
 
-int main(int argc, char** argv) {
-    ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
-}

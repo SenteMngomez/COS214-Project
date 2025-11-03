@@ -134,7 +134,3 @@ TEST_F(CustomerTest, InheritsFromPerson){
     EXPECT_EQ(person->getName(), "Rigby");
 }
 
-int main(int argc, char** argv) {
-    ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
-}

@@ -306,7 +306,3 @@ TEST(PersonBasicTest, DifferentNames) {
     EXPECT_EQ(bob.getName(), "Bob");
 }
 
-int main(int argc, char** argv) {
-    ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
-}
