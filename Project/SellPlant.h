@@ -49,6 +49,11 @@ public:
 	SellPlant(PlantBuilder* pb);
 
 	/**
+	 * @brief Deletes receipt
+	 */
+	~SellPlant();
+
+	/**
 	 * @brief Set the SalesAssistance helper used to build receipts.
 	 * @param sBuild Pointer to a SalesAssistance instance
 	 */

@@ -6,6 +6,14 @@
  */
 #include "Greenhouse.h"
 
+Greenhouse::~Greenhouse(){
+
+	for(Plant* plant:plants){
+        delete plant;
+    }
+    plants.clear();
+}
+
 void Greenhouse::waterPlant(std::string tag) {
 	
 	Plant* wateredPlant = nullptr;

@@ -7,6 +7,10 @@ SellPlant::SellPlant(PlantBuilder* pb):Command(){
 	r = nullptr;
 }
 
+SellPlant::~SellPlant(){
+
+}
+
 void SellPlant::setSalesAssitance(SalesAssistance* sa){
     if(sBuild != sa){
         delete sBuild;

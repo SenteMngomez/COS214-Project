@@ -40,6 +40,11 @@ public:
 	 * 
 	 */
 	Greenhouse(std::string name) : name(name) {};
+
+	/**
+	 * @brief Deletes plants in greenhouse
+	 */
+	~Greenhouse();
 	/** 
 	 * @brief Waters a specific plant and notifies observers.
 	 * @param plant The plant to water.
