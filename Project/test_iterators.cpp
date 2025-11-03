@@ -16,7 +16,7 @@ class MockPlant : public Plant{
         void print() override{}
         void add(Plant& plant)override{}
         void remove(Plant& plant) override{}
-        Plant* getChild(int) override {return nullptr;}
+        Plant* getChild(string) override {return nullptr;}
 };
 
 //****************************Plant Iterator Tests****************** 
