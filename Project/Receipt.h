@@ -5,7 +5,7 @@
  * @file Receipt.h
  * @brief Representation of a sales receipt containing sold plants and totals.
  *
- * The Receipt class collects sold Plant pointers, tracks the total price and
+ * The Receipt class collects sold Plant information, tracks the total price and
  * provides both a textual printout and a string representation suitable for
  * returning to callers or persisting.
  *
@@ -16,24 +16,34 @@
 #include <string>
 #include <iostream>
 #include <vector>
-#include "Plant.h"
 using namespace std;
+
+/**
+ * @struct PlantInfo
+ * @brief Holds plant information for receipt storage
+ */
+struct PlantInfo {
+    string type;
+    double price;
+    
+    PlantInfo(const string& t, double p) : type(t), price(p) {}
+};
 
 /**
  * @class Receipt
  * @brief Stores the items and total for a completed sale.
  *
  * Responsibilities:
- * - Keep track of the sold Plant pointers
+ * - Keep track of the sold Plant information 
  * - Track the total sale price
  * - Provide printing and string serialization helpers
  */
 class Receipt {
 
 private:
-	double totalPrice;        /**< Total price of the receipt (R currency) */
-	vector<Plant*> plants;    /**< List of pointers to sold Plant objects */
-	string seller;            /**< Name of the seller/store */
+	double totalPrice;           /**< Total price of the receipt (R currency) */
+	vector<PlantInfo> plants;    /**< List of sold Plant information */
+	string seller;               /**< Name of the seller/store */
 
 public:
 	/**
@@ -54,9 +64,10 @@ public:
 
 	/**
 	 * @brief Add a sold plant to the receipt.
-	 * @param P Pointer to the sold Plant
+	 * @param type The type of the plant
+	 * @param price The price of the plant
 	 */
-	void addPlant(Plant* P);
+	void addPlant(const string& type, double price);
 
 	/**
 	 * @brief Set the total price for the receipt.

@@ -20,11 +20,24 @@ class MockPlant : public Plant{
         Plant* getChild(string) override {return nullptr;}
 };
 
-// ********************************SEED STATE TEST*****************************************
+class MockCareStrategy:public CareStrategy{
+    public:
+        void water(Plant* plant) override{
+            cout<<plant->getType() << " plant received water."<<endl;
+        }
+        void sunlight(Plant* plant)override{
+            cout<<plant->getType()<<" plant received sunlight."<<endl;
+        }
+        void soil(Plant* plant)override{
+            cout<<plant->getType()<<" plant received soil care."<<endl;
+        }
+};
+
+// *******************************SEED STATE TEST****************************************
 TEST(PlantStateTest, SeedStateHandlesCorrectly){
     MockPlant plant;
-    SeedState seed;
-
+    plant.setCareStrategy(new MockCareStrategy());
+    //SeedState seed;
     plant.setState(new SeedState());
 
     testing::internal::CaptureStdout();
@@ -39,10 +52,11 @@ TEST(PlantStateTest, SeedStateHandlesCorrectly){
     EXPECT_NE(dynamic_cast<SproutState*>(plant.getState()), nullptr);
 }
 
-// ********************************SPROUT STATE TEST*****************************************
+// *******************************SPROUT STATE TEST****************************************
 TEST(PlantStateTest, SproutStateHandlesCorrectly){
     MockPlant plant;
-    SproutState seed;
+    //SproutState seed;
+    plant.setCareStrategy(new MockCareStrategy());
 
     plant.setState(new SproutState());
 
@@ -59,11 +73,11 @@ TEST(PlantStateTest, SproutStateHandlesCorrectly){
 }
 
 
-// ********************************MATURE STATE TEST*****************************************
+// *******************************MATURE STATE TEST****************************************
 TEST(PlantStateTest, MatureStateHandlesCorrectly){
     MockPlant plant;
-    MatureState seed;
-
+    //MatureState seed;
+    plant.setCareStrategy(new MockCareStrategy());
     plant.setState(new MatureState());
 
     testing::internal::CaptureStdout();
@@ -79,11 +93,11 @@ TEST(PlantStateTest, MatureStateHandlesCorrectly){
 }
 
 
-// ********************************DEAD STATE TEST*****************************************
+// *******************************DEAD STATE TEST****************************************
 TEST(PlantStateTest, DeadStateHandlesCorrectly){
     MockPlant plant;
-    DeadState seed;
-
+    //DeadState seed;
+    plant.setCareStrategy(new MockCareStrategy());
     plant.setState(new DeadState());
 
     testing::internal::CaptureStdout();

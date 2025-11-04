@@ -13,7 +13,13 @@ protected:
 public:
 	ReceiptBuilder(){receipt = new Receipt();}
 
-	virtual ~ReceiptBuilder()= default;
+	virtual ~ReceiptBuilder(){
+		if(receipt){
+			delete receipt;
+			receipt = nullptr;
+		}
+		
+	}
 
 	virtual void addPrice() = 0;
 
@@ -21,7 +27,11 @@ public:
 
 	virtual void addPlantDetails() = 0;
 
-	Receipt* getReceipt(){ return receipt; }
+	Receipt* getReceipt(){
+		Receipt* temp = receipt;
+		receipt = nullptr; // Transfer ownership to caller
+		return temp;
+	}
 	//add destructor 
 };
 

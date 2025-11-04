@@ -30,9 +30,12 @@ public:
      * @param careStrategy Inherited care strategy
      * @param price Inherited price
      */
-    PlantDecorator(Plant* plant, string colour, CareStrategy* careStrategy, double price);	
+	PlantDecorator(Plant* plant, string colour, CareStrategy* careStrategy, double price);
 
 	/**
+     * @brief Destructor - cleans up the wrapped component
+     */
+	virtual ~PlantDecorator();	/**
      * @brief Print the decorated plant
      */
 	void print() override;

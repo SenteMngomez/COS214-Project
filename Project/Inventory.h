@@ -62,6 +62,18 @@ public:
 	static Inventory* instance();
 
 	/**
+	 * @brief Cleans up the singleton instance. Call this to ensure clean shutdown.
+	 */
+	static void cleanup();
+
+	void clearInventory();
+
+	/**
+	 * @brief Destructor that cleans up all plant clones owned by inventory.
+	 */
+	~Inventory();
+
+	/**
 	 * @brief Updates the inventory based on notifications from a subject (e.g. Greenhouse).
 	 * 
 	 * This method is called by the subjects this observer is attached to. It adds new

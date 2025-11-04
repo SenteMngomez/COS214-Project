@@ -24,3 +24,6 @@ void MatureState::handle(Plant* plant) {
 	plant->setState(new DeadState());
 
 }
+
+
+std::string MatureState::getType(){ return "Mature"; }

@@ -11,8 +11,8 @@ void Receipt::print() {
         cout << "Seller: " << seller << endl;
         cout << "Items:" << endl;
         for (size_t i = 0; i < plants.size(); ++i) {
-            cout << "  - " << plants[i]->getType()
-                 << " (R" << plants[i]->getPrice() << ")" << endl;
+            cout << "  - " << plants[i].type
+                 << " (R" << plants[i].price << ")" << endl;
         }
         cout << "-----------------------------" << endl;
         cout << "Total: R" << totalPrice << endl;
@@ -29,8 +29,8 @@ void Receipt::setTotalPrice(double price){
 	this->totalPrice = price ;
 }
 
-void Receipt::addPlant(Plant* p){
-	plants.push_back(p);
+void Receipt::addPlant(const string& type, double price){
+	plants.push_back(PlantInfo(type, price));
 }
 
 string Receipt::toString(){
@@ -39,8 +39,8 @@ string Receipt::toString(){
     result += "Seller: " + seller + "\n";
     result += "Items:\n";
     for(size_t i = 0; i < plants.size(); ++i){
-        result += "  - " + plants[i]->getType() + 
-                 " (R" + to_string(plants[i]->getPrice()) + ")\n";
+        result += "  - " + plants[i].type + 
+                 " (R" + to_string(plants[i].price) + ")\n";
     }
     result += "-----------------------------\n";
     result += "Total: R" + to_string(totalPrice) + "\n";

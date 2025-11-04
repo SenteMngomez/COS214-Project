@@ -13,6 +13,19 @@ Plant::Plant(string colour, CareStrategy* careStrategy, double price)
     // Plant starts in seed state
 }
 
+Plant::~Plant() {
+	if(careStrategy){
+		delete careStrategy; 
+		careStrategy=nullptr;
+	}
+
+   	if(state){ 
+		delete state;
+		state=nullptr;
+	}
+
+}
+
 void Plant::receiveWater() {
 	if(careStrategy){
         careStrategy->water(this);
@@ -56,7 +69,6 @@ void Plant::progressState(){
 
 	if(state) state->handle(this);
 }
-
 
 
 

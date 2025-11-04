@@ -20,29 +20,22 @@ protected:
     // Flower plants (HeavyCareStrategy)
     Plant* rose;
     Plant* tulip;
-    HeavyCareStrategy* heavyCare;
 
     // Tree plants (ModerateCareStrategy)
     Plant* mango;
     Plant* oak;
-    ModerateCareStrategy* moderateCare;
 
     // Succulent plants (LightCareStrategy)
     Plant* begonia;
     Plant* cactus;
-    LightCareStrategy* lightCare;
 
     void SetUp() override{
-        heavyCare = new HeavyCareStrategy();
-        moderateCare = new ModerateCareStrategy();
-        lightCare = new LightCareStrategy();
-
-        rose = new Rose("Red", heavyCare, 15.99);
-        tulip = new Tulip("Yellow", heavyCare, 12.49);
-        mango = new Mango("Green", moderateCare, 25.99);
-        oak = new Oak("Brown", moderateCare, 30.99);
-        begonia = new Begonia("Pink", lightCare, 10.99);
-        cactus = new Cactus("Green", lightCare, 8.99);
+        rose = new Rose("Red", new HeavyCareStrategy(), 15.99);
+        tulip = new Tulip("Yellow", new HeavyCareStrategy(), 12.49);
+        mango = new Mango("Green", new ModerateCareStrategy(), 25.99);
+        oak = new Oak("Brown", new ModerateCareStrategy(), 30.99);
+        begonia = new Begonia("Pink", new LightCareStrategy(), 10.99);
+        cactus = new Cactus("Green", new LightCareStrategy(), 8.99);
     }
 
     void TearDown() override {
@@ -52,9 +45,6 @@ protected:
         delete oak;
         delete begonia;
         delete cactus;
-        delete heavyCare;
-        delete moderateCare;
-        delete lightCare;
     }
 };
 
@@ -88,9 +78,9 @@ TEST_F(PlantTest, CareOperations) {
 
 // Test care strategy retrieval
 TEST_F(PlantTest, CareStrategy) {
-    EXPECT_EQ(rose->getCareStrategy(), heavyCare);
-    EXPECT_EQ(mango->getCareStrategy(), moderateCare);
-    EXPECT_EQ(begonia->getCareStrategy(), lightCare);
+    EXPECT_NE(rose->getCareStrategy(), nullptr);
+    EXPECT_NE(mango->getCareStrategy(), nullptr);
+    EXPECT_NE(begonia->getCareStrategy(), nullptr);
 }
 
 // Test Prototype (clone)

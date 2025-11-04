@@ -67,6 +67,7 @@ protected:
         delete manager;
         delete mockPerson;
         delete mockStaffSuccessor;
+        delete section;
     }
     
     Manager* manager;

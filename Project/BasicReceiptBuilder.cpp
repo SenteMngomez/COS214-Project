@@ -3,13 +3,7 @@
 BasicReceiptBuilder::BasicReceiptBuilder(string &seller , vector<Plant*> plants){
 	this->sellerName = seller ;
 	this->soldPlants = plants;
-	this->receipt = new Receipt();;
-
-}
-
-Receipt* BasicReceiptBuilder::getResult() {
-	// TODO - implement BasicReceiptBuilder::getResult
-	return this->receipt;
+	// Don't allocate receipt here - base class already did in its constructor
 }
 
 void BasicReceiptBuilder::addPrice(){
@@ -22,7 +16,7 @@ void BasicReceiptBuilder::addPrice(){
 
 void BasicReceiptBuilder::addPlantDetails(){
 	for(size_t i = 0 ; i <soldPlants.size();i++){
-		receipt->addPlant(soldPlants[i]);
+		receipt->addPlant(soldPlants[i]->getType(), soldPlants[i]->getPrice());
 	}
 }
 

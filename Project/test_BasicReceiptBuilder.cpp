@@ -28,7 +28,7 @@ TEST(BasicReceiptBuilderTest, BuildsReceiptWithItemsAndTotal) {
 	builder.addPrice();
 	builder.addPlantDetails();
 	builder.addSeller();
-	Receipt* r = builder.getResult();
+	Receipt* r = builder.getReceipt();
 
 	ASSERT_NE(r, nullptr);
 	std::string s = r->toString();
@@ -50,7 +50,7 @@ TEST(BasicReceiptBuilderTest, EmptyPlantListProducesZeroTotal) {
 	builder.addPrice();
 	builder.addPlantDetails();
 	builder.addSeller();
-	Receipt* r = builder.getResult();
+	Receipt* r = builder.getReceipt();
 
 	ASSERT_NE(r, nullptr);
 	std::string s = r->toString();

@@ -124,10 +124,16 @@ public:
      */
     PlantState* getState() const;
 
+
+	/**
+	 * @brief Takes the plants state to the next state
+	 */
+	void progressState();
+
 	/**
      * @brief destructor
      */
-    virtual ~Plant() {};
+    virtual ~Plant();
 
 	/**
      * @brief Receive water from care operations
@@ -143,11 +149,6 @@ public:
      * @brief Set the care strategy for the plant. Determines how the plantt  is watered and given sunlight
      */
 	void setCareStrategy(CareStrategy* careStrategy);
-
-	/**
-	 * 
-	 */
-	void progressState();
 
 };
 

@@ -16,10 +16,7 @@
 class PlantGroupTest : public ::testing::Test {
 protected:
     PlantGroup* group;
-    Plant* rose;
-    Plant* tulip;
-    Plant* mango;
-    Plant* begonia;
+    // We'll create plants as needed in each test since PlantGroup takes ownership
     HeavyCareStrategy* heavyCare;
     ModerateCareStrategy* moderateCare;
     LightCareStrategy* lightCare;
@@ -29,19 +26,14 @@ protected:
         moderateCare = new ModerateCareStrategy();
         lightCare = new LightCareStrategy();
         
-        group = new PlantGroup("Test Group", heavyCare, 0.0);
-        rose = new Rose("Red", heavyCare, 15.99);
-        tulip = new Tulip("Yellow", heavyCare, 12.49);
-        mango = new Mango("Green", moderateCare, 25.99);
-        begonia = new Begonia("Pink", lightCare, 10.99);
+        group = new PlantGroup("Test Group", new HeavyCareStrategy(), 0.0);
     }
 
     void TearDown() override {
+        // PlantGroup destructor will handle children automatically
         delete group;
-        delete rose;
-        delete tulip;
-        delete mango;
-        delete begonia;
+        
+        // Clean up strategy objects
         delete heavyCare;
         delete moderateCare;
         delete lightCare;
@@ -50,40 +42,59 @@ protected:
 
 // Test adding and getting children
 TEST_F(PlantGroupTest, AddAndRemoveChild) {
+    // Create plants that PlantGroup will take ownership of
+    Plant* rose = new Rose("Red", new HeavyCareStrategy(), 15.99);
+    Plant* tulip = new Tulip("Yellow", new HeavyCareStrategy(), 12.49);
+    Plant* mango = new Mango("Green", new ModerateCareStrategy(), 25.99);
+    Plant* begonia = new Begonia("Pink", new LightCareStrategy(), 10.99);
+    
+    rose->setTag("1");
+    tulip->setTag("2");
+    mango->setTag("3");
+    begonia->setTag("4");
+    
     group->add(*rose);
     group->add(*tulip);
     group->add(*mango);
     group->add(*begonia);
 
     // Test that we can find children by tag
-    rose->setTag("1");
-    tulip->setTag("2");
-    mango->setTag("3");
-    begonia->setTag("4");
-    
     EXPECT_EQ(group->getChild("1"), rose);
     EXPECT_EQ(group->getChild("2"), tulip);
     EXPECT_EQ(group->getChild("3"), mango);
     EXPECT_EQ(group->getChild("4"), begonia);
     EXPECT_EQ(group->getChild("5"), nullptr);  // Non-existent tag
+    
+    // PlantGroup destructor will clean up the plants
 }
 
 // Test removing children
 TEST_F(PlantGroupTest, RemoveChild) {
+    Plant* rose = new Rose("Red", new HeavyCareStrategy(), 15.99);
+    Plant* tulip = new Tulip("Yellow", new HeavyCareStrategy(), 12.49);
+    
     rose->setTag("1");
     tulip->setTag("2");
+    
     group->add(*rose);
     group->add(*tulip);
-    group->remove(*rose);  // Remove rose
+    group->remove(*rose);  // Remove rose - PlantGroup will delete it
 
     EXPECT_EQ(group->getChild("2"), tulip);  // Tulip should be the only child left
     EXPECT_EQ(group->getChild("1"), nullptr);
+    
+    // Note: rose is now deleted by PlantGroup, no need to manually delete
 }
 
 // Test getType for group
 TEST_F(PlantGroupTest, GetType) {
     EXPECT_EQ(group->getType(), "PlantGroup");  // Empty group
 
+    Plant* rose = new Rose("Red", new HeavyCareStrategy(), 15.99);
+    Plant* tulip = new Tulip("Yellow", new HeavyCareStrategy(), 12.49);
+    Plant* mango = new Mango("Green", new ModerateCareStrategy(), 25.99);
+    Plant* begonia = new Begonia("Pink", new LightCareStrategy(), 10.99);
+    
     group->add(*rose);
     group->add(*tulip);
     group->add(*mango);
@@ -93,6 +104,7 @@ TEST_F(PlantGroupTest, GetType) {
 
 // Test print (capture output)
 TEST_F(PlantGroupTest, Print) {
+    Plant* rose = new Rose("Red", new HeavyCareStrategy(), 15.99);
     group->add(*rose);
 
     testing::internal::CaptureStdout();
@@ -104,10 +116,16 @@ TEST_F(PlantGroupTest, Print) {
 
 // Test cloning PlantGroup
 TEST_F(PlantGroupTest, Clone) {
+    Plant* rose = new Rose("Red", new HeavyCareStrategy(), 15.99);
+    Plant* tulip = new Tulip("Yellow", new HeavyCareStrategy(), 12.49);
+    Plant* mango = new Mango("Green", new ModerateCareStrategy(), 25.99);
+    Plant* begonia = new Begonia("Pink", new LightCareStrategy(), 10.99);
+    
     rose->setTag("1");
     tulip->setTag("2");
     mango->setTag("3");
     begonia->setTag("4");
+    
     group->add(*rose);
     group->add(*tulip);
     group->add(*mango);
@@ -144,5 +162,7 @@ TEST_F(PlantGroupTest, EmptyGroupOperations) {
     EXPECT_EQ(group->getType(), "PlantGroup");
 
     // Removing from empty group should not crash
+    Plant* rose = new Rose("Red", new HeavyCareStrategy(), 15.99);
     EXPECT_NO_THROW(group->remove(*rose));
+    delete rose; // Clean up since it wasn't added to group
 }

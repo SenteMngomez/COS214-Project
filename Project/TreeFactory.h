@@ -9,7 +9,7 @@
 #define TREEFACTORY_H
 
 #include "PlantFactory.h"
-#include "ModerateCareStrategy.h"
+#include "HeavyCareStrategy.h"
 #include "Mango.h"
 #include "Oak.h"
 

@@ -51,7 +51,6 @@ TEST(ConcretePlantBuilderTest, SinglePlantWithWrapReturnsDecorator){
 	EXPECT_NE(t.find("Tulip"), std::string::npos);
 
 	delete result;
-	delete p1;
 }
 
 TEST(ConcretePlantBuilderTest, MultiplePlantsWithPotReturnsGroupWrapped){
@@ -72,8 +71,6 @@ TEST(ConcretePlantBuilderTest, MultiplePlantsWithPotReturnsGroupWrapped){
 	EXPECT_NE(t.find("B"), std::string::npos);
 
 	delete result; 
-	delete p1;
-	delete p2;
 }
 
 
