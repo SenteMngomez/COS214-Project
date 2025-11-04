@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classSection.html" title="A Section manages a collection of Person instances, maintains a history of messages,..." alt="" coords="5,31,76,56"/>
+<area shape="rect" id="Node000001" href="$classHelpDesk.html" title="A HelpDesk is a concrete Section that broadcasts messages to all participants and routes help request..." alt="" coords="129,5,214,31"/>
+<area shape="poly" id="edge35_Node000000_Node000001" title=" " alt="" coords="89,31,128,24,129,29,90,37"/>
+<area shape="rect" id="Node000002" href="$classSalesRoom.html" title="A SalesRoom is a concrete Section that broadcasts messages to all participants and routes requests to..." alt="" coords="124,55,219,80"/>
+<area shape="poly" id="edge36_Node000000_Node000002" title=" " alt="" coords="90,50,124,56,123,61,89,55"/>
+</map>

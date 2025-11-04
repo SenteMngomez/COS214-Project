@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classIterator.html" title=" " alt="" coords="5,31,76,56"/>
+<area shape="rect" id="Node000001" href="$classChatIterator.html" title="Iterator for chat messages." alt="" coords="125,5,225,31"/>
+<area shape="poly" id="edge9_Node000000_Node000001" title=" " alt="" coords="89,32,124,25,125,30,90,37"/>
+<area shape="rect" id="Node000002" href="$classPlantIterator.html" title="Iterator for Plant objects." alt="" coords="124,55,227,80"/>
+<area shape="poly" id="edge10_Node000000_Node000002" title=" " alt="" coords="90,49,124,56,123,61,89,55"/>
+</map>

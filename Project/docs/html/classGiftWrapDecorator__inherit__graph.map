@@ -1,0 +1,7 @@
+<map id="GiftWrapDecorator" name="GiftWrapDecorator">
+<area shape="rect" id="Node000001" title="Decorator that adds gift wrapping to a plant." alt="" coords="5,152,148,177"/>
+<area shape="rect" id="Node000002" href="$classPlantDecorator.html" title="Base class for decorating plants with additional features." alt="" coords="17,79,136,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,118,79,152,74,152,74,118"/>
+<area shape="rect" id="Node000003" href="$classPlant.html" title="Abstract base class representing a plant in the nursery." alt="" coords="49,5,104,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="79,44,79,79,74,79,74,44"/>
+</map>

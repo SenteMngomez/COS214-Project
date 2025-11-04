@@ -1,0 +1,16 @@
+<map id="BasicReceiptBuilder.h" name="BasicReceiptBuilder.h">
+<area shape="rect" id="Node000001" title="Concrete ReceiptBuilder that assembles a simple receipt from sold plants." alt="" coords="92,5,255,31"/>
+<area shape="rect" id="Node000002" href="$BasicReceiptBuilder_8cpp.html" title=" " alt="" coords="5,79,184,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="152,42,109,80,106,76,149,38"/>
+<area shape="rect" id="Node000003" href="$SellPlant_8h.html" title="Command used to sell one or more plants and generate a receipt." alt="" coords="208,79,299,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="198,38,242,76,238,80,194,42"/>
+<area shape="rect" id="Node000004" href="$SalesClerk_8h.html" title="Concrete class representing a sales clerk (specialised Staff)" alt="" coords="113,152,215,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="230,115,180,154,177,150,227,110"/>
+<area shape="rect" id="Node000006" href="$main_8cpp.html" title=" " alt="" coords="212,225,295,251"/>
+<area shape="poly" id="edge7_Node000003_Node000006" title=" " alt="" coords="256,118,256,225,251,225,251,118"/>
+<area shape="rect" id="Node000007" href="$SellPlant_8cpp.html" title=" " alt="" coords="291,152,397,177"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="280,110,331,150,328,154,277,115"/>
+<area shape="rect" id="Node000005" href="$SalesClerk_8cpp.html" title=" " alt="" coords="70,225,189,251"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="155,191,137,226,133,224,150,189"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="191,184,240,223,237,227,187,188"/>
+</map>

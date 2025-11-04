@@ -1,0 +1,5 @@
+<map id="SalesRoom" name="SalesRoom">
+<area shape="rect" id="Node000001" title="A SalesRoom is a concrete Section that broadcasts messages to all participants and routes requests to..." alt="" coords="5,79,100,104"/>
+<area shape="rect" id="Node000002" href="$classSection.html" title="A Section manages a collection of Person instances, maintains a history of messages,..." alt="" coords="17,5,88,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,44,55,79,50,79,50,44"/>
+</map>

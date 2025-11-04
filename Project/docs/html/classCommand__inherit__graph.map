@@ -1,0 +1,9 @@
+<map id="Command" name="Command">
+<area shape="rect" id="Node000001" title=" " alt="" coords="129,5,219,31"/>
+<area shape="rect" id="Node000002" href="$classGiveSunlight.html" title=" " alt="" coords="5,79,111,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="145,40,78,81,76,76,142,35"/>
+<area shape="rect" id="Node000003" href="$classSellPlant.html" title="Concrete Command that handles selling plants and building receipts." alt="" coords="135,79,213,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="177,44,177,79,171,79,171,44"/>
+<area shape="rect" id="Node000004" href="$classWaterPlant.html" title="Concrete Command that waters plant(s) in the greenhouse." alt="" coords="238,79,331,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="205,36,268,76,265,81,202,40"/>
+</map>

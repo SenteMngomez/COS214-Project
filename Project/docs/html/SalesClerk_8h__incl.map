@@ -1,0 +1,86 @@
+<map id="SalesClerk.h" name="SalesClerk.h">
+<area shape="rect" id="Node000001" title="Concrete class representing a sales clerk (specialised Staff)" alt="" coords="1122,5,1225,31"/>
+<area shape="rect" id="Node000002" href="$Staff_8h.html" title="Concrete class representing a staff member." alt="" coords="749,79,813,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1122,31,827,84,826,79,1121,26"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="597,592,656,617"/>
+<area shape="poly" id="edge14_Node000001_Node000007" title=" " alt="" coords="1225,24,1324,43,1437,72,1489,91,1531,112,1560,136,1568,149,1571,163,1571,460,1567,485,1557,504,1540,517,1520,525,1471,535,1415,547,1348,561,1259,573,1043,591,827,601,670,605,670,600,827,595,1043,585,1258,568,1347,556,1414,541,1470,530,1519,520,1538,512,1552,501,1562,484,1565,459,1565,164,1563,151,1556,139,1528,116,1487,96,1436,77,1323,48,1224,30"/>
+<area shape="rect" id="Node000010" href="$SellPlant_8h.html" title="Command used to sell one or more plants and generate a receipt." alt="" coords="1128,79,1219,104"/>
+<area shape="poly" id="edge15_Node000001_Node000010" title=" " alt="" coords="1176,31,1176,65,1171,65,1171,31"/>
+<area shape="rect" id="Node000003" href="$Person_8h.html" title="Abstract base class representing a person." alt="" coords="417,152,495,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="749,102,510,154,509,149,748,97"/>
+<area shape="rect" id="Node000004" href="$Section_8h.html" title="Abstract class representing a chat section/group within the system." alt="" coords="108,225,191,251"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="417,178,205,227,204,221,416,172"/>
+<area shape="poly" id="edge11_Node000003_Node000007" title=" " alt="" coords="417,176,364,192,308,219,283,236,263,257,250,282,245,310,245,459,248,472,255,483,283,507,325,528,376,546,488,575,584,594,583,599,487,581,375,551,323,532,280,511,251,487,243,474,240,460,240,310,245,280,259,254,280,232,305,214,362,187,416,171"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="654,372,717,397"/>
+<area shape="poly" id="edge12_Node000003_Node000008" title=" " alt="" coords="470,176,665,360,661,364,466,180"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="1175,519,1255,544"/>
+<area shape="poly" id="edge13_Node000003_Node000009" title=" " alt="" coords="496,173,508,175,640,190,744,194,847,201,978,223,1090,250,1151,272,1176,284,1194,297,1212,320,1225,346,1232,374,1235,404,1232,460,1224,505,1219,504,1227,459,1229,404,1226,375,1220,348,1208,322,1190,301,1173,288,1149,277,1089,256,977,228,846,206,743,200,640,195,508,180,495,178"/>
+<area shape="rect" id="Node000005" href="$Iterator_8h.html" title=" " alt="" coords="73,372,154,397"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="130,253,104,273,84,300,81,315,83,330,97,359,92,362,78,332,75,314,79,298,100,269,127,249"/>
+<area shape="rect" id="Node000006" href="$ChatIterator_8h.html" title="Declaration of the ChatIterator class. This class implements the Iterator interface to iterate over a..." alt="" coords="94,299,205,324"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="152,251,152,285,147,285,147,251"/>
+<area shape="poly" id="edge9_Node000004_Node000007" title=" " alt="" coords="125,253,89,273,51,302,34,319,20,339,11,360,8,384,8,459,13,479,26,498,48,514,77,529,152,553,242,572,339,584,434,593,584,600,584,605,434,598,339,590,241,577,151,559,75,534,45,519,23,501,8,482,3,460,3,383,6,359,16,336,30,316,47,298,86,268,122,248"/>
+<area shape="poly" id="edge10_Node000004_Node000008" title=" " alt="" coords="191,240,334,257,422,273,509,296,651,363,649,368,507,301,420,279,333,262,191,245"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="146,326,128,361,123,358,141,323"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="155,323,193,447,213,512,226,542,252,557,290,569,389,587,496,596,584,600,583,605,496,601,389,592,289,575,250,562,222,546,208,514,187,449,150,325"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="205,317,641,375,640,380,204,323"/>
+<area shape="poly" id="edge57_Node000010_Node000007" title=" " alt="" coords="1219,89,1305,94,1355,102,1404,114,1449,132,1486,158,1500,174,1511,193,1518,213,1520,237,1520,460,1515,492,1500,514,1478,527,1449,533,1381,538,1344,540,1307,547,1217,565,1123,580,941,598,782,605,670,607,670,601,782,600,940,593,1123,575,1216,560,1306,541,1344,535,1381,532,1448,528,1476,522,1496,510,1510,490,1515,459,1515,237,1512,215,1506,195,1496,177,1482,162,1446,137,1402,119,1354,107,1305,99,1219,94"/>
+<area shape="poly" id="edge58_Node000010_Node000008" title=" " alt="" coords="1128,100,1025,117,965,133,908,154,850,183,808,212,773,249,733,300,713,331,698,360,693,358,709,328,728,297,769,245,805,208,847,179,906,150,964,128,1024,112,1127,94"/>
+<area shape="poly" id="edge59_Node000010_Node000009" title=" " alt="" coords="1220,92,1293,102,1334,111,1375,125,1412,143,1442,168,1462,199,1469,236,1469,313,1463,352,1447,387,1423,418,1393,445,1360,468,1326,488,1263,516,1261,511,1324,483,1357,464,1390,441,1419,414,1443,384,1458,350,1464,312,1464,237,1457,201,1438,171,1409,148,1373,130,1333,116,1292,107,1219,97"/>
+<area shape="rect" id="Node000011" href="$Command_8h.html" title=" " alt="" coords="919,152,1020,177"/>
+<area shape="poly" id="edge16_Node000010_Node000011" title=" " alt="" coords="1141,107,1016,150,1014,145,1140,102"/>
+<area shape="rect" id="Node000020" href="$Inventory_8h.html" title="Declaration of Inventory class." alt="" coords="1278,299,1373,324"/>
+<area shape="poly" id="edge46_Node000010_Node000020" title=" " alt="" coords="1196,102,1227,122,1257,150,1280,184,1298,221,1321,285,1316,286,1293,223,1275,187,1253,154,1224,126,1193,106"/>
+<area shape="rect" id="Node000022" href="$SalesAssistance_8h.html" title=" " alt="" coords="1104,152,1243,177"/>
+<area shape="poly" id="edge47_Node000010_Node000022" title=" " alt="" coords="1176,104,1176,138,1171,138,1171,104"/>
+<area shape="rect" id="Node000025" href="$BasicReceiptBuilder_8h.html" title="Concrete ReceiptBuilder that assembles a simple receipt from sold plants." alt="" coords="520,152,683,177"/>
+<area shape="poly" id="edge53_Node000010_Node000025" title=" " alt="" coords="1128,101,696,154,696,149,1128,96"/>
+<area shape="poly" id="edge45_Node000011_Node000008" title=" " alt="" coords="938,180,891,200,843,228,801,261,763,298,705,363,701,359,759,294,798,257,840,223,889,195,936,175"/>
+<area shape="rect" id="Node000012" href="$Greenhouse_8h.html" title="Declaration of Greenhouse class." alt="" coords="853,225,965,251"/>
+<area shape="poly" id="edge17_Node000011_Node000012" title=" " alt="" coords="961,179,930,217,926,213,957,176"/>
+<area shape="poly" id="edge38_Node000011_Node000020" title=" " alt="" coords="1021,170,1147,192,1208,207,1251,223,1287,253,1313,285,1309,289,1283,256,1248,228,1206,212,1146,197,1020,176"/>
+<area shape="poly" id="edge35_Node000012_Node000007" title=" " alt="" coords="853,245,576,264,442,280,396,290,371,301,355,318,348,336,347,383,347,459,354,495,372,523,400,547,435,565,474,578,513,588,584,598,583,603,512,593,472,583,433,570,397,551,368,527,349,497,341,460,341,383,343,335,350,316,368,296,395,285,442,275,576,259,853,239"/>
+<area shape="poly" id="edge34_Node000012_Node000008" title=" " alt="" coords="892,253,813,301,714,367,712,362,811,296,889,248"/>
+<area shape="poly" id="edge36_Node000012_Node000009" title=" " alt="" coords="966,243,1080,262,1132,277,1166,297,1185,320,1199,347,1215,404,1221,460,1220,505,1214,505,1215,460,1210,405,1194,349,1180,323,1162,301,1130,282,1079,267,965,248"/>
+<area shape="rect" id="Node000013" href="$GreenhouseInterface_8h.html" title="Implementation of GreenhouseInterface class." alt="" coords="824,299,995,324"/>
+<area shape="poly" id="edge18_Node000012_Node000013" title=" " alt="" coords="912,251,912,285,907,285,907,251"/>
+<area shape="rect" id="Node000018" title=" " alt="" coords="787,372,872,397"/>
+<area shape="poly" id="edge37_Node000012_Node000018" title=" " alt="" coords="943,248,972,262,998,279,1014,301,1014,313,1009,326,993,336,962,347,886,371,884,366,961,342,990,331,1005,322,1009,312,1009,302,994,283,969,266,941,253"/>
+<area shape="rect" id="Node000019" href="$PlantIterator_8h.html" title="Declaration of the PlantIterator class. This class implements the Iterator interface to iterate over ..." alt="" coords="381,299,496,324"/>
+<area shape="poly" id="edge30_Node000012_Node000019" title=" " alt="" coords="853,250,510,302,509,297,853,245"/>
+<area shape="poly" id="edge28_Node000013_Node000008" title=" " alt="" coords="874,327,731,372,729,367,873,321"/>
+<area shape="rect" id="Node000014" href="$InventoryInterface_8h.html" title="Interface for Inventory class (Observer in Observer pattern)" alt="" coords="896,372,1051,397"/>
+<area shape="poly" id="edge19_Node000013_Node000014" title=" " alt="" coords="922,323,956,360,952,364,918,326"/>
+<area shape="poly" id="edge29_Node000013_Node000018" title=" " alt="" coords="898,326,854,365,851,361,895,322"/>
+<area shape="rect" id="Node000015" href="$Plant_8h.html" title="Abstract base class for plants in the nursery simulator." alt="" coords="637,445,704,471"/>
+<area shape="poly" id="edge20_Node000014_Node000015" title=" " alt="" coords="925,400,718,448,717,443,924,395"/>
+<area shape="poly" id="edge23_Node000015_Node000007" title=" " alt="" coords="654,473,630,493,610,520,607,534,608,550,616,579,611,580,602,550,602,534,606,518,626,489,650,469"/>
+<area shape="poly" id="edge24_Node000015_Node000009" title=" " alt="" coords="705,461,1161,520,1161,526,704,466"/>
+<area shape="rect" id="Node000016" href="$CareStrategy_8h.html" title="Declaration of the CareStrategy abstract class. This class defines the interface for different care s..." alt="" coords="745,519,863,544"/>
+<area shape="poly" id="edge21_Node000015_Node000016" title=" " alt="" coords="687,468,765,510,762,515,684,473"/>
+<area shape="rect" id="Node000017" href="$PlantState_8h.html" title="Abstract base class for plant states in the State design pattern. This class defines the interface fo..." alt="" coords="620,519,721,544"/>
+<area shape="poly" id="edge25_Node000015_Node000017" title=" " alt="" coords="666,471,665,505,659,505,661,471"/>
+<area shape="poly" id="edge22_Node000016_Node000015" title=" " alt="" coords="788,521,710,479,713,474,790,516"/>
+<area shape="poly" id="edge27_Node000017_Node000007" title=" " alt="" coords="666,546,643,582,639,579,661,543"/>
+<area shape="poly" id="edge26_Node000017_Node000015" title=" " alt="" coords="675,518,677,484,682,485,680,519"/>
+<area shape="poly" id="edge31_Node000019_Node000005" title=" " alt="" coords="387,327,168,374,167,369,386,321"/>
+<area shape="poly" id="edge33_Node000019_Node000008" title=" " alt="" coords="479,321,641,368,640,373,478,327"/>
+<area shape="poly" id="edge32_Node000019_Node000015" title=" " alt="" coords="459,322,641,435,639,440,456,326"/>
+<area shape="poly" id="edge41_Node000020_Node000007" title=" " alt="" coords="1347,322,1372,342,1393,371,1396,385,1393,398,1372,450,1348,488,1315,518,1268,546,1217,565,1148,579,1065,589,976,597,801,605,670,606,670,601,801,599,976,591,1065,584,1147,574,1216,560,1266,542,1312,514,1344,484,1367,447,1388,397,1391,385,1388,373,1369,346,1344,326"/>
+<area shape="poly" id="edge44_Node000020_Node000008" title=" " alt="" coords="1278,320,775,375,731,380,730,375,774,369,1278,315"/>
+<area shape="poly" id="edge40_Node000020_Node000009" title=" " alt="" coords="1324,325,1300,389,1261,472,1235,509,1231,506,1256,469,1295,387,1319,323"/>
+<area shape="poly" id="edge39_Node000020_Node000014" title=" " alt="" coords="1278,325,1044,372,1043,367,1277,320"/>
+<area shape="poly" id="edge43_Node000020_Node000018" title=" " alt="" coords="1278,321,1109,341,886,374,885,369,1108,336,1277,315"/>
+<area shape="rect" id="Node000021" title=" " alt="" coords="1328,372,1379,397"/>
+<area shape="poly" id="edge42_Node000020_Node000021" title=" " alt="" coords="1332,323,1346,358,1341,360,1327,325"/>
+<area shape="rect" id="Node000023" href="$ReceiptBuilder_8h.html" title=" " alt="" coords="1109,225,1237,251"/>
+<area shape="poly" id="edge48_Node000022_Node000023" title=" " alt="" coords="1176,178,1176,212,1171,212,1171,178"/>
+<area shape="rect" id="Node000024" href="$Receipt_8h.html" title="Representation of a sales receipt containing sold plants and totals." alt="" coords="1069,299,1152,324"/>
+<area shape="poly" id="edge49_Node000023_Node000024" title=" " alt="" coords="1165,253,1132,290,1128,286,1161,249"/>
+<area shape="poly" id="edge50_Node000024_Node000007" title=" " alt="" coords="1108,326,1091,360,1065,399,1019,450,980,486,936,515,876,546,822,568,767,584,670,601,669,596,765,578,820,563,874,542,933,511,977,481,1016,446,1061,396,1087,357,1103,323"/>
+<area shape="poly" id="edge52_Node000024_Node000008" title=" " alt="" coords="1070,322,731,378,730,373,1069,317"/>
+<area shape="poly" id="edge51_Node000024_Node000009" title=" " alt="" coords="1116,323,1137,387,1173,469,1198,506,1194,509,1168,472,1132,389,1111,325"/>
+<area shape="poly" id="edge56_Node000025_Node000008" title=" " alt="" coords="608,177,678,358,673,360,603,179"/>
+<area shape="poly" id="edge55_Node000025_Node000015" title=" " alt="" coords="550,180,480,201,444,215,411,232,385,251,367,273,362,296,372,323,396,352,425,377,458,397,492,414,563,437,624,449,623,454,562,442,491,419,455,402,422,381,392,356,367,325,357,297,362,271,381,248,408,228,442,210,479,196,549,175"/>
+<area shape="poly" id="edge54_Node000025_Node000023" title=" " alt="" coords="683,173,1091,223,1096,223,1095,229,1090,228,682,178"/>
+</map>

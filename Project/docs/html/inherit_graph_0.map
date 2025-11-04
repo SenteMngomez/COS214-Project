@@ -1,0 +1,9 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classCareStrategy.html" title="Abstract class representing different care strategies for plants." alt="" coords="5,55,112,80"/>
+<area shape="rect" id="Node000001" href="$classHeavyCareStrategy.html" title="Concrete class implementing the CareStrategy for plants needing heavy care. This class provides speci..." alt="" coords="170,5,319,31"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="120,49,195,28,196,33,121,54"/>
+<area shape="rect" id="Node000002" href="$classLightCareStrategy.html" title="Concrete class implementing the CareStrategy for plants needing light care. This class provides speci..." alt="" coords="175,55,314,80"/>
+<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="126,65,175,65,175,70,126,70"/>
+<area shape="rect" id="Node000003" href="$classModerateCareStrategy.html" title="Concrete class implementing the CareStrategy for plants needing moderate care. This class provides sp..." alt="" coords="160,104,329,129"/>
+<area shape="poly" id="edge3_Node000000_Node000003" title=" " alt="" coords="121,81,196,101,195,106,120,86"/>
+</map>

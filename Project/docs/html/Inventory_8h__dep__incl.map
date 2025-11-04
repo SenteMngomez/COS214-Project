@@ -1,0 +1,36 @@
+<map id="Inventory.h" name="Inventory.h">
+<area shape="rect" id="Node000001" title="Declaration of Inventory class." alt="" coords="587,5,681,31"/>
+<area shape="rect" id="Node000002" href="$Command_8h.html" title=" " alt="" coords="451,79,553,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="602,39,525,81,522,76,600,35"/>
+<area shape="rect" id="Node000009" href="$SellPlant_8h.html" title="Command used to sell one or more plants and generate a receipt." alt="" coords="633,152,723,177"/>
+<area shape="poly" id="edge19_Node000001_Node000009" title=" " alt="" coords="644,43,662,103,677,151,672,153,657,105,639,45"/>
+<area shape="rect" id="Node000015" href="$Inventory_8cpp.html" title="Implementation of Inventory class." alt="" coords="671,79,781,104"/>
+<area shape="poly" id="edge18_Node000001_Node000015" title=" " alt="" coords="661,37,713,76,709,81,658,41"/>
+<area shape="rect" id="Node000003" href="$Command_8cpp.html" title=" " alt="" coords="492,152,608,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="520,114,544,150,540,153,515,117"/>
+<area shape="rect" id="Node000004" href="$GIveSunlight_8h.html" title=" " alt="" coords="158,152,275,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="444,110,264,154,262,149,442,105"/>
+<area shape="rect" id="Node000008" href="$main_8cpp.html" title=" " alt="" coords="438,299,521,324"/>
+<area shape="poly" id="edge17_Node000002_Node000008" title=" " alt="" coords="494,117,483,153,479,194,478,236,481,298,475,299,472,236,473,194,478,151,489,116"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="544,107,650,149,648,154,542,112"/>
+<area shape="rect" id="Node000013" href="$WaterPlant_8h.html" title="Command to water plants identified by tag(s)." alt="" coords="304,152,409,177"/>
+<area shape="poly" id="edge14_Node000002_Node000013" title=" " alt="" coords="468,112,382,154,379,149,465,108"/>
+<area shape="rect" id="Node000005" href="$GIveSunlight_8cpp.html" title=" " alt="" coords="5,225,137,251"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="182,186,96,228,94,223,180,181"/>
+<area shape="rect" id="Node000006" href="$GroundStaff_8h.html" title="Concrete class representing ground staff who care for plants." alt="" coords="161,225,272,251"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="219,191,219,225,214,225,214,191"/>
+<area shape="rect" id="Node000007" href="$GroundStaff_8cpp.html" title=" " alt="" coords="153,299,280,324"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="219,264,219,299,214,299,214,264"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="273,252,438,296,437,301,272,257"/>
+<area shape="poly" id="edge13_Node000009_Node000008" title=" " alt="" coords="620,182,575,200,532,227,516,245,503,264,486,300,481,297,498,262,511,241,528,223,572,195,619,177"/>
+<area shape="rect" id="Node000010" href="$SalesClerk_8h.html" title="Concrete class representing a sales clerk (specialised Staff)" alt="" coords="673,225,776,251"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="695,187,719,224,715,227,691,190"/>
+<area shape="rect" id="Node000012" href="$SellPlant_8cpp.html" title=" " alt="" coords="542,225,649,251"/>
+<area shape="poly" id="edge12_Node000009_Node000012" title=" " alt="" coords="656,188,611,227,607,223,653,184"/>
+<area shape="poly" id="edge11_Node000010_Node000008" title=" " alt="" coords="673,257,520,301,518,296,672,252"/>
+<area shape="rect" id="Node000011" href="$SalesClerk_8cpp.html" title=" " alt="" coords="665,299,784,324"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="727,264,727,299,722,299,722,264"/>
+<area shape="poly" id="edge15_Node000013_Node000006" title=" " alt="" coords="323,186,241,227,238,223,321,181"/>
+<area shape="rect" id="Node000014" href="$WaterPlant_8cpp.html" title=" " alt="" coords="297,225,417,251"/>
+<area shape="poly" id="edge16_Node000013_Node000014" title=" " alt="" coords="359,191,359,225,354,225,354,191"/>
+</map>

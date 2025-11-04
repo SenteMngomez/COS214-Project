@@ -1,0 +1,13 @@
+<map id="Person" name="Person">
+<area shape="rect" id="Node000001" title="Abstract base class representing a person. Provides common attrributes and methods for customers and ..." alt="" coords="88,5,155,31"/>
+<area shape="rect" id="Node000002" href="$classCustomer.html" title="Represents a customer in the system. Inherits from Person and implements behaviour for receiving mess..." alt="" coords="32,79,117,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,44,84,80,80,77,104,41"/>
+<area shape="rect" id="Node000003" href="$classStaff.html" title="Represents a staff member in the system. Inherits from Person and provides request handling (Chain of..." alt="" coords="142,79,194,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="139,41,163,77,158,80,134,44"/>
+<area shape="rect" id="Node000004" href="$classGroundStaff.html" title="Represents ground staff in the system. Inherits from Staff and handles &quot;Care&quot; requests by executing w..." alt="" coords="5,152,104,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="139,114,75,154,72,150,136,109"/>
+<area shape="rect" id="Node000005" href="$classManager.html" title="Represents a manager in the system. Inherits from Staff and handles requests that require managerial ..." alt="" coords="129,152,207,177"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="171,118,171,152,165,152,165,118"/>
+<area shape="rect" id="Node000006" href="$classSalesClerk.html" title="Represents a sales clerk in the system. Inherits from Staff and handles Purchase requests and execute..." alt="" coords="232,152,323,177"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="198,109,261,150,258,154,196,114"/>
+</map>

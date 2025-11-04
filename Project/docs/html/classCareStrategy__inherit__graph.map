@@ -1,0 +1,9 @@
+<map id="CareStrategy" name="CareStrategy">
+<area shape="rect" id="Node000001" title="Abstract class representing different care strategies for plants." alt="" coords="195,5,301,31"/>
+<area shape="rect" id="Node000002" href="$classHeavyCareStrategy.html" title="Concrete class implementing the CareStrategy for plants needing heavy care. This class provides speci..." alt="" coords="5,79,155,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="210,38,109,81,106,76,207,34"/>
+<area shape="rect" id="Node000003" href="$classLightCareStrategy.html" title="Concrete class implementing the CareStrategy for plants needing light care. This class provides speci..." alt="" coords="179,79,317,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="251,44,251,79,245,79,245,44"/>
+<area shape="rect" id="Node000004" href="$classModerateCareStrategy.html" title="Concrete class implementing the CareStrategy for plants needing moderate care. This class provides sp..." alt="" coords="342,79,511,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="290,33,398,76,396,81,288,38"/>
+</map>

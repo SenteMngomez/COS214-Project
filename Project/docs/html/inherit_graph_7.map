@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classPlantBuilder.html" title="Interface for building composite Plant objects." alt="" coords="5,5,107,31"/>
+<area shape="rect" id="Node000001" href="$classConcretePlantBuilder.html" title="Concrete builder that composes multiple Plant instances into a single composite Plant according to a ..." alt="" coords="155,5,313,31"/>
+<area shape="poly" id="edge26_Node000000_Node000001" title=" " alt="" coords="121,15,155,15,155,21,121,21"/>
+</map>
