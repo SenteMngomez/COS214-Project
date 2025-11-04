@@ -72,6 +72,9 @@ Follow the steps to be able to use our program/system.
 # How to run unit/integrated testing⌨️
 - make tests
 
+# Link to Report
+https://docs.google.com/document/d/1BdWMNZtlrCkOYYhAnO_Sj27GYvwT37ylevLtTDNC_Z8/edit?usp=sharing
+
 # Closing Note🌿
 Greenhouse represents a modern, pattern-driven approach to software design- where collaboration, maintainability, and resusability
 
