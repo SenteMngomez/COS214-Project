@@ -6,6 +6,8 @@
  */
 
 #include "Mango.h"
+#include "ModerateCareStrategy.h"
+#include "SeedState.h"
 
 Mango::Mango(string colour, CareStrategy* careStrategy, double price)
     : Plant(colour, careStrategy, price) {
@@ -14,11 +16,34 @@ Mango::Mango(string colour, CareStrategy* careStrategy, double price)
 	}
 
 Plant* Mango::clone() {
-	return new Mango(*this);
+    // Create a new CareStrategy of the same type
+    CareStrategy* newStrategy = nullptr;
+    if (getCareStrategy()) {
+        // Assuming all mangos use ModerateCareStrategy, create a new one
+        newStrategy = new ModerateCareStrategy();
+    }
+    
+    // Create a new Mango with the same properties but new strategy
+    Mango* cloned = new Mango(getColour(), newStrategy, getPrice());
+    cloned->setTag(getTag());
+    
+    // Copy the state - create a new state of the same type
+    if (getState()) {
+        PlantState* newState = new SeedState(); // Default to SeedState for clones
+        cloned->setState(newState);
+    }
+    
+    return cloned;
 }
 
 void Mango::print() {
-	cout << "Type: " << getType() << ", Colour: " << getColour() << ", Tag: " << getTag()  << ", Price: R" << getPrice() << endl;
+	if(getState()){
+
+		cout << "Type: " << getType() << ", Colour: " << getColour() << ", Tag: " << getTag()  << ", Price: R" << getPrice() <<" ("<<getState()->getType()<<")"<<endl;
+	}else{
+
+		cout << "Type: " << getType() << ", Colour: " << getColour() << ", Tag: " << getTag()  << ", Price: R" << getPrice() << endl;
+	}
 }
 
 Plant* Mango::getChild(string tag){

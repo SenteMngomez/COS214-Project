@@ -20,6 +20,8 @@
  * Each concrete state class will implement the handle method to define
  * how the plant behaves in that particular state.
  */
+
+ #include <string>
 class Plant;
 class PlantState {
 
@@ -33,6 +35,12 @@ public:
 	/**
 	 * @brief Virtual destructor for PlantState.s
 	 */
+
+	/**
+	 * @brief Returns the name of the state
+	 */
+	virtual std::string getType()=0;
+
 	virtual ~PlantState(){}
 };
 

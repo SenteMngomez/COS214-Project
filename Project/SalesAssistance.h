@@ -9,6 +9,7 @@ private:
 	ReceiptBuilder* builder;
 
 public:
+	~SalesAssistance();
 	void setBuilder(ReceiptBuilder* b);
 	Receipt* constructReceipt();
 	

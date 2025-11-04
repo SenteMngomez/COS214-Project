@@ -3,6 +3,20 @@
 #include "FlowerFactory.h"
 #include "SucculentFactory.h"
 
+// Global test environment to clean up singletons at the end
+class GlobalTestEnvironment : public ::testing::Environment {
+public:
+    ~GlobalTestEnvironment() override = default;
+
+    void TearDown() override {
+        // Cleanup all singletons at the very end
+        Inventory::cleanup();
+    }
+};
+
+// Register the global environment
+const auto registered = ::testing::AddGlobalTestEnvironment(new GlobalTestEnvironment);
+
 class InventoryTest : public ::testing::Test {
     protected:
         Inventory* inventory;
@@ -11,6 +25,10 @@ class InventoryTest : public ::testing::Test {
 
         void SetUp() override {
             inventory = Inventory::instance();
+        }
+
+        void TearDown() override {
+            inventory->clearInventory();
         }
 
 };
@@ -31,6 +49,9 @@ TEST_F(InventoryTest, UpdateInventory) {
 
     EXPECT_NO_THROW(inventory->updateInventory(rose));
 
+    // Remove from inventory before deleting
+    inventory->removePlant(rose->getTag());
+    delete rose;
 }
 
 TEST_F(InventoryTest, AddStock) {
@@ -51,6 +72,7 @@ TEST_F(InventoryTest, RemovePlant) {
     ASSERT_NE(removed, nullptr);
     EXPECT_EQ(removed->getTag(), tag);
 
+    delete removed; // Clean up the removed plant
 }
 
 TEST_F(InventoryTest, RemoveNonExistentPlant) {
@@ -71,5 +93,13 @@ TEST_F(InventoryTest, MultipleProductsInventory) {
     EXPECT_NO_THROW(inventory->updateInventory(tulip));
     EXPECT_NO_THROW(inventory->updateInventory(cactus));
 
+    // Remove from inventory before deleting
+    inventory->removePlant(rose->getTag());
+    inventory->removePlant(tulip->getTag());
+    inventory->removePlant(cactus->getTag());
+    
+    delete rose;
+    delete tulip;
+    delete cactus;
 }
 

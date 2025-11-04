@@ -23,3 +23,6 @@ void SproutState::handle(Plant* plant) {
 	cout<<"The sprout has finally matured into a full "<<plant->getType()<<". #grown"<<endl;
 	plant->setState(new MatureState());
 }
+
+
+std::string SproutState::getType(){ return "Sprout"; }

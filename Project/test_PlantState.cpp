@@ -33,7 +33,7 @@ class MockCareStrategy:public CareStrategy{
         }
 };
 
-// ********************************SEED STATE TEST*****************************************
+// *******************************SEED STATE TEST****************************************
 TEST(PlantStateTest, SeedStateHandlesCorrectly){
     MockPlant plant;
     plant.setCareStrategy(new MockCareStrategy());
@@ -52,7 +52,7 @@ TEST(PlantStateTest, SeedStateHandlesCorrectly){
     EXPECT_NE(dynamic_cast<SproutState*>(plant.getState()), nullptr);
 }
 
-// ********************************SPROUT STATE TEST*****************************************
+// *******************************SPROUT STATE TEST****************************************
 TEST(PlantStateTest, SproutStateHandlesCorrectly){
     MockPlant plant;
     //SproutState seed;
@@ -73,7 +73,7 @@ TEST(PlantStateTest, SproutStateHandlesCorrectly){
 }
 
 
-// ********************************MATURE STATE TEST*****************************************
+// *******************************MATURE STATE TEST****************************************
 TEST(PlantStateTest, MatureStateHandlesCorrectly){
     MockPlant plant;
     //MatureState seed;
@@ -93,7 +93,7 @@ TEST(PlantStateTest, MatureStateHandlesCorrectly){
 }
 
 
-// ********************************DEAD STATE TEST*****************************************
+// *******************************DEAD STATE TEST****************************************
 TEST(PlantStateTest, DeadStateHandlesCorrectly){
     MockPlant plant;
     //DeadState seed;

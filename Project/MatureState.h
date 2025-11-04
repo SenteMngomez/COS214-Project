@@ -26,6 +26,11 @@ public:
 	 * @param plant Pointer to the Plant object whose state is being handled.
 	 */
 	void handle(Plant* plant);
+
+	/**
+	 * @brief Returns the name of the state
+	 */
+	virtual std::string getType();
 };
 
 #endif

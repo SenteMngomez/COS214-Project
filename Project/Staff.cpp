@@ -9,22 +9,22 @@ void Staff::receiveMessage(Person* person, Section* section){
 
 	if(person->getMessageType()=="Purchase"){
 
-		if(person->getTags()->empty()){
-			std::cout<<"Plants to purchase not specified.\n";
-			return;
-		}
+		if(!person->getTags() || person->getTags()->empty()){
+			// Still process the message, just note that plants aren't specified
+			plants="";
+		} else {
+			plants+="\n\tPurchasing plants: ";
 
-		plants+="\n\tPurchasing plants: ";
+			int numPlants=person->getTags()->size();
 
-		int numPlants=person->getTags()->size();
+			for(int i=0;i<numPlants;i++){
 
-		for(int i=0;i<numPlants;i++){
+				plants+="Plant-"+(*person->getTags())[i];
 
-			plants+="Plant-"+(*person->getTags())[i];
+				if(i<numPlants-1){
 
-			if(i<numPlants-1){
-
-				plants+=", ";
+					plants+=", ";
+				}
 			}
 		}
 
@@ -35,22 +35,22 @@ void Staff::receiveMessage(Person* person, Section* section){
 		}
 	} else if(person->getMessageType()=="Care"){
 
-		if(person->getTags()->empty()){
-			std::cout<<"Plants to care for not specified.\n";
-			return;
-		}
+		if(!person->getTags() || person->getTags()->empty()){
+			// Still process the message, just note that plants aren't specified
+			plants="";
+		} else {
+			plants+="\n\tPlants to care for: ";
 
-		plants+="\n\tPlants to care for: ";
+			int numPlants=person->getTags()->size();
 
-		int numPlants=person->getTags()->size();
+			for(int i=0;i<numPlants;i++){
 
-		for(int i=0;i<numPlants;i++){
+				plants+="Plant-"+(*person->getTags())[i];
 
-			plants+="Plant-"+(*person->getTags())[i];
+				if(i<numPlants-1){
 
-			if(i<numPlants-1){
-
-				plants+=", ";
+					plants+=", ";
+				}
 			}
 		}
 

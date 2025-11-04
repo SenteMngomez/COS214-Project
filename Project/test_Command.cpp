@@ -83,13 +83,16 @@ protected:
     SalesAssistance* salesHelper;
     BasicReceiptBuilder* builder;
     SellPlant* sellCommand;
+	PlantBuilder* pb;
+	TestPlant* p1; 
+    TestPlant* p2;  
 
     void SetUp() override {
         greenhouse = new Greenhouse("UnitTest Greenhouse");
        
 
-        TestPlant* p1 = new TestPlant("PlantA", 10.50);
-        TestPlant* p2 = new TestPlant("PlantB", 5.25);
+        p1 = new TestPlant("PlantA", 10.50);
+        p2 = new TestPlant("PlantB", 5.25);
         std::vector<Plant*> plants = { p1, p2 };
         std::string seller = "TestSeller";
 
@@ -97,7 +100,7 @@ protected:
         p2->setTag("2");
 
         builder = new BasicReceiptBuilder(const_cast<std::string&>(seller), plants);
-        PlantBuilder* pb = new ConcretePlantBuilder();
+        pb = new ConcretePlantBuilder();
         salesHelper = new SalesAssistance();
         salesHelper->setBuilder(builder);
 
@@ -115,9 +118,10 @@ protected:
 
     void TearDown() override {
         delete sellCommand;
-        // delete salesHelper;  // SellPlant takes ownership and deletes it
-        // delete builder;  // SellPlant takes ownership and deletes it
-        
+        delete salesHelper;  // This will delete the builder in its destructor
+        // Don't delete builder - SalesAssistance takes ownership and deletes it
+        delete pb;
+		// Plants are cleaned up by greenhouse destructor or by SellPlant::execute
         delete greenhouse;
     }
 };

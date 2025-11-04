@@ -25,7 +25,9 @@ string PlantGroup::getType() const{
 Plant* PlantGroup::clone(){
     PlantGroup* clonedGroup = new PlantGroup(getColour(), nullptr, getPrice());
     for(Plant* child : children){
-        clonedGroup->add(*child->clone());
+        Plant* clonedChild = child->clone();
+        clonedGroup->children.push_back(clonedChild);  // Direct ownership
+        clonedGroup->types.push_back(clonedChild->getType());
     }
     return clonedGroup;
 }
@@ -47,7 +49,18 @@ void PlantGroup::add(Plant& plant){
 void PlantGroup::remove(Plant& plant){
     auto it = find(children.begin(), children.end(), &plant);
     if(it != children.end()){
+        // Calculate the index to remove the corresponding type
+        size_t index = it - children.begin();
         children.erase(it);
+        
+        // Also remove the corresponding type to keep vectors synchronized
+        if(index < types.size()) {
+            types.erase(types.begin() + index);
+        }
+        
+        // Note: PlantGroup originally owned the plant, so we should delete it
+        // This maintains consistency with the destructor behavior
+        delete &plant;
     }
 }
 
@@ -61,5 +74,9 @@ Plant* PlantGroup::getChild(string tag){
 }
 
 PlantGroup::~PlantGroup() {
-    
+    // Delete all child plants
+    for(Plant* child : children) {
+        delete child;
+    }
+    children.clear();
 }

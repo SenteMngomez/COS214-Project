@@ -62,6 +62,7 @@ TEST_F(GreenhouseTest, RemovePlant) {
     ASSERT_NE(removed, nullptr);
     EXPECT_EQ(removed->getTag(), tag);
 
+    delete removed; // Clean up the removed plant
 }
 
 TEST_F(GreenhouseTest, RemoveNonExistentPlant) {

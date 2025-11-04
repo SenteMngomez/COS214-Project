@@ -9,7 +9,7 @@ Plant* ConcretePlantBuilder::buildCompositePlant( vector<Plant*> plants , std::s
         if (plants.size() > 1) {
             PlantGroup* group = new PlantGroup("Group", nullptr, 0.0);
             for (auto* p : plants) {
-                group->add(*p);
+                group->add(*p);  // PlantGroup takes ownership
             }
             result = group;
         } else {

@@ -23,3 +23,6 @@ void SeedState::handle(Plant* plant) {
 	cout<<"Seed has successfully germinated into a " << plant->getType()<< " sprout!"<<endl;
 	plant->setState(new SproutState());
 }
+
+
+std::string SeedState::getType(){ return "Seed"; }

@@ -13,6 +13,11 @@ class GreenhouseInterfaceTest : public ::testing::Test {
         void SetUp() override {
             inventory = Inventory::instance();
         }
+		void TearDown() override{
+			inventory->clearInventory();
+			greenhouse.detach(inventory);
+
+		}
 
         
 
@@ -34,5 +39,7 @@ TEST_F(GreenhouseInterfaceTest, NotifyObservers) {
     ASSERT_NE(rose, nullptr);
 
     EXPECT_NO_THROW(greenhouse.notify(rose));
+
+	delete rose;
 }
 

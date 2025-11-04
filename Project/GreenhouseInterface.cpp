@@ -25,9 +25,10 @@ void GreenhouseInterface::detach(InventoryInterface* obs) {
 void GreenhouseInterface::notify(Plant* plant) {
 	
 	for (auto observer : observers){
-
-		observer->updateInventory(plant); // Calling the updateInventory method on each observer
-		
+		// Send a clone to inventory so each has independent ownership
+		Plant* plantClone = plant->clone();
+		observer->updateInventory(plantClone); // Inventory now owns this clone
+		//observer->updateInventory(plant);
 	}
 
 }

@@ -50,7 +50,7 @@ void Greenhouse::giveSunlight(std::string tag) {
 
 }
 
-Iterator *Greenhouse::createIterator()
+PlantIterator* Greenhouse::createIterator()
 {
     return new PlantIterator(plants);
 }
@@ -101,3 +101,39 @@ string Greenhouse::getName()
 {
     return name;
 }
+
+void Greenhouse::progressPlants(){
+	if (plants.empty()){
+		std::cout << "No plants in the greenhouse." << std::endl;
+		return;
+	}
+
+	for(Plant* p:plants){
+
+		p->progressState();
+		cout<<"\n";
+	}
+
+}
+
+void Greenhouse::showOrderedPlants(){
+
+	if(plants.empty()){
+
+		cout<<"No plants in greenhouse\n";
+		return;
+	}
+
+	cout<<"=========Plants in "<<name<<"(ordered)==========\n";
+
+	PlantIterator* it=createIterator();
+
+	while(!it->isDone()){
+
+		it->currentItem()->print();
+		it->next();
+	}
+	
+	delete it;
+
+} 

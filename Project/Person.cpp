@@ -5,9 +5,6 @@ Person::Person(std::string name):name(name),messageType(""),message(""),tags(nul
 
 Person::~Person(){
 
-	for(Section* section:sections) {
-        if(section) section->removePerson(this);
-    }
 	sections.clear();
 }
 

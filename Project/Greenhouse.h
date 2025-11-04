@@ -61,7 +61,7 @@ public:
 	 * @brief Creates an iterator for the plants in the greenhouse.
 	 * @return Pointer to an Iterator for the plants.
 	 */
-	Iterator* createIterator();
+	PlantIterator* createIterator();
 
 	/**
 	 * @brief Adds a new plant to the greenhouse and notifies observers.
@@ -80,6 +80,16 @@ public:
 	 * @return A pointer to the removed plant, or nullptr if not found.
 	 */
 	Plant* removePlant(std::string tag);
+
+	/**
+	 * @brief Progresses all plant states
+	 */
+	void progressPlants();
+
+	/**
+	 * @brief Show plants in type order
+	 */
+	void showOrderedPlants();
 
 	string getName();
 };

@@ -19,8 +19,23 @@ Inventory* Inventory::instance() {
 
 }
 
+void Inventory::cleanup() {
+	if (uniqueInstance != nullptr) {
+		delete uniqueInstance;
+		uniqueInstance = nullptr;
+	}
+}
+
 Inventory::Inventory() {
 	//Empty since we're using singleton
+}
+
+Inventory::~Inventory() {
+	// Clean up all plant clones owned by inventory
+	for(Plant* plant : plants) {
+		delete plant;
+	}
+	plants.clear();
 }
 
 Inventory::Inventory(const Inventory &inventory)
@@ -30,17 +45,28 @@ Inventory::Inventory(const Inventory &inventory)
 
 void Inventory::updateInventory(Plant* plant) {
 	
-	//Checking if plant is not already in inventory
-	auto it = std::find(plants.begin(), plants.end(), plant);
+	// Since we now receive clones, we always add them to inventory
+	// No need to check for duplicates since each is a unique clone
+	plants.push_back(plant);
+	stockCount[plant->getType()]++;
 
-	//If plant not found, add to inventory
-	if (it == plants.end()){
-		plants.push_back(plant);
-		stockCount[plant->getType()]++;
+	// auto it = std::find(plants.begin(), plants.end(), plant);
+
+	// //If plant not found, add to inventory
+	// if (it == plants.end()){
+	// 	plants.push_back(plant);
+	// 	stockCount[plant->getType()]++;
+	// }
+
+}
+
+void Inventory::clearInventory(){
+	// Delete all plant objects before clearing the vector
+	for (Plant* plant : plants) {
+		delete plant;
 	}
-	
-	//If it is found we don't need to do anything since we already have a pointer
-
+	plants.clear();
+	stockCount.clear();
 }
 
 void Inventory::addStock(string plantName, int stock) {

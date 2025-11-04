@@ -36,12 +36,6 @@ public:
 	BasicReceiptBuilder(string & seller, vector<Plant*> plants);
 
 	/**
-	 * @brief Return the constructed Receipt object.
-	 * @return Receipt* Pointer to the constructed receipt
-	 */
-	Receipt* getResult();
-
-	/**
 	 * @brief Calculate and set the total price on the receipt.
 	 */
 	virtual void addPrice();
