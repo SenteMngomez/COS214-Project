@@ -1,0 +1,19 @@
+<map id="LightCareStrategy.cpp" name="LightCareStrategy.cpp">
+<area shape="rect" id="Node000001" title="Implementation of the LightCareStrategy class. This class provides specific care instructions for pla..." alt="" coords="54,5,218,31"/>
+<area shape="rect" id="Node000002" href="$LightCareStrategy_8h.html" title="Declaration of the LightCareStrategy class. This class implements the CareStrategy interface for plan..." alt="" coords="5,79,155,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,33,100,69,95,66,125,29"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="153,299,233,324"/>
+<area shape="poly" id="edge10_Node000001_Node000006" title=" " alt="" coords="146,30,158,51,169,78,183,135,191,193,196,285,191,285,185,193,177,136,164,79,153,54,141,32"/>
+<area shape="rect" id="Node000003" href="$CareStrategy_8h.html" title="Declaration of the CareStrategy abstract class. This class defines the interface for different care s..." alt="" coords="20,152,137,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="82,104,82,139,76,138,77,104"/>
+<area shape="rect" id="Node000004" href="$Plant_8h.html" title="Abstract base class for plants in the nursery simulator." alt="" coords="45,225,112,251"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="74,178,73,212,67,212,69,178"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="83,225,85,191,90,191,88,225"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,372,64,397"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="62,253,38,273,18,300,15,314,16,330,24,359,19,360,10,330,10,314,14,298,34,269,58,249"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="98,248,164,289,162,294,96,253"/>
+<area shape="rect" id="Node000007" href="$PlantState_8h.html" title="Abstract base class for plant states in the State design pattern. This class defines the interface fo..." alt="" coords="28,299,129,324"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="74,251,73,285,67,285,69,251"/>
+<area shape="poly" id="edge8_Node000007_Node000004" title=" " alt="" coords="83,298,85,264,90,265,88,299"/>
+<area shape="poly" id="edge9_Node000007_Node000005" title=" " alt="" coords="74,326,51,362,47,359,69,323"/>
+</map>

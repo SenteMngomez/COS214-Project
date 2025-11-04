@@ -1,0 +1,24 @@
+<map id="SalesRoomTest" name="SalesRoomTest">
+<area shape="rect" id="Node000001" title=" " alt="" coords="115,388,237,413"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,276,107,301"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="80,309,138,362,165,386,161,390,134,366,77,313"/>
+<area shape="rect" id="Node000003" href="$classSalesRoom.html" title="A SalesRoom is a concrete Section that broadcasts messages to all participants and routes requests to..." alt="" coords="225,276,319,301"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="255,314,188,389,184,386,251,310"/>
+<area shape="rect" id="Node000004" href="$classSection.html" title="A Section manages a collection of Person instances, maintains a history of messages,..." alt="" coords="242,168,313,193"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="274,207,272,218,271,249,273,276,268,276,266,249,267,217,268,207"/>
+<area shape="rect" id="Node000007" href="$classMockCustomer.html" title=" " alt="" coords="344,276,464,301"/>
+<area shape="poly" id="edge11_Node000007_Node000004" title=" " alt="" coords="288,205,297,224,310,241,337,260,366,273,364,278,334,265,306,245,292,227,283,207"/>
+<area shape="rect" id="Node000005" href="$classStaff.html" title="Represents a staff member in the system. Inherits from Person and provides request handling (Chain of..." alt="" coords="251,80,303,105"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="280,119,280,167,275,167,275,119"/>
+<area shape="rect" id="Node000009" href="$classTestSalesStaff.html" title=" " alt="" coords="107,217,221,243"/>
+<area shape="poly" id="edge13_Node000009_Node000005" title=" " alt="" coords="261,117,176,219,172,215,257,114"/>
+<area shape="rect" id="Node000006" href="$classPerson.html" title="Abstract base class representing a person. Provides common attrributes and methods for customers and ..." alt="" coords="352,5,419,31"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="358,41,296,82,293,78,355,36"/>
+<area shape="poly" id="edge10_Node000007_Node000006" title=" " alt="" coords="402,41,418,71,433,109,443,151,443,194,429,241,413,277,408,275,424,239,437,193,437,151,428,110,413,73,398,44"/>
+<area shape="rect" id="Node000008" href="$classCustomer.html" title="Represents a customer in the system. Inherits from Person and implements behaviour for receiving mess..." alt="" coords="343,168,428,193"/>
+<area shape="poly" id="edge8_Node000008_Node000006" title=" " alt="" coords="388,44,388,168,383,168,383,44"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="386,313,355,341,317,366,278,382,237,393,236,388,276,377,315,362,352,337,382,309"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="385,207,390,243,399,275,394,277,385,244,379,207"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="400,206,408,243,410,276,405,276,402,244,395,207"/>
+<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="167,257,169,310,177,388,172,388,164,311,162,257"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="ModerateCareStrategy" name="ModerateCareStrategy">
+<area shape="rect" id="Node000001" title="Concrete class implementing the CareStrategy for plants needing moderate care. This class provides sp..." alt="" coords="5,79,175,104"/>
+<area shape="rect" id="Node000002" href="$classCareStrategy.html" title="Abstract class representing different care strategies for plants." alt="" coords="37,5,143,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,44,93,79,87,79,87,44"/>
+</map>

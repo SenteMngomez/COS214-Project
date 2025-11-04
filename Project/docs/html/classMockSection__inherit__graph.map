@@ -1,0 +1,8 @@
+<map id="MockSection" name="MockSection">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,79,111,104"/>
+<area shape="rect" id="Node000002" href="$classSection.html" title="A Section manages a collection of Person instances, maintains a history of messages,..." alt="" coords="23,5,93,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="35,44,34,62,40,78,35,79,29,62,30,44"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="52,44,54,78,48,79,47,45"/>
+<area shape="poly" id="edge3_Node000001_Node000002" title=" " alt="" coords="69,45,68,79,62,78,64,44"/>
+<area shape="poly" id="edge4_Node000001_Node000002" title=" " alt="" coords="86,44,87,62,81,79,76,78,82,62,81,44"/>
+</map>

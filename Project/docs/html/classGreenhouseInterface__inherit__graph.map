@@ -1,0 +1,5 @@
+<map id="GreenhouseInterface" name="GreenhouseInterface">
+<area shape="rect" id="Node000001" title="An interface for the &quot;Subject&quot; in the Observer design pattern." alt="" coords="5,5,164,31"/>
+<area shape="rect" id="Node000002" href="$classGreenhouse.html" title="A concrete subject that manages a collection of plants." alt="" coords="35,79,135,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,44,87,79,82,79,82,44"/>
+</map>

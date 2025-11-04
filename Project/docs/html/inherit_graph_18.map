@@ -1,0 +1,15 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classSection.html" title="A Section manages a collection of Person instances, maintains a history of messages,..." alt="" coords="5,129,76,155"/>
+<area shape="rect" id="Node000001" href="$classHelpDesk.html" title="A HelpDesk is a concrete Section that broadcasts messages to all participants and routes help request..." alt="" coords="151,5,237,31"/>
+<area shape="poly" id="edge49_Node000000_Node000001" title=" " alt="" coords="55,116,83,77,122,40,150,26,152,31,126,44,87,80,59,119"/>
+<area shape="rect" id="Node000002" href="$classMockHelpSection.html" title=" " alt="" coords="127,55,261,80"/>
+<area shape="poly" id="edge50_Node000000_Node000002" title=" " alt="" coords="70,119,123,89,150,78,152,83,125,94,73,124"/>
+<area shape="rect" id="Node000003" href="$classMockSalesSection.html" title=" " alt="" coords="124,104,264,129"/>
+<area shape="poly" id="edge51_Node000000_Node000003" title=" " alt="" coords="89,131,123,126,124,131,90,137"/>
+<area shape="rect" id="Node000004" href="$classMockSection.html" title=" " alt="" coords="141,153,247,179"/>
+<area shape="poly" id="edge52_Node000000_Node000004" title=" " alt="" coords="90,147,141,155,140,160,89,152"/>
+<area shape="rect" id="Node000005" href="$classSalesRoom.html" title="A SalesRoom is a concrete Section that broadcasts messages to all participants and routes requests to..." alt="" coords="147,203,241,228"/>
+<area shape="poly" id="edge53_Node000000_Node000005" title=" " alt="" coords="75,160,125,188,155,200,153,205,123,192,72,164"/>
+<area shape="rect" id="Node000006" href="$classTestSection.html" title=" " alt="" coords="146,252,242,277"/>
+<area shape="poly" id="edge54_Node000000_Node000006" title=" " alt="" coords="60,165,88,202,126,237,149,250,147,254,122,242,84,206,55,168"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classPlantState.html" title="Abstract base class for plant states. This class defines the interface for handling state&#45;specific be..." alt="" coords="5,80,95,105"/>
+<area shape="rect" id="Node000001" href="$classDeadState.html" title="Represents the dead state of a plant in the state pattern. In this state, the plant can no longer gro..." alt="" coords="149,5,239,31"/>
+<area shape="poly" id="edge44_Node000000_Node000001" title=" " alt="" coords="84,71,141,40,164,29,166,33,144,44,87,76"/>
+<area shape="rect" id="Node000002" href="$classMatureState.html" title="Represents the mature state of a plant. This state handles the behavior of a plant that has fully gro..." alt="" coords="143,55,245,80"/>
+<area shape="poly" id="edge45_Node000000_Node000002" title=" " alt="" coords="108,80,142,74,143,79,109,85"/>
+<area shape="rect" id="Node000003" href="$classSeedState.html" title="Represents the seed stage of a plant in its lifecycle. This state handles the transition from seed to..." alt="" coords="150,104,238,129"/>
+<area shape="poly" id="edge46_Node000000_Node000003" title=" " alt="" coords="109,100,150,107,150,112,108,105"/>
+<area shape="rect" id="Node000004" href="$classSproutState.html" title="Represents the sprout state of a plant in its lifecycle. This state handles the behavior and transiti..." alt="" coords="145,153,243,179"/>
+<area shape="poly" id="edge47_Node000000_Node000004" title=" " alt="" coords="89,109,144,138,168,151,166,156,141,143,86,114"/>
+</map>

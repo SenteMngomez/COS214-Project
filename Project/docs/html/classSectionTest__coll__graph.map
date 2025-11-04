@@ -1,0 +1,20 @@
+<map id="SectionTest" name="SectionTest">
+<area shape="rect" id="Node000001" title=" " alt="" coords="191,384,287,409"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,296,107,321"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,325,215,381,213,386,92,330"/>
+<area shape="rect" id="Node000003" href="$classTestSection.html" title=" " alt="" coords="131,296,227,321"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="191,333,206,358,227,382,223,386,202,362,187,335"/>
+<area shape="rect" id="Node000004" href="$classSection.html" title="A Section manages a collection of Person instances, maintains a history of messages,..." alt="" coords="158,179,229,204"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="193,218,183,296,177,296,188,217"/>
+<area shape="rect" id="Node000005" href="$classStaff.html" title="Represents a staff member in the system. Inherits from Person and provides request handling (Chain of..." alt="" coords="206,80,258,105"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="218,119,212,130,198,179,193,178,207,128,213,116"/>
+<area shape="rect" id="Node000008" href="$classTestSectionStaff.html" title=" " alt="" coords="209,237,335,263"/>
+<area shape="poly" id="edge10_Node000008_Node000005" title=" " alt="" coords="251,116,257,128,271,189,275,237,269,237,266,190,252,130,246,118"/>
+<area shape="rect" id="Node000006" href="$classPerson.html" title="Abstract base class representing a person. Provides common attrributes and methods for customers and ..." alt="" coords="199,5,265,31"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="188,38,158,54,126,74,97,100,74,131,67,154,69,178,78,202,93,225,130,265,164,294,161,298,126,269,88,228,73,204,64,179,62,154,70,128,93,96,123,70,155,49,186,34"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="235,45,235,80,229,80,229,45"/>
+<area shape="rect" id="Node000007" href="$classTestSectionPerson.html" title=" " alt="" coords="295,129,435,155"/>
+<area shape="poly" id="edge8_Node000007_Node000006" title=" " alt="" coords="257,38,355,127,351,131,253,42"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="367,169,355,241,342,283,322,323,290,359,258,386,254,382,286,355,318,320,337,281,350,240,361,168"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="273,277,268,317,259,361,248,385,243,383,253,359,263,316,268,276"/>
+</map>

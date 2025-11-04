@@ -1,0 +1,24 @@
+<map id="Customer.cpp" name="Customer.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="197,5,308,31"/>
+<area shape="rect" id="Node000002" href="$Customer_8h.html" title="Concrete class representing a customer." alt="" coords="205,79,301,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="255,31,255,65,250,65,250,31"/>
+<area shape="rect" id="Node000003" href="$Person_8h.html" title="Abstract base class representing a person." alt="" coords="213,152,292,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="255,104,255,138,250,138,250,104"/>
+<area shape="rect" id="Node000004" href="$Section_8h.html" title="Abstract class representing a chat section/group within the system." alt="" coords="139,225,222,251"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="243,180,204,218,200,214,239,176"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="245,372,303,397"/>
+<area shape="poly" id="edge11_Node000003_Node000007" title=" " alt="" coords="258,177,267,230,275,298,277,358,272,358,270,299,261,230,252,178"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="5,372,68,397"/>
+<area shape="poly" id="edge12_Node000003_Node000008" title=" " alt="" coords="217,180,173,199,129,227,100,259,77,294,47,360,42,358,72,292,96,255,126,223,170,194,215,175"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="362,225,442,251"/>
+<area shape="poly" id="edge13_Node000003_Node000009" title=" " alt="" coords="278,175,366,217,364,222,276,180"/>
+<area shape="rect" id="Node000005" href="$Iterator_8h.html" title=" " alt="" coords="116,372,197,397"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="161,253,136,273,115,300,112,315,116,331,135,360,131,363,111,333,107,315,110,298,132,269,158,249"/>
+<area shape="rect" id="Node000006" href="$ChatIterator_8h.html" title="Declaration of the ChatIterator class. This class implements the Iterator interface to iterate over a..." alt="" coords="125,299,236,324"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="183,251,183,285,178,285,178,251"/>
+<area shape="poly" id="edge9_Node000004_Node000007" title=" " alt="" coords="200,249,227,269,251,297,265,328,273,358,268,359,260,330,246,300,223,273,197,253"/>
+<area shape="poly" id="edge10_Node000004_Node000008" title=" " alt="" coords="165,253,107,301,55,362,51,359,103,297,162,249"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="179,325,167,360,162,358,174,323"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="197,322,250,361,246,366,194,326"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="159,326,74,368,71,363,156,322"/>
+</map>

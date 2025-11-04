@@ -1,0 +1,33 @@
+<map id="test_Section.cpp" name="test_Section.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="266,5,395,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,109,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="287,33,115,78,114,73,286,28"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="133,79,208,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="306,33,210,75,208,71,304,28"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="283,225,363,251"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="331,31,324,79,322,151,324,211,318,212,317,151,319,78,326,31"/>
+<area shape="rect" id="Node000005" href="$Section_8h.html" title="Abstract class representing a chat section/group within the system." alt="" coords="437,225,520,251"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="363,28,399,48,433,77,453,110,467,146,479,211,474,212,462,148,448,112,429,80,396,52,360,33"/>
+<area shape="rect" id="Node000006" href="$Iterator_8h.html" title=" " alt="" coords="309,372,390,397"/>
+<area shape="poly" id="edge20_Node000001_Node000006" title=" " alt="" coords="320,33,298,55,275,86,256,123,248,164,248,239,256,277,275,310,299,339,324,362,321,366,296,343,270,313,251,278,243,240,243,163,251,121,270,83,294,52,316,29"/>
+<area shape="rect" id="Node000007" href="$ChatIterator_8h.html" title="Declaration of the ChatIterator class. This class implements the Iterator interface to iterate over a..." alt="" coords="489,299,599,324"/>
+<area shape="poly" id="edge19_Node000001_Node000007" title=" " alt="" coords="372,28,416,47,458,77,489,112,508,144,535,225,545,284,540,285,529,226,503,146,485,115,454,81,413,52,370,33"/>
+<area shape="rect" id="Node000010" href="$Person_8h.html" title="Abstract base class representing a person." alt="" coords="365,152,443,177"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="358,29,387,48,401,62,412,78,418,109,415,139,409,138,413,109,407,80,397,65,384,52,355,33"/>
+<area shape="rect" id="Node000011" href="$Staff_8h.html" title="Concrete class representing a staff member." alt="" coords="333,79,397,104"/>
+<area shape="poly" id="edge17_Node000001_Node000011" title=" " alt="" coords="339,30,356,65,351,67,334,32"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="470,253,371,363,367,360,466,249"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="491,249,526,287,522,290,487,253"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="608,372,667,397"/>
+<area shape="poly" id="edge10_Node000005_Node000008" title=" " alt="" coords="521,246,569,264,593,278,614,297,631,326,638,357,633,358,626,328,610,300,590,283,567,269,519,251"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="419,372,482,397"/>
+<area shape="poly" id="edge11_Node000005_Node000009" title=" " alt="" coords="479,252,458,359,453,358,474,251"/>
+<area shape="poly" id="edge7_Node000007_Node000006" title=" " alt="" coords="514,327,395,370,393,365,512,322"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="561,322,613,361,610,366,557,326"/>
+<area shape="poly" id="edge9_Node000007_Node000009" title=" " alt="" coords="531,326,478,366,475,361,527,322"/>
+<area shape="poly" id="edge16_Node000010_Node000004" title=" " alt="" coords="393,179,348,218,344,214,389,175"/>
+<area shape="poly" id="edge13_Node000010_Node000005" title=" " alt="" coords="418,175,458,214,455,218,414,179"/>
+<area shape="poly" id="edge14_Node000010_Node000008" title=" " alt="" coords="444,172,493,187,548,212,600,248,622,271,640,298,648,329,646,359,641,358,642,329,635,300,618,274,597,252,546,217,491,192,443,177"/>
+<area shape="poly" id="edge15_Node000010_Node000009" title=" " alt="" coords="409,177,448,358,443,359,404,178"/>
+<area shape="poly" id="edge18_Node000011_Node000010" title=" " alt="" coords="374,103,394,139,389,141,369,106"/>
+</map>

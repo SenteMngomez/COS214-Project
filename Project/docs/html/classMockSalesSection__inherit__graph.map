@@ -1,0 +1,5 @@
+<map id="MockSalesSection" name="MockSalesSection">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,79,145,104"/>
+<area shape="rect" id="Node000002" href="$classSection.html" title="A Section manages a collection of Person instances, maintains a history of messages,..." alt="" coords="40,5,111,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="78,44,78,79,73,79,73,44"/>
+</map>

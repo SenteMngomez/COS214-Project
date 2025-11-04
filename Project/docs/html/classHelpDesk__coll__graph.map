@@ -1,0 +1,9 @@
+<map id="HelpDesk" name="HelpDesk">
+<area shape="rect" id="Node000001" title="A HelpDesk is a concrete Section that broadcasts messages to all participants and routes help request..." alt="" coords="5,243,91,268"/>
+<area shape="rect" id="Node000002" href="$classSection.html" title="A Section manages a collection of Person instances, maintains a history of messages,..." alt="" coords="13,168,83,193"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="51,208,51,242,45,242,45,208"/>
+<area shape="rect" id="Node000003" href="$classStaff.html" title="Represents a staff member in the system. Inherits from Person and provides request handling (Chain of..." alt="" coords="22,80,74,105"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="51,119,51,167,45,167,45,119"/>
+<area shape="rect" id="Node000004" href="$classPerson.html" title="Abstract base class representing a person. Provides common attrributes and methods for customers and ..." alt="" coords="15,5,81,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="51,45,51,80,45,80,45,45"/>
+</map>

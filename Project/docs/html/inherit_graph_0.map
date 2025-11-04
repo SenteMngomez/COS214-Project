@@ -1,0 +1,11 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classCareStrategy.html" title="Abstract class representing different care strategies for plants." alt="" coords="5,80,112,105"/>
+<area shape="rect" id="Node000001" href="$classHeavyCareStrategy.html" title="Concrete class implementing the CareStrategy for plants needing heavy care. This class provides speci..." alt="" coords="170,5,319,31"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="93,71,159,40,193,28,194,33,161,44,95,76"/>
+<area shape="rect" id="Node000002" href="$classLightCareStrategy.html" title="Concrete class implementing the CareStrategy for plants needing light care. This class provides speci..." alt="" coords="175,55,314,80"/>
+<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="125,81,175,74,175,79,126,86"/>
+<area shape="rect" id="Node000003" href="$classMockCareStrategy.html" title=" " alt="" coords="173,104,316,129"/>
+<area shape="poly" id="edge3_Node000000_Node000003" title=" " alt="" coords="126,99,173,105,173,110,125,104"/>
+<area shape="rect" id="Node000004" href="$classModerateCareStrategy.html" title="Concrete class implementing the CareStrategy for plants needing moderate care. This class provides sp..." alt="" coords="160,153,329,179"/>
+<area shape="poly" id="edge4_Node000000_Node000004" title=" " alt="" coords="97,109,161,138,198,151,196,156,159,143,95,114"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="TestPerson::ReceivedMessage" name="TestPerson::ReceivedMessage">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,256,224,281"/>
+<area shape="rect" id="Node000002" href="$classPerson.html" title="Abstract base class representing a person. Provides common attrributes and methods for customers and ..." alt="" coords="76,5,143,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,45,115,144,117,256,112,256,109,144,107,45"/>
+<area shape="rect" id="Node000004" href="$classStaff.html" title="Represents a staff member in the system. Inherits from Person and provides request handling (Chain of..." alt="" coords="139,80,191,105"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="129,40,158,78,154,81,125,43"/>
+<area shape="rect" id="Node000003" href="$classSection.html" title="A Section manages a collection of Person instances, maintains a history of messages,..." alt="" coords="134,168,205,193"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="157,206,125,257,120,254,152,203"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="169,119,171,167,166,168,164,119"/>
+</map>

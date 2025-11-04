@@ -1,0 +1,7 @@
+<map id="GroundStaff" name="GroundStaff">
+<area shape="rect" id="Node000001" title="Represents ground staff in the system. Inherits from Staff and handles &quot;Care&quot; requests by executing w..." alt="" coords="5,152,104,177"/>
+<area shape="rect" id="Node000002" href="$classStaff.html" title="Represents a staff member in the system. Inherits from Person and provides request handling (Chain of..." alt="" coords="29,79,81,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="57,118,57,152,52,152,52,118"/>
+<area shape="rect" id="Node000003" href="$classPerson.html" title="Abstract base class representing a person. Provides common attrributes and methods for customers and ..." alt="" coords="21,5,88,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="57,44,57,79,52,79,52,44"/>
+</map>

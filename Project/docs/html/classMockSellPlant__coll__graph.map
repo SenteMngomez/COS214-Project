@@ -1,0 +1,15 @@
+<map id="MockSellPlant" name="MockSellPlant">
+<area shape="rect" id="Node000001" title=" " alt="" coords="99,317,214,343"/>
+<area shape="rect" id="Node000002" href="$classSellPlant.html" title="Concrete Command that handles selling plants and building receipts." alt="" coords="117,243,196,268"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,282,159,317,154,317,154,282"/>
+<area shape="rect" id="Node000003" href="$classCommand.html" title=" " alt="" coords="112,168,201,193"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="159,208,159,242,154,242,154,208"/>
+<area shape="rect" id="Node000004" href="$classGreenhouse.html" title="A concrete subject that manages a collection of plants." alt="" coords="49,80,149,105"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="99,119,104,143,116,156,130,166,127,170,112,160,100,145,94,120"/>
+<area shape="rect" id="Node000005" href="$classGreenhouseInterface.html" title="An interface for the &quot;Subject&quot; in the Observer design pattern." alt="" coords="5,5,164,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="92,44,100,79,94,80,87,45"/>
+<area shape="rect" id="Node000006" href="$classInventory.html" title="A singleton class that manages the inventory of plants in the nursery." alt="" coords="203,80,287,105"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="225,117,171,169,167,166,221,113"/>
+<area shape="rect" id="Node000007" href="$classInventoryInterface.html" title="An interface for the &quot;Observer&quot; in the Observer design pattern." alt="" coords="188,5,331,31"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="257,45,250,80,244,79,252,44"/>
+</map>

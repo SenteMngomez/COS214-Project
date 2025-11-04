@@ -1,0 +1,8 @@
+<map id="Customer" name="Customer">
+<area shape="rect" id="Node000001" title="Represents a customer in the system. Inherits from Person and implements behaviour for receiving mess..." alt="" coords="23,79,108,104"/>
+<area shape="rect" id="Node000003" href="$classMockCustomer.html" title=" " alt="" coords="5,152,125,177"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="59,118,61,152,56,152,54,118"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="77,118,75,152,70,152,71,118"/>
+<area shape="rect" id="Node000002" href="$classPerson.html" title="Abstract base class representing a person. Provides common attrributes and methods for customers and ..." alt="" coords="32,5,99,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="68,44,68,79,63,79,63,44"/>
+</map>

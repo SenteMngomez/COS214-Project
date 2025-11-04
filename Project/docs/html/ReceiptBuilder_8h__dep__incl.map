@@ -1,0 +1,32 @@
+<map id="ReceiptBuilder.h" name="ReceiptBuilder.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="483,5,611,31"/>
+<area shape="rect" id="Node000002" href="$BasicReceiptBuilder_8h.html" title="Concrete ReceiptBuilder that assembles a simple receipt from sold plants." alt="" coords="379,79,541,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="524,41,476,81,472,76,521,37"/>
+<area shape="rect" id="Node000012" href="$SalesAssistance_8h.html" title=" " alt="" coords="565,79,704,104"/>
+<area shape="poly" id="edge14_Node000001_Node000012" title=" " alt="" coords="573,37,622,76,619,81,570,41"/>
+<area shape="rect" id="Node000003" href="$BasicReceiptBuilder_8cpp.html" title=" " alt="" coords="240,152,419,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="428,113,352,154,349,149,425,108"/>
+<area shape="rect" id="Node000004" href="$SellPlant_8h.html" title="Command used to sell one or more plants and generate a receipt." alt="" coords="443,152,533,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="472,116,486,151,481,153,467,118"/>
+<area shape="rect" id="Node000010" href="$test__Command_8cpp.html" title=" " alt="" coords="566,225,714,251"/>
+<area shape="poly" id="edge13_Node000002_Node000010" title=" " alt="" coords="491,109,547,150,630,223,626,227,544,154,488,114"/>
+<area shape="rect" id="Node000011" href="$test__BasicReceiptBuilder_8cpp.html" title=" " alt="" coords="5,152,216,177"/>
+<area shape="poly" id="edge12_Node000002_Node000011" title=" " alt="" coords="391,109,168,155,167,149,390,104"/>
+<area shape="rect" id="Node000005" href="$SalesClerk_8h.html" title="Concrete class representing a sales clerk (specialised Staff)" alt="" coords="257,225,359,251"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="448,185,338,228,336,223,446,180"/>
+<area shape="rect" id="Node000007" href="$main_8cpp.html" title=" " alt="" coords="141,299,224,324"/>
+<area shape="poly" id="edge9_Node000004_Node000007" title=" " alt="" coords="429,181,318,206,271,218,245,228,227,244,211,263,190,299,186,297,207,260,223,240,243,223,269,213,316,201,428,176"/>
+<area shape="rect" id="Node000008" href="$test__SalesClerk_8cpp.html" title=" " alt="" coords="391,299,542,324"/>
+<area shape="poly" id="edge11_Node000004_Node000008" title=" " alt="" coords="458,188,439,205,425,226,423,245,429,264,455,297,451,300,425,267,417,246,420,224,435,202,455,184"/>
+<area shape="rect" id="Node000009" href="$SellPlant_8cpp.html" title=" " alt="" coords="435,225,541,251"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="491,191,491,225,485,225,485,191"/>
+<area shape="poly" id="edge10_Node000004_Node000010" title=" " alt="" coords="526,181,616,223,614,228,523,185"/>
+<area shape="rect" id="Node000006" href="$SalesClerk_8cpp.html" title=" " alt="" coords="249,299,367,324"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="311,264,311,299,305,299,305,264"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="277,260,204,301,202,296,275,255"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="347,254,442,296,440,301,345,259"/>
+<area shape="poly" id="edge16_Node000012_Node000004" title=" " alt="" coords="600,112,513,154,511,149,598,107"/>
+<area shape="poly" id="edge17_Node000012_Node000010" title=" " alt="" coords="638,118,642,225,637,225,633,118"/>
+<area shape="rect" id="Node000013" href="$SalesAssistance_8cpp.html" title=" " alt="" coords="672,152,827,177"/>
+<area shape="poly" id="edge15_Node000012_Node000013" title=" " alt="" coords="666,109,732,150,729,154,663,113"/>
+</map>

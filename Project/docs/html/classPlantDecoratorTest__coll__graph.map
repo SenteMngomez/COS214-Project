@@ -1,0 +1,17 @@
+<map id="PlantDecoratorTest" name="PlantDecoratorTest">
+<area shape="rect" id="Node000001" title=" " alt="" coords="213,197,358,223"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,80,107,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,112,128,142,180,171,244,195,242,200,178,176,125,146,81,116"/>
+<area shape="rect" id="Node000003" href="$classPlant.html" title="Abstract base class representing a plant in the nursery." alt="" coords="131,80,186,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="175,115,197,143,224,171,262,195,259,199,221,175,193,147,171,118"/>
+<area shape="rect" id="Node000004" href="$classHeavyCareStrategy.html" title="Concrete class implementing the CareStrategy for plants needing heavy care. This class provides speci..." alt="" coords="211,80,360,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="288,119,288,197,283,197,283,119"/>
+<area shape="rect" id="Node000005" href="$classCareStrategy.html" title="Abstract class representing different care strategies for plants." alt="" coords="416,5,523,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="429,38,315,82,313,77,427,33"/>
+<area shape="rect" id="Node000006" href="$classModerateCareStrategy.html" title="Concrete class implementing the CareStrategy for plants needing moderate care. This class provides sp..." alt="" coords="385,80,554,105"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="472,45,472,80,467,80,467,45"/>
+<area shape="rect" id="Node000007" href="$classLightCareStrategy.html" title="Concrete class implementing the CareStrategy for plants needing light care. This class provides speci..." alt="" coords="579,80,717,105"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="511,33,621,78,619,82,509,38"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="447,117,411,146,367,176,317,200,315,195,364,171,407,142,444,112"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="626,116,583,148,530,176,487,190,442,199,359,209,358,204,441,194,486,184,528,171,581,143,623,112"/>
+</map>

@@ -1,0 +1,18 @@
+<map id="GiveSunLightTest" name="GiveSunLightTest">
+<area shape="rect" id="Node000001" title=" " alt="" coords="81,344,215,369"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,256,107,281"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="80,289,137,342,133,345,77,293"/>
+<area shape="rect" id="Node000003" href="$classGreenhouse.html" title="A concrete subject that manages a collection of plants." alt="" coords="259,80,359,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="320,118,330,160,336,214,335,243,331,271,321,298,306,322,292,332,270,340,216,351,215,346,268,335,289,327,302,318,316,295,326,270,330,242,331,214,325,161,315,119"/>
+<area shape="rect" id="Node000006" href="$classCommand.html" title=" " alt="" coords="139,168,229,193"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="257,113,223,131,205,150,192,169,188,167,201,147,220,127,254,108"/>
+<area shape="rect" id="Node000004" href="$classGreenhouseInterface.html" title="An interface for the &quot;Subject&quot; in the Observer design pattern." alt="" coords="230,5,389,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="312,45,312,80,307,80,307,45"/>
+<area shape="rect" id="Node000005" href="$classGiveSunlight.html" title=" " alt="" coords="131,256,237,281"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="161,293,152,306,148,325,149,344,143,344,143,325,147,304,156,290"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="187,207,187,255,181,255,181,207"/>
+<area shape="rect" id="Node000007" href="$classInventory.html" title="A singleton class that manages the inventory of plants in the nursery." alt="" coords="81,80,165,105"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="121,119,126,143,138,156,153,166,150,170,134,160,122,145,116,120"/>
+<area shape="rect" id="Node000008" href="$classInventoryInterface.html" title="An interface for the &quot;Observer&quot; in the Observer design pattern." alt="" coords="51,5,194,31"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="125,45,125,80,120,80,120,45"/>
+</map>

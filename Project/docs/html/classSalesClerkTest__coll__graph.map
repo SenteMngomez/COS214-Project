@@ -1,0 +1,50 @@
+<map id="SalesClerkTest" name="SalesClerkTest">
+<area shape="rect" id="Node000001" title=" " alt="" coords="328,443,445,468"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,355,107,380"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="83,386,108,402,137,416,186,431,236,441,328,450,327,455,236,446,185,436,135,421,106,407,80,391"/>
+<area shape="rect" id="Node000003" href="$classSalesClerk.html" title="Represents a sales clerk in the system. Inherits from Staff and handles Purchase requests and execute..." alt="" coords="293,305,384,331"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="345,344,353,379,368,413,382,441,377,444,363,416,348,381,340,345"/>
+<area shape="rect" id="Node000004" href="$classStaff.html" title="Represents a staff member in the system. Inherits from Person and provides request handling (Chain of..." alt="" coords="390,168,442,193"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="405,207,348,307,343,304,400,204"/>
+<area shape="rect" id="Node000007" href="$classSection.html" title="A Section manages a collection of Person instances, maintains a history of messages,..." alt="" coords="405,256,475,281"/>
+<area shape="poly" id="edge14_Node000007_Node000004" title=" " alt="" coords="426,206,439,255,434,256,420,207"/>
+<area shape="rect" id="Node000008" href="$classMockStaff.html" title=" " alt="" coords="242,256,329,281"/>
+<area shape="poly" id="edge16_Node000008_Node000004" title=" " alt="" coords="378,193,325,220,299,239,282,258,278,254,296,235,323,215,376,188"/>
+<area shape="poly" id="edge17_Node000008_Node000004" title=" " alt="" coords="380,202,349,220,300,258,297,254,347,215,377,197"/>
+<area shape="poly" id="edge18_Node000008_Node000004" title=" " alt="" coords="402,203,373,220,318,258,315,254,371,215,399,198"/>
+<area shape="rect" id="Node000005" href="$classPerson.html" title="Abstract base class representing a person. Provides common attrributes and methods for customers and ..." alt="" coords="677,80,744,105"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="664,104,604,115,539,132,487,151,441,170,439,165,485,146,538,127,603,110,663,99"/>
+<area shape="rect" id="Node000006" href="$classMockPerson.html" title=" " alt="" coords="660,355,761,380"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="687,118,678,142,672,172,668,241,676,308,683,334,694,353,689,356,678,336,670,309,663,241,667,172,673,141,682,116"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="697,119,689,173,686,242,691,308,702,354,696,355,685,309,681,242,683,173,692,118"/>
+<area shape="poly" id="edge8_Node000006_Node000005" title=" " alt="" coords="708,119,704,243,709,354,704,355,699,243,703,119"/>
+<area shape="poly" id="edge9_Node000006_Node000005" title=" " alt="" coords="719,119,722,243,717,355,712,354,717,243,713,119"/>
+<area shape="poly" id="edge10_Node000006_Node000005" title=" " alt="" coords="729,118,738,173,740,242,736,309,725,355,720,354,731,308,735,242,733,173,724,119"/>
+<area shape="poly" id="edge11_Node000006_Node000005" title=" " alt="" coords="740,116,748,141,754,172,758,241,751,309,743,336,732,356,728,353,738,334,746,308,753,241,749,172,743,142,735,118"/>
+<area shape="poly" id="edge12_Node000006_Node000005" title=" " alt="" coords="758,102,777,112,791,128,819,181,826,206,828,230,826,254,819,279,792,332,777,347,760,357,757,352,774,343,787,329,814,277,821,253,823,230,821,207,814,183,787,131,773,117,756,107"/>
+<area shape="poly" id="edge19_Node000008_Node000005" title=" " alt="" coords="664,97,562,100,438,111,378,121,324,133,282,149,254,170,248,179,247,190,251,213,263,236,277,254,273,257,259,238,246,215,241,190,243,177,250,166,279,145,323,128,377,115,438,106,562,95,664,92"/>
+<area shape="rect" id="Node000016" href="$classMockSection.html" title=" " alt="" coords="437,355,542,380"/>
+<area shape="poly" id="edge32_Node000016_Node000005" title=" " alt="" coords="696,118,665,163,634,218,625,250,624,278,619,305,601,333,574,351,543,362,541,357,571,347,597,329,614,303,618,277,620,249,630,216,660,161,691,115"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="662,387,541,421,440,445,439,440,539,416,661,381"/>
+<area shape="poly" id="edge13_Node000006_Node000007" title=" " alt="" coords="471,286,510,308,556,328,609,344,660,355,659,361,608,349,554,333,508,313,468,291"/>
+<area shape="poly" id="edge28_Node000016_Node000007" title=" " alt="" coords="431,294,445,325,467,353,463,356,440,328,426,296"/>
+<area shape="poly" id="edge29_Node000016_Node000007" title=" " alt="" coords="447,293,480,353,475,356,442,295"/>
+<area shape="poly" id="edge30_Node000016_Node000007" title=" " alt="" coords="462,292,492,353,487,356,457,294"/>
+<area shape="poly" id="edge31_Node000016_Node000007" title=" " alt="" coords="476,290,497,323,504,354,499,355,492,325,472,293"/>
+<area shape="poly" id="edge15_Node000001_Node000008" title=" " alt="" coords="256,291,232,310,211,332,201,356,201,367,206,379,231,404,262,423,295,436,328,445,327,450,294,442,259,428,227,409,202,381,196,368,195,355,207,329,228,306,252,287"/>
+<area shape="rect" id="Node000009" href="$classMockSellPlant.html" title=" " alt="" coords="801,355,916,380"/>
+<area shape="poly" id="edge20_Node000001_Node000009" title=" " alt="" coords="813,387,751,405,683,421,556,441,446,452,445,447,556,436,682,416,750,400,811,382"/>
+<area shape="rect" id="Node000010" href="$classSellPlant.html" title="Concrete Command that handles selling plants and building receipts." alt="" coords="867,256,946,281"/>
+<area shape="poly" id="edge21_Node000009_Node000010" title=" " alt="" coords="897,295,867,356,862,353,893,292"/>
+<area shape="rect" id="Node000011" href="$classCommand.html" title=" " alt="" coords="870,168,959,193"/>
+<area shape="poly" id="edge22_Node000010_Node000011" title=" " alt="" coords="915,207,910,256,905,255,910,207"/>
+<area shape="rect" id="Node000012" href="$classGreenhouse.html" title="A concrete subject that manages a collection of plants." alt="" coords="937,80,1037,105"/>
+<area shape="poly" id="edge23_Node000011_Node000012" title=" " alt="" coords="970,118,927,169,923,166,966,114"/>
+<area shape="rect" id="Node000013" href="$classGreenhouseInterface.html" title="An interface for the &quot;Subject&quot; in the Observer design pattern." alt="" coords="917,5,1075,31"/>
+<area shape="poly" id="edge24_Node000012_Node000013" title=" " alt="" coords="995,45,991,80,986,79,990,44"/>
+<area shape="rect" id="Node000014" href="$classInventory.html" title="A singleton class that manages the inventory of plants in the nursery." alt="" coords="782,80,866,105"/>
+<area shape="poly" id="edge25_Node000011_Node000014" title=" " alt="" coords="846,113,875,142,902,166,899,170,872,146,842,117"/>
+<area shape="rect" id="Node000015" href="$classInventoryInterface.html" title="An interface for the &quot;Observer&quot; in the Observer design pattern." alt="" coords="750,5,893,31"/>
+<area shape="poly" id="edge26_Node000014_Node000015" title=" " alt="" coords="825,45,826,80,821,80,820,45"/>
+<area shape="poly" id="edge27_Node000001_Node000016" title=" " alt="" coords="466,391,403,444,399,440,463,387"/>
+</map>

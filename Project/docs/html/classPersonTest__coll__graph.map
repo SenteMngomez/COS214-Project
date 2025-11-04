@@ -1,0 +1,23 @@
+<map id="PersonTest" name="PersonTest">
+<area shape="rect" id="Node000001" title=" " alt="" coords="199,359,291,384"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,256,107,281"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,286,225,356,223,361,89,290"/>
+<area shape="rect" id="Node000003" href="$classTestPerson.html" title=" " alt="" coords="131,256,223,281"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="183,294,189,314,198,333,210,346,225,356,221,361,207,350,194,336,184,316,178,296"/>
+<area shape="rect" id="Node000004" href="$classPerson.html" title="Abstract base class representing a person. Provides common attrributes and methods for customers and ..." alt="" coords="272,5,339,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="292,43,269,81,218,182,185,257,180,255,213,180,264,79,288,41"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="265,39,236,55,207,75,179,100,158,131,153,147,150,164,154,199,163,231,174,255,169,257,158,233,148,200,145,164,147,145,154,128,175,97,203,71,234,50,263,34"/>
+<area shape="rect" id="Node000006" href="$classStaff.html" title="Represents a staff member in the system. Inherits from Person and provides request handling (Chain of..." alt="" coords="279,80,331,105"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="308,45,308,80,303,80,303,45"/>
+<area shape="rect" id="Node000007" href="$classMockHelpSection.html" title=" " alt="" coords="247,256,382,281"/>
+<area shape="poly" id="edge10_Node000007_Node000004" title=" " alt="" coords="324,41,345,79,356,110,362,136,362,162,356,194,342,230,325,257,321,255,337,227,351,193,357,161,357,136,351,111,340,81,320,43"/>
+<area shape="rect" id="Node000008" href="$classMockSalesSection.html" title=" " alt="" coords="406,256,546,281"/>
+<area shape="poly" id="edge13_Node000008_Node000004" title=" " alt="" coords="353,30,389,44,428,65,464,93,492,128,502,163,501,199,493,232,484,257,479,255,488,230,496,198,497,163,487,131,460,97,425,70,387,49,351,35"/>
+<area shape="rect" id="Node000005" href="$classSection.html" title="A Section manages a collection of Person instances, maintains a history of messages,..." alt="" coords="271,168,342,193"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="264,201,230,220,207,239,189,258,185,254,203,235,226,215,261,196"/>
+<area shape="poly" id="edge9_Node000007_Node000005" title=" " alt="" coords="312,207,316,255,311,256,306,207"/>
+<area shape="poly" id="edge12_Node000008_Node000005" title=" " alt="" coords="343,197,454,253,452,258,340,202"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="308,119,309,167,304,168,303,119"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="306,295,281,336,260,360,256,356,277,333,301,292"/>
+<area shape="poly" id="edge11_Node000001_Node000008" title=" " alt="" coords="458,293,432,317,401,337,346,357,292,368,291,363,344,352,399,332,429,312,454,290"/>
+</map>

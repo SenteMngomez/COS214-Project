@@ -1,0 +1,10 @@
+<map id="PersonTracker" name="PersonTracker">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,256,117,281"/>
+<area shape="rect" id="Node000002" href="$classPerson.html" title="Abstract base class representing a person. Provides common attrributes and methods for customers and ..." alt="" coords="23,5,89,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="56,45,49,129,53,201,62,256,56,256,48,202,44,129,51,44"/>
+<area shape="rect" id="Node000004" href="$classStaff.html" title="Represents a staff member in the system. Inherits from Person and provides request handling (Chain of..." alt="" coords="98,80,150,105"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="78,39,115,78,111,81,75,43"/>
+<area shape="rect" id="Node000003" href="$classSection.html" title="A Section manages a collection of Person instances, maintains a history of messages,..." alt="" coords="93,168,163,193"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="113,206,73,257,69,254,108,203"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="128,119,130,167,125,168,123,119"/>
+</map>
