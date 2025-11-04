@@ -22,7 +22,7 @@ class Section;
 class ChatIterator :public Iterator {
 
 private:
-	const vector<string>* messages; //store messages from person
+	vector<string>* messages; //store messages from person (owned copy so we can sort)
 	//Section* section;
 	int current;
 
@@ -30,9 +30,10 @@ public:
 
 	/**
 	 * @brief Constructor for ChatIterator.
-	 * @param messages Vector of chat messages to iterate over.
+	 * @param messages Vector of chat messages to iterate over. Messages are alphabetically stored based on the request type.
 	 */
 	ChatIterator(const vector<string>* mgs);
+	~ChatIterator();
 	//ChatIterator(Section* section);
 
 	/**

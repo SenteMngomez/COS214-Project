@@ -5,9 +5,13 @@
  * @date 27 October 2025
  */
 #include "PlantIterator.h"
+#include <algorithm>
 
 PlantIterator::PlantIterator(const vector<Plant*>& plantsVec){
 	plants = plantsVec;
+	std::sort(plants.begin(), plants.end(), [](Plant* a,Plant* b){
+		return a->getTag() < b->getTag();
+	});
 	current = 0;
 }
 
