@@ -1,0 +1,164 @@
+==77990== Memcheck, a memory error detector
+==77990== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==77990== Using Valgrind-3.23.0 and LibVEX; rerun with -h for copyright info
+==77990== Command: ./main
+==77990== 
+Welcome to greenHome
+Please enter option 1 for customer or option 2 if you are part of staff :) Enter Password: [2J[HWelcome back staff member :) hope you are ready to work
+	1.Care For Plant(s)
+	2.Add Plant 
+	3.Remove Plant(s)
+	4.View Plants
+	5.Rooms
+What will we be doing today?
+Enter here: [2J[HPlants in the greenhouse:
+------------------------
+Type: Rose, Colour: Red, Tag: Rose#Red, Price: R15.99
+Type: Cactus, Colour: Green, Tag: Cactus#Green, Price: R8.99
+Type: Oak, Colour: Brown, Tag: Oak#Brown, Price: R30.99
+Type: Tulip, Colour: Blue, Tag: Tulip#Blue, Price: R12.49
+Which plant(s) will you be removing from the greenhouse
+
+Please enter the tags of the plants you would like to remove (Type s to finish):
+Tag: Tag: Unable to remove Plant-Cactus
+
+Need anything else?
+	1.Yes 
+	2.No
+Enter Here: ==77990== Invalid read of size 8
+==77990==    at 0x1123F8: Greenhouse::~Greenhouse() (Greenhouse.cpp:13)
+==77990==    by 0x12A393: main (main.cpp:499)
+==77990==  Address 0x4e363c0 is 0 bytes inside a block of size 96 free'd
+==77990==    at 0x484C8AD: operator delete(void*, unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==77990==    by 0x1215B4: Rose::~Rose() (Rose.h:20)
+==77990==    by 0x117A76: Inventory::~Inventory() (Inventory.cpp:16)
+==77990==    by 0x117B15: Inventory::~Inventory() (Inventory.cpp:24)
+==77990==    by 0x12A345: main (main.cpp:496)
+==77990==  Block was alloc'd at
+==77990==    at 0x4848FD3: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==77990==    by 0x1114A6: FlowerFactory::createPlant(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (FlowerFactory.cpp:13)
+==77990==    by 0x128507: main (main.cpp:163)
+==77990== 
+==77990== Jump to the invalid address stated on the next line
+==77990==    at 0x0: ???
+==77990==    by 0x12A393: main (main.cpp:499)
+==77990==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==77990== 
+==77990== 
+==77990== Process terminating with default action of signal 11 (SIGSEGV)
+==77990==  Bad permissions for mapped region at address 0x0
+==77990==    at 0x0: ???
+==77990==    by 0x12A393: main (main.cpp:499)
+==77990== 
+==77990== HEAP SUMMARY:
+==77990==     in use at exit: 78,952 bytes in 13 blocks
+==77990==   total heap usage: 50 allocs, 37 frees, 80,904 bytes allocated
+==77990== 
+==77990== 8 bytes in 1 blocks are still reachable in loss record 1 of 13
+==77990==    at 0x4848FD3: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==77990==    by 0x1161A3: std::__new_allocator<InventoryInterface*>::allocate(unsigned long, void const*) (new_allocator.h:151)
+==77990==    by 0x115BB0: allocate (alloc_traits.h:478)
+==77990==    by 0x115BB0: std::_Vector_base<InventoryInterface*, std::allocator<InventoryInterface*> >::_M_allocate(unsigned long) (stl_vector.h:380)
+==77990==    by 0x1154DC: void std::vector<InventoryInterface*, std::allocator<InventoryInterface*> >::_M_realloc_append<InventoryInterface* const&>(InventoryInterface* const&) (vector.tcc:596)
+==77990==    by 0x114F6A: std::vector<InventoryInterface*, std::allocator<InventoryInterface*> >::push_back(InventoryInterface* const&) (stl_vector.h:1294)
+==77990==    by 0x114BB8: GreenhouseInterface::attach(InventoryInterface*) (GreenhouseInterface.cpp:21)
+==77990==    by 0x12833D: main (main.cpp:146)
+==77990== 
+==77990== 8 bytes in 1 blocks are definitely lost in loss record 2 of 13
+==77990==    at 0x4848FD3: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==77990==    by 0x1114BD: FlowerFactory::createPlant(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (FlowerFactory.cpp:13)
+==77990==    by 0x128507: main (main.cpp:163)
+==77990== 
+==77990== 8 bytes in 1 blocks are definitely lost in loss record 3 of 13
+==77990==    at 0x4848FD3: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==77990==    by 0x11DAAA: Plant::Plant(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, CareStrategy*, double) (Plant.cpp:12)
+==77990==    by 0x121088: Rose::Rose(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, CareStrategy*, double) (Rose.cpp:11)
+==77990==    by 0x11150D: FlowerFactory::createPlant(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (FlowerFactory.cpp:13)
+==77990==    by 0x128507: main (main.cpp:163)
+==77990== 
+==77990== 8 bytes in 1 blocks are definitely lost in loss record 4 of 13
+==77990==    at 0x4848FD3: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==77990==    by 0x12644C: SucculentFactory::createPlant(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (SucculentFactory.cpp:19)
+==77990==    by 0x1285CC: main (main.cpp:164)
+==77990== 
+==77990== 8 bytes in 1 blocks are definitely lost in loss record 5 of 13
+==77990==    at 0x4848FD3: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==77990==    by 0x11DAAA: Plant::Plant(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, CareStrategy*, double) (Plant.cpp:12)
+==77990==    by 0x10F7AC: Cactus::Cactus(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, CareStrategy*, double) (Cactus.cpp:11)
+==77990==    by 0x12649C: SucculentFactory::createPlant(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (SucculentFactory.cpp:19)
+==77990==    by 0x1285CC: main (main.cpp:164)
+==77990== 
+==77990== 8 bytes in 1 blocks are definitely lost in loss record 6 of 13
+==77990==    at 0x4848FD3: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==77990==    by 0x126918: TreeFactory::createPlant(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (TreeFactory.cpp:19)
+==77990==    by 0x128691: main (main.cpp:165)
+==77990== 
+==77990== 8 bytes in 1 blocks are definitely lost in loss record 7 of 13
+==77990==    at 0x4848FD3: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==77990==    by 0x11DAAA: Plant::Plant(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, CareStrategy*, double) (Plant.cpp:12)
+==77990==    by 0x11B9F6: Oak::Oak(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, CareStrategy*, double) (Oak.cpp:11)
+==77990==    by 0x126961: TreeFactory::createPlant(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (TreeFactory.cpp:19)
+==77990==    by 0x128691: main (main.cpp:165)
+==77990== 
+==77990== 8 bytes in 1 blocks are definitely lost in loss record 8 of 13
+==77990==    at 0x4848FD3: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==77990==    by 0x111608: FlowerFactory::createPlant(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (FlowerFactory.cpp:17)
+==77990==    by 0x128756: main (main.cpp:166)
+==77990== 
+==77990== 8 bytes in 1 blocks are definitely lost in loss record 9 of 13
+==77990==    at 0x4848FD3: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==77990==    by 0x11DAAA: Plant::Plant(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, CareStrategy*, double) (Plant.cpp:12)
+==77990==    by 0x126C0C: Tulip::Tulip(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, CareStrategy*, double) (Tulip.cpp:11)
+==77990==    by 0x111658: FlowerFactory::createPlant(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (FlowerFactory.cpp:17)
+==77990==    by 0x128756: main (main.cpp:166)
+==77990== 
+==77990== 32 bytes in 1 blocks are still reachable in loss record 10 of 13
+==77990==    at 0x4848FD3: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==77990==    by 0x10EBC7: std::__new_allocator<Plant*>::allocate(unsigned long, void const*) (new_allocator.h:151)
+==77990==    by 0x10E7B4: allocate (alloc_traits.h:478)
+==77990==    by 0x10E7B4: std::_Vector_base<Plant*, std::allocator<Plant*> >::_M_allocate(unsigned long) (stl_vector.h:380)
+==77990==    by 0x113ED0: void std::vector<Plant*, std::allocator<Plant*> >::_M_realloc_append<Plant* const&>(Plant* const&) (vector.tcc:596)
+==77990==    by 0x113BCC: std::vector<Plant*, std::allocator<Plant*> >::push_back(Plant* const&) (stl_vector.h:1294)
+==77990==    by 0x112920: Greenhouse::addPlant(Plant*) (Greenhouse.cpp:64)
+==77990==    by 0x1287DD: main (main.cpp:170)
+==77990== 
+==77990== 1,024 bytes in 1 blocks are still reachable in loss record 11 of 13
+==77990==    at 0x4848858: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==77990==    by 0x4B9B3D6: _IO_file_doallocate (filedoalloc.c:101)
+==77990==    by 0x4BAB833: _IO_doallocbuf (genops.c:374)
+==77990==    by 0x4BA8B83: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:486)
+==77990==    by 0x4BAB8E1: _IO_default_uflow (genops.c:389)
+==77990==    by 0x498D1C8: __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::underflow() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+==77990==    by 0x499C062: std::istream::sentry::sentry(std::istream&, bool) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+==77990==    by 0x499C31F: std::istream::operator>>(int&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+==77990==    by 0x128C52: main (main.cpp:211)
+==77990== 
+==77990== 4,096 bytes in 1 blocks are still reachable in loss record 12 of 13
+==77990==    at 0x4848858: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==77990==    by 0x4B9B3D6: _IO_file_doallocate (filedoalloc.c:101)
+==77990==    by 0x4BAB833: _IO_doallocbuf (genops.c:374)
+==77990==    by 0x4BA92BF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+==77990==    by 0x4BA9DDF: _IO_new_file_xsputn (fileops.c:1244)
+==77990==    by 0x4BA9DDF: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+==77990==    by 0x4B9CC42: fwrite (iofwrite.c:39)
+==77990==    by 0x49BBDC3: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+==77990==    by 0x49BC13B: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+==77990==    by 0x1282A4: main (main.cpp:141)
+==77990== 
+==77990== 73,728 bytes in 1 blocks are still reachable in loss record 13 of 13
+==77990==    at 0x4848858: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==77990==    by 0x491C38E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+==77990==    by 0x40047EE: call_init.part.0 (dl-init.c:74)
+==77990==    by 0x4004903: call_init (dl-init.c:120)
+==77990==    by 0x4004903: _dl_init (dl-init.c:121)
+==77990==    by 0x402099F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+==77990== 
+==77990== LEAK SUMMARY:
+==77990==    definitely lost: 64 bytes in 8 blocks
+==77990==    indirectly lost: 0 bytes in 0 blocks
+==77990==      possibly lost: 0 bytes in 0 blocks
+==77990==    still reachable: 78,888 bytes in 5 blocks
+==77990==         suppressed: 0 bytes in 0 blocks
+==77990== 
+==77990== For lists of detected and suppressed errors, rerun with: -s
+==77990== ERROR SUMMARY: 10 errors from 10 contexts (suppressed: 0 from 0)

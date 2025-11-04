@@ -1,0 +1,33 @@
+<map id="TreeFactory.cpp" name="TreeFactory.cpp">
+<area shape="rect" id="Node000001" title="Implementation of TreeFactory." alt="" coords="131,5,252,31"/>
+<area shape="rect" id="Node000002" href="$TreeFactory_8h.html" title="Concrete factory for tree plants." alt="" coords="229,79,335,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="208,29,258,68,255,72,204,33"/>
+<area shape="rect" id="Node000010" href="$Mango_8h.html" title="Concrete Mango plant class." alt="" coords="165,152,244,177"/>
+<area shape="poly" id="edge19_Node000001_Node000010" title=" " alt="" coords="195,31,205,138,200,139,190,31"/>
+<area shape="rect" id="Node000011" href="$Oak_8h.html" title=" " alt="" coords="81,152,141,177"/>
+<area shape="poly" id="edge20_Node000001_Node000011" title=" " alt="" coords="187,32,127,141,122,139,183,30"/>
+<area shape="rect" id="Node000003" href="$PlantFactory_8h.html" title="Factory for creating plants." alt="" coords="319,152,431,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="299,102,351,141,348,146,295,106"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="213,372,271,397"/>
+<area shape="poly" id="edge18_Node000002_Node000006" title=" " alt="" coords="336,94,365,101,395,111,423,128,446,151,449,164,446,178,442,257,433,291,409,326,382,349,350,365,317,375,286,382,285,377,315,370,348,360,379,344,405,322,428,288,437,257,441,177,444,164,441,153,420,132,393,116,364,106,335,99"/>
+<area shape="rect" id="Node000009" href="$HeavyCareStrategy_8h.html" title="Declaration of the HeavyCareStrategy class. This class implements the CareStrategy interface for plan..." alt="" coords="212,225,371,251"/>
+<area shape="poly" id="edge12_Node000002_Node000009" title=" " alt="" coords="285,104,292,211,287,212,280,105"/>
+<area shape="poly" id="edge14_Node000002_Node000010" title=" " alt="" coords="271,106,229,144,226,141,268,102"/>
+<area shape="poly" id="edge16_Node000002_Node000011" title=" " alt="" coords="256,106,153,149,151,144,254,102"/>
+<area shape="rect" id="Node000004" href="$Plant_8h.html" title="Abstract base class for plants in the nursery simulator." alt="" coords="121,225,187,251"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="341,180,201,224,200,219,339,175"/>
+<area shape="poly" id="edge11_Node000003_Node000006" title=" " alt="" coords="383,177,392,205,400,244,400,286,395,306,386,326,365,347,340,363,312,374,286,381,285,375,311,369,337,358,362,343,381,322,390,305,395,285,395,244,387,206,378,178"/>
+<area shape="rect" id="Node000005" href="$CareStrategy_8h.html" title="Declaration of the CareStrategy abstract class. This class defines the interface for different care s..." alt="" coords="254,299,371,324"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="174,248,269,291,266,296,172,253"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="121,248,78,259,36,275,21,286,11,297,9,309,15,322,26,332,44,341,93,357,199,376,199,381,91,362,42,346,23,337,11,326,3,309,6,294,17,282,34,271,77,254,120,243"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="150,299,230,324"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="162,250,180,285,176,288,158,252"/>
+<area shape="rect" id="Node000008" href="$PlantState_8h.html" title="Abstract base class for plant states in the State design pattern. This class defines the interface fo..." alt="" coords="25,299,126,324"/>
+<area shape="poly" id="edge8_Node000004_Node000008" title=" " alt="" coords="136,253,92,291,89,287,133,249"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="293,301,198,258,200,253,295,296"/>
+<area shape="poly" id="edge9_Node000008_Node000004" title=" " alt="" coords="93,297,137,259,140,263,97,301"/>
+<area shape="poly" id="edge10_Node000008_Node000006" title=" " alt="" coords="103,322,203,364,201,369,101,326"/>
+<area shape="poly" id="edge13_Node000009_Node000005" title=" " alt="" coords="297,250,308,285,303,286,292,252"/>
+<area shape="poly" id="edge15_Node000010_Node000004" title=" " alt="" coords="199,179,172,216,168,213,194,176"/>
+<area shape="poly" id="edge17_Node000011_Node000004" title=" " alt="" coords="121,176,142,212,138,215,116,179"/>
+</map>

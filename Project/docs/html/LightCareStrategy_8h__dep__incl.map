@@ -1,0 +1,15 @@
+<map id="LightCareStrategy.h" name="LightCareStrategy.h">
+<area shape="rect" id="Node000001" title="Declaration of the LightCareStrategy class. This class implements the CareStrategy interface for plan..." alt="" coords="181,5,330,31"/>
+<area shape="rect" id="Node000002" href="$Begonia_8cpp.html" title="Implementation of Begonia class." alt="" coords="5,79,108,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="211,38,90,81,88,76,210,33"/>
+<area shape="rect" id="Node000003" href="$Cactus_8cpp.html" title="Implementation of Cactus class." alt="" coords="133,79,226,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="235,42,194,80,190,76,231,38"/>
+<area shape="rect" id="Node000004" href="$LightCareStrategy_8cpp.html" title="Implementation of the LightCareStrategy class. This class provides specific care instructions for pla..." alt="" coords="251,79,415,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="280,38,322,76,318,80,276,42"/>
+<area shape="rect" id="Node000005" href="$SucculentFactory_8h.html" title="Concrete factory for succulent plants." alt="" coords="439,79,581,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="310,32,469,76,468,81,309,37"/>
+<area shape="rect" id="Node000006" href="$SucculentFactory_8cpp.html" title="Implementation of SucculentFactory." alt="" coords="359,152,517,177"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="490,116,452,154,448,150,486,112"/>
+<area shape="rect" id="Node000007" href="$main_8cpp.html" title=" " alt="" coords="541,152,623,177"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="534,112,572,150,568,154,530,116"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="ReceiptBuilder" name="ReceiptBuilder">
+<area shape="rect" id="Node000001" title=" " alt="" coords="23,5,140,31"/>
+<area shape="rect" id="Node000002" href="$classBasicReceiptBuilder.html" title="Minimal implementation of ReceiptBuilder for basic receipts." alt="" coords="5,79,157,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,44,84,79,79,79,79,44"/>
+</map>

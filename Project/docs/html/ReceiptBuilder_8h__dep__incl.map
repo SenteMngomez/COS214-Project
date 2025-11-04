@@ -1,0 +1,23 @@
+<map id="ReceiptBuilder.h" name="ReceiptBuilder.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="183,5,311,31"/>
+<area shape="rect" id="Node000002" href="$BasicReceiptBuilder_8h.html" title="Concrete ReceiptBuilder that assembles a simple receipt from sold plants." alt="" coords="79,79,241,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="224,41,176,81,172,76,221,37"/>
+<area shape="rect" id="Node000009" href="$SalesAssistance_8h.html" title=" " alt="" coords="265,79,404,104"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="273,37,322,76,319,81,270,41"/>
+<area shape="rect" id="Node000003" href="$BasicReceiptBuilder_8cpp.html" title=" " alt="" coords="5,152,184,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="142,116,107,154,103,150,138,113"/>
+<area shape="rect" id="Node000004" href="$SellPlant_8h.html" title="Command used to sell one or more plants and generate a receipt." alt="" coords="208,152,299,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="187,110,240,150,236,154,184,114"/>
+<area shape="rect" id="Node000005" href="$SalesClerk_8h.html" title="Concrete class representing a sales clerk (specialised Staff)" alt="" coords="113,225,215,251"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="230,188,180,227,177,223,227,184"/>
+<area shape="rect" id="Node000007" href="$main_8cpp.html" title=" " alt="" coords="212,299,295,324"/>
+<area shape="poly" id="edge8_Node000004_Node000007" title=" " alt="" coords="256,191,256,298,251,298,251,191"/>
+<area shape="rect" id="Node000008" href="$SellPlant_8cpp.html" title=" " alt="" coords="291,225,397,251"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="280,184,331,223,328,227,277,188"/>
+<area shape="rect" id="Node000006" href="$SalesClerk_8cpp.html" title=" " alt="" coords="70,299,189,324"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="155,264,137,300,133,297,150,262"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="191,257,240,296,237,301,187,261"/>
+<area shape="poly" id="edge11_Node000009_Node000004" title=" " alt="" coords="313,115,268,154,265,150,310,111"/>
+<area shape="rect" id="Node000010" href="$SalesAssistance_8cpp.html" title=" " alt="" coords="323,152,477,177"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="357,113,391,150,387,154,353,116"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="PlantFactory" name="PlantFactory">
+<area shape="rect" id="Node000001" title="Factory class for plant creation." alt="" coords="157,5,260,31"/>
+<area shape="rect" id="Node000002" href="$classFlowerFactory.html" title="Factory for creating flower&#45;type plants." alt="" coords="5,79,119,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,39,87,81,85,76,172,34"/>
+<area shape="rect" id="Node000003" href="$classSucculentFactory.html" title="Factory for creating succulent&#45;type plants." alt="" coords="143,79,275,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="211,44,211,79,206,79,206,44"/>
+<area shape="rect" id="Node000004" href="$classTreeFactory.html" title="Factory for creating tree&#45;type plants." alt="" coords="299,79,395,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="244,34,326,76,323,81,242,39"/>
+</map>

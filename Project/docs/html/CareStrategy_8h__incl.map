@@ -1,0 +1,14 @@
+<map id="CareStrategy.h" name="CareStrategy.h">
+<area shape="rect" id="Node000001" title="Declaration of the CareStrategy abstract class. This class defines the interface for different care s..." alt="" coords="61,5,178,31"/>
+<area shape="rect" id="Node000002" href="$Plant_8h.html" title="Abstract base class for plants in the nursery simulator." alt="" coords="86,79,153,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,31,113,65,108,65,110,31"/>
+<area shape="poly" id="edge2_Node000002_Node000001" title=" " alt="" coords="124,78,125,44,131,45,129,79"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="51,225,110,251"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="87,103,46,122,27,136,13,153,9,170,16,187,31,202,49,216,46,220,27,206,12,190,4,171,8,151,23,132,43,117,85,99"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="22,152,102,177"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="112,106,82,143,78,139,108,103"/>
+<area shape="rect" id="Node000005" href="$PlantState_8h.html" title="Abstract base class for plant states in the State design pattern. This class defines the interface fo..." alt="" coords="126,152,227,177"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="124,103,153,140,149,144,120,106"/>
+<area shape="poly" id="edge6_Node000005_Node000002" title=" " alt="" coords="172,154,143,116,147,112,176,150"/>
+<area shape="poly" id="edge7_Node000005_Node000003" title=" " alt="" coords="163,180,109,219,106,215,160,175"/>
+</map>

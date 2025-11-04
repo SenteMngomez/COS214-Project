@@ -1,0 +1,79 @@
+#include "Staff.h"
+
+Staff::Staff(std::string name):Person(name),successor(nullptr){}
+
+void Staff::receiveMessage(Person* person, Section* section){
+
+	std::string plants="";
+	std::string decorate="";
+
+	if(person->getMessageType()=="Purchase"){
+
+		if(!person->getTags() || person->getTags()->empty()){
+			// Still process the message, just note that plants aren't specified
+			plants="";
+		} else {
+			plants+="\n\tPurchasing plants: ";
+
+			int numPlants=person->getTags()->size();
+
+			for(int i=0;i<numPlants;i++){
+
+				plants+="Plant-"+(*person->getTags())[i];
+
+				if(i<numPlants-1){
+
+					plants+=", ";
+				}
+			}
+		}
+
+		if(!person->getDecorator().empty()){
+
+			decorate=" with "+person->getDecorator();
+
+		}
+	} else if(person->getMessageType()=="Care"){
+
+		if(!person->getTags() || person->getTags()->empty()){
+			// Still process the message, just note that plants aren't specified
+			plants="";
+		} else {
+			plants+="\n\tPlants to care for: ";
+
+			int numPlants=person->getTags()->size();
+
+			for(int i=0;i<numPlants;i++){
+
+				plants+="Plant-"+(*person->getTags())[i];
+
+				if(i<numPlants-1){
+
+					plants+=", ";
+				}
+			}
+		}
+
+	}
+
+	if(person->getMessageType()!="Purchase Complete"){
+
+		std::cout<<"["<<section->getName()<<"] "<<getName()<<" received --"<<person->getMessageType()<<" request-- \""<<person->getMessage()<<"\" from "<<person->getName()<<plants<<decorate<<"\n";
+	}
+		
+}
+
+void Staff::handleRequest(Person* person) {
+
+	if(successor){
+		std::cout<<"Passing on request to "<<successor->getName()<<"\n";
+		successor->handleRequest(person);
+	}else{
+		std::cout<<"Request Unhandled"<<std::endl;
+	}
+}
+
+void Staff::setSuccessor(Staff* successor){
+
+	this->successor=successor;
+}

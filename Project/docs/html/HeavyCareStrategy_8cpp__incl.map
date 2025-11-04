@@ -1,0 +1,19 @@
+<map id="HeavyCareStrategy.cpp" name="HeavyCareStrategy.cpp">
+<area shape="rect" id="Node000001" title="Implementation of the HeavyCareStrategy class. This class provides specific care instructions for pla..." alt="" coords="56,5,231,31"/>
+<area shape="rect" id="Node000002" href="$HeavyCareStrategy_8h.html" title="Declaration of the HeavyCareStrategy class. This class implements the CareStrategy interface for plan..." alt="" coords="5,79,164,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="136,33,105,70,101,67,132,29"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="162,299,242,324"/>
+<area shape="poly" id="edge10_Node000001_Node000006" title=" " alt="" coords="154,30,167,51,179,78,193,135,201,192,205,285,200,285,196,193,188,136,174,80,163,54,149,32"/>
+<area shape="rect" id="Node000003" href="$CareStrategy_8h.html" title="Declaration of the CareStrategy abstract class. This class defines the interface for different care s..." alt="" coords="27,152,145,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="88,104,88,138,83,139,82,104"/>
+<area shape="rect" id="Node000004" href="$Plant_8h.html" title="Abstract base class for plants in the nursery simulator." alt="" coords="53,225,119,251"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="82,178,80,212,75,212,76,178"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="90,225,92,191,97,191,96,225"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="13,372,71,397"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="69,253,45,273,26,300,22,314,23,330,32,359,27,360,18,330,17,314,21,298,41,269,66,249"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="106,248,173,289,170,294,103,253"/>
+<area shape="rect" id="Node000007" href="$PlantState_8h.html" title="Abstract base class for plant states in the State design pattern. This class defines the interface fo..." alt="" coords="35,299,137,324"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="82,251,80,285,75,285,76,251"/>
+<area shape="poly" id="edge8_Node000007_Node000004" title=" " alt="" coords="90,298,92,264,97,265,96,299"/>
+<area shape="poly" id="edge9_Node000007_Node000005" title=" " alt="" coords="81,326,59,362,54,359,76,323"/>
+</map>

@@ -1,0 +1,139 @@
+/**
+ * @file Greenhouse.cpp
+ * @brief Implementation of Greenhouse class
+ * @author Kundai
+ * @date October 24, 2025
+ */
+#include "Greenhouse.h"
+
+Greenhouse::~Greenhouse(){
+
+	for(Plant* plant:plants){
+        delete plant;
+    }
+    plants.clear();
+}
+
+void Greenhouse::waterPlant(std::string tag) {
+	
+	Plant* wateredPlant = nullptr;
+
+	auto it = std::find_if(plants.begin(), plants.end(), [tag](Plant* p) { //Finding plant with tag in order to water
+		return p->getTag() == tag;
+	});
+
+	if (it != plants.end()){
+
+		wateredPlant =*it;
+		wateredPlant->receiveWater();
+		notify(wateredPlant); 
+		
+	}
+
+}
+
+void Greenhouse::giveSunlight(std::string tag) {
+	
+	Plant* sunBathedPlant = nullptr;
+
+	auto it = std::find_if(plants.begin(), plants.end(), [tag](Plant* p) { //Finding plant with tag in order to give sunlight
+		return p->getTag() == tag;
+	});
+
+	if (it != plants.end()){
+
+		sunBathedPlant = *it;
+		sunBathedPlant->receiveSunlight();
+		notify(sunBathedPlant); 
+		
+	}
+
+}
+
+PlantIterator* Greenhouse::createIterator()
+{
+    return new PlantIterator(plants);
+}
+
+void Greenhouse::addPlant(Plant* plant) {
+	
+	plants.push_back(plant);
+	notify(plant); // Notify observers about the new plant
+
+}
+
+void Greenhouse::showPlants() {
+	
+	if (plants.empty()){
+		std::cout << "No plants in the greenhouse." << std::endl;
+		return;
+	}
+
+	std::cout << "Plants in the greenhouse:" << std::endl;
+	std::cout << "------------------------" << std::endl;
+
+	for (Plant* plant: plants){
+		plant->print();
+	}
+}
+
+Plant* Greenhouse::removePlant(std::string tag) {
+	
+	Plant* removedPlant = nullptr;
+
+	auto it = std::find_if(plants.begin(), plants.end(), [tag](Plant* p) {
+		return p->getTag() == tag;
+	});
+
+	if (it != plants.end()){
+
+		removedPlant =*it; 
+		plants.erase(it);
+		notify(removedPlant); //Notify observers about the removed plant
+		
+	}
+
+	return removedPlant; 
+
+}
+
+string Greenhouse::getName()
+{
+    return name;
+}
+
+void Greenhouse::progressPlants(){
+	if (plants.empty()){
+		std::cout << "No plants in the greenhouse." << std::endl;
+		return;
+	}
+
+	for(Plant* p:plants){
+
+		p->progressState();
+		cout<<"\n";
+	}
+
+}
+
+void Greenhouse::showOrderedPlants(){
+
+	if(plants.empty()){
+
+		cout<<"No plants in greenhouse\n";
+		return;
+	}
+
+	cout<<"=========Plants in "<<name<<"(ordered)==========\n";
+
+	PlantIterator* it=createIterator();
+
+	while(!it->isDone()){
+
+		it->currentItem()->print();
+		it->next();
+	}
+	
+	delete it;
+
+} 
