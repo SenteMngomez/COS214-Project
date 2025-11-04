@@ -3,7 +3,7 @@
 
 SellPlant::SellPlant(PlantBuilder* pb):Command(){
 	this->builder = pb;
-	sBuild = nullptr;  // Don't create one - will be set externally
+	sBuild = nullptr;  
 	r = nullptr;
 }
 
@@ -11,16 +11,15 @@ SellPlant::~SellPlant(){
 	if(r != nullptr){
 		delete r ;
 	}
-	// Don't delete sBuild - it's externally managed via setSalesAssitance
-	// Don't delete builder - it's externally managed (passed in constructor)
+	
 }
 
 void SellPlant::setSalesAssitance(SalesAssistance* sa){
-    // Simply set the pointer - don't delete anything since we don't own sBuild
+   
     sBuild = sa;
 }
 void SellPlant::execute(vector<string>* tag, string decorator){
-	// cout<<"HII"<<endl;
+	
 
 	if(!tag || !greenHouse || !sBuild) {
         cout << "Invalid parameters for plant sale" << endl;
@@ -43,21 +42,43 @@ void SellPlant::execute(vector<string>* tag, string decorator){
 		return ;	
 	}
 
-    // Create receipt with the plants BEFORE building the composite
-    // This ensures Receipt gets valid pointers before they're reorganized
-	string sellerName = "Green Home"; 
-    BasicReceiptBuilder* receiptBuilder = new BasicReceiptBuilder(sellerName, soldPlants);
-	sBuild->setBuilder(receiptBuilder);
-	r = sBuild->constructReceipt();
-
-    // Build composite/decorated plant - this will take ownership of the plants
+    //Build composite/decorated plant first
     Plant* saleItem = builder->buildCompositePlant(soldPlants, decorator);
+
+    //Calculate base plants price before they get reorganized
+    double basePlantsPrice = 0.0;
+    for(Plant* plant : soldPlants) {
+        basePlantsPrice += plant->getPrice();
+    }
+
+    //Create receipt
+    string sellerName = "Green Home"; 
+    BasicReceiptBuilder* receiptBuilder = new BasicReceiptBuilder(sellerName, soldPlants);
+    sBuild->setBuilder(receiptBuilder);
+    
+    //Build basic receipt first
+    receiptBuilder->addSeller();
+    receiptBuilder->addPlantDetails();
+    
+    //Get the receipt and modify it to include decorator
+    r = receiptBuilder->getReceipt();
+    
+    
+    if(!decorator.empty() && decorator != "none") {
+        double decoratorPrice = saleItem->getPrice() - basePlantsPrice;
+        string decoratorName = (decorator == "pot") ? "Decorative Pot" : 
+                              (decorator == "wrap") ? "Gift Wrap" : decorator;
+        r->addPlant(decoratorName, decoratorPrice);
+    }
+    
+    // Set total price from the final sale item
+    r->setTotalPrice(saleItem->getPrice());
 
     std::cout << "Selling " 
               << (soldPlants.size() > 1 ? "group of plants" : "single plant")
               << " from greenhouse " << greenHouse->getName() << std::endl;
 
-	// Clean up the sale item - this will clean up all the individual plants too
+	
 	if(saleItem) {
         delete saleItem;
     }

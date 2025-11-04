@@ -7,7 +7,12 @@ Plant* ConcretePlantBuilder::buildCompositePlant( vector<Plant*> plants , std::s
 
         // If multiple plants, group them
         if (plants.size() > 1) {
-            PlantGroup* group = new PlantGroup("Group", nullptr, 0.0);
+            // Calculate total price of all plants
+            double totalPrice = 0.0;
+            for (auto* p : plants) {
+                totalPrice += p->getPrice();
+            }
+            PlantGroup* group = new PlantGroup("Group", nullptr, totalPrice);
             for (auto* p : plants) {
                 group->add(*p);  // PlantGroup takes ownership
             }
@@ -18,9 +23,11 @@ Plant* ConcretePlantBuilder::buildCompositePlant( vector<Plant*> plants , std::s
 
         // Apply decorator if any
         if (decorator == "pot") {
-            result = new DecorativePot(result,decorator,result->getColour(),result->getCareStrategy(),result->getPrice());
+            double decoratorPrice = 10.00; // Add cost for decorative pot
+            result = new DecorativePot(result,decorator,result->getColour(),result->getCareStrategy(),result->getPrice() + decoratorPrice);
         } else if (decorator == "wrap") {
-            result = new GiftWrapDecorator(result, "Gift Wrap", result->getColour(), nullptr, result->getPrice());
+            double decoratorPrice = 6.00; // Add cost for gift wrap
+            result = new GiftWrapDecorator(result, "Gift Wrap", result->getColour(), nullptr, result->getPrice() + decoratorPrice);
         }
 
         return result;

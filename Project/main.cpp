@@ -76,7 +76,7 @@ void customerRequest(Customer* customer,string type){
         }
 
 		int decorate;
-		cout<<"Would you like your plants in:\n\t1.Wrap\n\t2.Flower Pot\n\t3.None\n";
+		cout<<"Would you like your plants in:\n\t1.Wrap(+R6.00)\n\t2.Flower Pot(+R10.00)\n\t3.None\n";
 		cout<<"Enter here: ";
 		std::cin>>decorate;
 
@@ -174,11 +174,11 @@ int main() {
 
 	
 	//Adding more plants to greenhouse using prototype
-	// for(int i=0;i<3;i++){
+	for(int i=0;i<3;i++){
 
-	// 	greenhouse.addPlant(rose->clone());
-	// 	greenhouse.addPlant(tulip->clone());
-	// }
+		greenhouse.addPlant(rose->clone());
+		greenhouse.addPlant(tulip->clone());
+	}
 
 	SalesClerk* salesMan1=new SalesClerk("Brett Hands");
 	GroundStaff* groundsMan1=new GroundStaff("Mick Jagger");
@@ -233,7 +233,7 @@ int main() {
             if(std::cin>>choiceReq){
 
                 if(choiceReq==1){
-                    greenhouse.showPlants();
+                    greenhouse.showOrderedPlants();
                     cout<<"Select next action:\n\t1.Purchase a plant\n\t2.Ask for help\n\t3.Exit\n";
                     int choiceReq2;
                     cout<<"Enter here: ";
@@ -247,6 +247,8 @@ int main() {
                         else if (choiceReq2 == 1|| choiceReq2 == 2){
 
                             string type=(choiceReq2==1)?"Purchase":"Help";
+
+							if(type=="Purchase") greenhouse.showOrderedPlants();
 
                             Customer* customer=dynamic_cast<Customer*>(person);
 
@@ -309,7 +311,7 @@ int main() {
 
         while(flag == true){
 
-            cout<<"\t1.Care For Plant(s)\n\t2.Add Plant \n\t3.Remove Plant(s)\n\t4.View Plants\n\t5.Progress Plants\n\t6.Rooms\n\t7.View Ordered Plants\n\t8.Exit\n\t"<<endl;
+            cout<<"\t1.Care For Plant(s)\n\t2.Add Plant \n\t3.Remove Plant(s)\n\t4.View Plants\n\t5.Progress Plants\n\t6.Rooms\n\t7.View Ordered Plants\n\t8.Send Message\n\t9.Exit\n\t"<<endl;
             int op2;
             cout<<"What will we be doing today?\n";
 			cout<<"Enter here: ";
@@ -383,7 +385,7 @@ int main() {
 						cout<<"No seeds are available for "<<type<<" at the moment\n";
 					}
                     
-                }else if(option ==2){
+                }else if(option==2){
                     int typeInt;
                     string type;
                     cout<<"What type of tree do you want to add:\n\t1.Oak\n\t2.Mango\n";
@@ -569,6 +571,14 @@ int main() {
 				greenhouse.showOrderedPlants();
 
 			}else if(op2==8){
+
+				cout<<"Enter the message you would like to send: ";
+				string message;
+				std::getline(std::cin>>std::ws, message);
+
+				manager1->sendMessage(message,"Help");
+
+			}else if(op2==9){
 
 				flag=false;
 			}else{
