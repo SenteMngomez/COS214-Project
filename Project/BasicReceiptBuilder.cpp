@@ -3,7 +3,7 @@
 BasicReceiptBuilder::BasicReceiptBuilder(string &seller , vector<Plant*> plants){
 	this->sellerName = seller ;
 	this->soldPlants = plants;
-	// Don't allocate receipt here - base class already did in its constructor
+	
 }
 
 void BasicReceiptBuilder::addPrice(){
