@@ -46,8 +46,21 @@ public:
 	void print();
 
 	// Composite methods (stubs for leaf plant)
+     /**
+      * @brief Add a child plant (not applicable for leaf plants)
+      * @param plant Reference to the plant to add
+      */
     void add(Plant& plant) override {}
+     /**
+      * @brief Remove a child plant (not applicable for leaf plants)
+      * @param plant Reference to the plant to remove
+      */
     void remove(Plant& plant) override {}
+     /**
+      * @brief Get a child plant by tag (not applicable for leaf plants)
+      * @param tag The tag of the child plant
+      * @return nullptr as leaf plants do not have children
+      */
     Plant* getChild(string tag) override;
 };
 

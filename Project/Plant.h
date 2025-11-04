@@ -28,10 +28,15 @@ using namespace std;
 class Plant {
 
 private:
+     /// @brief Current state of the plant
 	PlantState* state;
+     /// @brief Care strategy for the plant
 	CareStrategy* careStrategy;
+     /// @brief Colour of the plant
 	string colour;
+     /// @brief Unique tag/ID of the plant
 	string tag;
+     /// @brief Price of the plant
 	double price;
 
 public:

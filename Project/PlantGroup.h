@@ -23,7 +23,9 @@ using namespace std;
 class PlantGroup :public Plant {
 
 private:
+    /// @brief Child plants in the group
     vector<Plant*> children;
+    /// @brief Types of plants in the group
 	vector<string> types;
 
 public:

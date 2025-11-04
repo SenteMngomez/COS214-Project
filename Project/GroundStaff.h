@@ -64,7 +64,9 @@ class GroundStaff :public Staff {
 		void setGiveSunlightCommand(GiveSunlight* giveSunlightCommand);
 
 	private:
+		/// @brief Command used to water plants
 		WaterPlant* waterPlantCmd;/** Command used to water plants */
+		/// @brief Command used to give sunlight to plants
 		GiveSunlight* giveSunCmd;/** Command used to give sunlight to plants */
 };
 

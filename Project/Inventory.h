@@ -66,6 +66,9 @@ public:
 	 */
 	static void cleanup();
 
+	/**
+	 * @brief Clears the inventory, deleting all plant clones and resetting stock counts.
+	 */
 	void clearInventory();
 
 	/**

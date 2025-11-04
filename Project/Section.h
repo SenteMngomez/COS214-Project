@@ -99,12 +99,17 @@ class Section {
 		string getType();
 
 	private:
+		/// @brief Name of the section
 		std::string name;
+		/// @brief History of messages in the section
 		std::vector<std::string> history;
 
 	protected:
+		/// @brief Administrative staff member for the section
 		Staff* admin;
+		/// @brief List of persons in the section
 		std::vector<Person*> personList;
+		/// @brief Type of section
 		string type;
 };
 

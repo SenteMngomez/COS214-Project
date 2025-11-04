@@ -41,6 +41,9 @@ public:
 	 */
 	virtual std::string getType()=0;
 
+	/**
+	 * @brief Virtual destructor for PlantState.
+	 */
 	virtual ~PlantState(){}
 };
 

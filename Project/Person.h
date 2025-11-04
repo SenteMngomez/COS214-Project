@@ -23,16 +23,29 @@ using namespace std;
 class Person {
 
 private:
+	/// @brief Sections the person is part of
 	std::vector<Section*> sections;
+	/// @brief Name of the person
 	string name;
+	/// @brief Type of the message/request being sent
 	string messageType;
+	/// @brief The message being sent
 	string message;
+	/// @brief Tags of plants to be purchased/cared for
 	std::vector<string>* tags;
+	/// @brief Type of decorator for plant purchase
 	std::string decorator;
 
 public:
+	/**
+	 * @brief Constructs a Person with the given name.
+	 * @param name The name of the person.
+	 */
 	Person(std::string name);
 
+	/**
+	 * @brief Destroys the Person and releases any runtime resources.
+	 */
 	virtual ~Person();
 
 	/**
@@ -81,6 +94,10 @@ public:
 	 */
 	std::vector<string>* getTags();
 
+	/**
+	 * @brief Adds a Section to the person's list of sections
+	 * @param section Pointer to the Section to add
+	 */
 	void addSection(Section* section);
 
 };

@@ -19,6 +19,7 @@
 class Staff :public Person {
 
 	private:
+		/// @brief Successor in the chain of responsibility
 		Staff* successor;
 	public:
 		/**

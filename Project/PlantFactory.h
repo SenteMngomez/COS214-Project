@@ -24,6 +24,7 @@ class Plant;
 class PlantFactory {
 
 private:
+	 /// @brief The created plant product
 	Plant* product;
 
 protected:
@@ -36,6 +37,9 @@ protected:
 	}
 
 public:
+	/**
+	 * @brief Default constructor
+	 */
 	PlantFactory() : product(nullptr) {}
 
 	/**
@@ -53,6 +57,9 @@ public:
 		return product; 
 	}
 
+	/**
+	 * @brief Virtual destructor
+	 */
 	virtual ~PlantFactory()=default;
 };
 

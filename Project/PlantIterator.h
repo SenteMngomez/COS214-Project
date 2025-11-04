@@ -19,8 +19,9 @@ using namespace std;
  */
 class PlantIterator :public Iterator {
 private:
-
+	/// @brief a pointer to a vector of Plant pointers
 	vector<Plant*> plants; //vector of Plant pointers
+	/// @brief current index in the plants vector
 	size_t current;
 
 public:

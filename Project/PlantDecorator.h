@@ -20,6 +20,7 @@
  */
 class PlantDecorator :public Plant {
 protected:
+     /// @brief The wrapped plant component
 	Plant* component;
 
 public:

@@ -18,6 +18,8 @@
  */
 class GiftWrapDecorator :public PlantDecorator {
 private:
+
+     /// @brief Type of the gift wrap
     string wrapType;
 
 public:

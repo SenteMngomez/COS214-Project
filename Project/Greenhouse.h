@@ -91,6 +91,10 @@ public:
 	 */
 	void showOrderedPlants();
 
+	/**
+	 * @brief Get the name of the greenhouse
+	 * @return The name as a string
+	 */
 	string getName();
 };
 

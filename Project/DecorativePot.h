@@ -18,6 +18,8 @@
  */
 class DecorativePot :public PlantDecorator {
 private:
+
+     /// @brief Type of the decorative pot
 	string potType;
 
 public:

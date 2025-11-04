@@ -21,6 +21,10 @@ using namespace std;
 class SalesClerk : public Staff {
 
 	public:
+		/**
+		 * @brief Constructs a SalesClerk with the given name.
+		 * @param name The name of the sales clerk.
+		 */
 		SalesClerk(string name);
 
 		/**
@@ -51,7 +55,7 @@ class SalesClerk : public Staff {
 		void sell(std::vector<string>* tags, string decorator, string name);
 
 	private:
-		
+		/// @brief The SellPlant command used for sales
 		SellPlant* sellPlantCommand;
 
 		

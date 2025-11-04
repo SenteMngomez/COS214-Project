@@ -24,6 +24,9 @@
  */
 class PlantBuilder {
 public:
+    /**
+     * @brief Virtual destructor for PlantBuilder.
+     */
     virtual ~PlantBuilder() = default;
 
     /**

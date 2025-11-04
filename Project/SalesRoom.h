@@ -37,7 +37,9 @@ class SalesRoom :public Section {
          */
 		void notify(Person* person);
 
-
+		/**
+		 * @brief Destructor for SalesRoom
+		 */
 		virtual ~SalesRoom() = default ;
 };
 
