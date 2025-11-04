@@ -1,9 +1,0 @@
-<map id="ChatIterator.h" name="ChatIterator.h">
-<area shape="rect" id="Node000001" title="Declaration of the ChatIterator class. This class implements the Iterator interface to iterate over a..." alt="" coords="85,5,196,31"/>
-<area shape="rect" id="Node000002" href="$Iterator_8h.html" title=" " alt="" coords="5,79,87,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="127,33,74,72,71,68,124,29"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="111,79,170,104"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="143,31,143,65,138,65,138,31"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="195,79,257,104"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="156,29,203,68,200,72,153,33"/>
-</map>

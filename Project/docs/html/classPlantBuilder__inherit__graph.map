@@ -1,5 +1,0 @@
-<map id="PlantBuilder" name="PlantBuilder">
-<area shape="rect" id="Node000001" title="Interface for building composite Plant objects." alt="" coords="34,5,135,31"/>
-<area shape="rect" id="Node000002" href="$classConcretePlantBuilder.html" title="Concrete builder that composes multiple Plant instances into a single composite Plant according to a ..." alt="" coords="5,79,164,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,44,87,79,82,79,82,44"/>
-</map>

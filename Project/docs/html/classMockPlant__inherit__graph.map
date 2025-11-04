@@ -1,9 +1,0 @@
-<map id="MockPlant" name="MockPlant">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,79,96,104"/>
-<area shape="rect" id="Node000002" href="$classPlant.html" title="Abstract base class representing a plant in the nursery." alt="" coords="23,5,78,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="19,43,18,61,26,77,21,80,13,62,14,43"/>
-<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="36,44,36,62,40,78,34,79,30,63,31,44"/>
-<area shape="poly" id="edge3_Node000001_Node000002" title=" " alt="" coords="53,44,53,79,48,79,48,44"/>
-<area shape="poly" id="edge4_Node000001_Node000002" title=" " alt="" coords="71,44,71,63,67,79,62,78,66,62,65,44"/>
-<area shape="poly" id="edge5_Node000001_Node000002" title=" " alt="" coords="87,43,89,62,80,80,76,77,83,61,82,43"/>
-</map>

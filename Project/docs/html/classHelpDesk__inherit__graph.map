@@ -1,5 +1,0 @@
-<map id="HelpDesk" name="HelpDesk">
-<area shape="rect" id="Node000001" title="A HelpDesk is a concrete Section that broadcasts messages to all participants and routes help request..." alt="" coords="5,79,91,104"/>
-<area shape="rect" id="Node000002" href="$classSection.html" title="A Section manages a collection of Person instances, maintains a history of messages,..." alt="" coords="13,5,83,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="51,44,51,79,45,79,45,44"/>
-</map>

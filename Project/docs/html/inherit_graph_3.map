@@ -1,5 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$classInventoryInterface.html" title="An interface for the &quot;Observer&quot; in the Observer design pattern." alt="" coords="5,5,148,31"/>
-<area shape="rect" id="Node000001" href="$classInventory.html" title="A singleton class that manages the inventory of plants in the nursery." alt="" coords="196,5,280,31"/>
-<area shape="poly" id="edge12_Node000000_Node000001" title=" " alt="" coords="161,15,196,15,196,21,161,21"/>
-</map>

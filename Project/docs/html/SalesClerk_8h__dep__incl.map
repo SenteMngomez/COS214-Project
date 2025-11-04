@@ -1,9 +1,0 @@
-<map id="SalesClerk.h" name="SalesClerk.h">
-<area shape="rect" id="Node000001" title="Concrete class representing a sales clerk (specialised Staff)" alt="" coords="137,5,240,31"/>
-<area shape="rect" id="Node000002" href="$SalesClerk_8cpp.html" title=" " alt="" coords="5,79,124,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="158,40,86,81,84,76,156,35"/>
-<area shape="rect" id="Node000003" href="$main_8cpp.html" title=" " alt="" coords="147,79,230,104"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="191,44,191,79,186,79,186,44"/>
-<area shape="rect" id="Node000004" href="$test__SalesClerk_8cpp.html" title=" " alt="" coords="255,79,405,104"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="225,34,308,76,306,81,222,39"/>
-</map>

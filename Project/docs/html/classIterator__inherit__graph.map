@@ -1,7 +1,0 @@
-<map id="Iterator" name="Iterator">
-<area shape="rect" id="Node000001" title=" " alt="" coords="83,5,153,31"/>
-<area shape="rect" id="Node000002" href="$classChatIterator.html" title="Iterator for chat messages." alt="" coords="5,79,105,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,43,67,80,63,77,97,39"/>
-<area shape="rect" id="Node000003" href="$classPlantIterator.html" title="Iterator for Plant objects." alt="" coords="129,79,232,104"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="139,39,173,77,169,80,135,43"/>
-</map>
